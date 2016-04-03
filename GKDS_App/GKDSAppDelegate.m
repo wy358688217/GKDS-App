@@ -1,5 +1,5 @@
 //
-//  AppDelegate.m
+//  GKDSAppDelegate.m
 //  GKDS_App
 //
 //  Created by wang on 16/3/22.
@@ -8,11 +8,11 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface GKDSAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation GKDSAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
