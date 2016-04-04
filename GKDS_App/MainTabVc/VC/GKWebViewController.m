@@ -9,7 +9,7 @@
 
 #import "GKWebViewController.h"
 #import "WebKit/WebKit.h"
-@interface GKWebViewController ()//<UIWebViewDelegate>
+@interface GKWebViewController ()<UIWebViewDelegate>
 
 @end
 
@@ -33,7 +33,7 @@
     [super viewDidLoad];
     
     
-//    [webView setFrame:self.view.bounds];
+    [webView setFrame:self.view.bounds];
 
     
     //加载网页的方式
@@ -62,51 +62,51 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-//    if (!webView) {
-//        webView = [[UIWebView alloc]initWithFrame:SCREEN_RECT];
-//        [self.view addSubview:webView];
-//    }
-//    [webView setUserInteractionEnabled:YES];//是否支持交互
-//    [webView setDelegate:self];
-//    [webView setOpaque:NO];//opaque是不透明的意思
-//    [webView setScalesPageToFit:YES];//自动缩放以适应屏幕
-//    NSURL *url = [[NSURL alloc]initWithString:@"https://www.baidu.com/"];
-//    NSURLRequest * request = [NSURLRequest requestWithURL:url];
-//    [webView loadRequest:request];
-//    
-    
-    if (!wkWebView) {
-        wkWebView = [[WKWebView alloc]initWithFrame:SCREEN_RECT];
-        [self.view addSubview:wkWebView];
+    if (!webView) {
+        webView = [[UIWebView alloc]initWithFrame:SCREEN_RECT];
+        [self.view addSubview:webView];
     }
-    [wkWebView setUserInteractionEnabled:YES];//是否支持交互
-//    [wkWebView setDelegate:self];
-    [wkWebView setOpaque:NO];//opaque是不透明的意思
-//    [wkWebView setScalesPageToFit:YES];//自动缩放以适应屏幕
-    NSURL *url_ = [[NSURL alloc]initWithString:@"https://www.baidu.com/"];
-    NSURLRequest * request_ = [NSURLRequest requestWithURL:url_];
-    [wkWebView loadRequest:request_];
+    [webView setUserInteractionEnabled:YES];//是否支持交互
+    [webView setDelegate:self];
+    [webView setOpaque:NO];//opaque是不透明的意思
+    [webView setScalesPageToFit:YES];//自动缩放以适应屏幕
+    NSURL *url = [[NSURL alloc]initWithString:@"https://www.baidu.com/"];
+    NSURLRequest * request = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:request];
+    
+    
+//    if (!wkWebView) {
+//        wkWebView = [[WKWebView alloc]initWithFrame:SCREEN_RECT];
+//        [self.view addSubview:wkWebView];
+//    }
+//    [wkWebView setUserInteractionEnabled:YES];//是否支持交互
+////    [wkWebView setDelegate:self];
+//    [wkWebView setOpaque:NO];//opaque是不透明的意思
+////    [wkWebView setScalesPageToFit:YES];//自动缩放以适应屏幕
+//    NSURL *url_ = [[NSURL alloc]initWithString:@"https://www.baidu.com/"];
+//    NSURLRequest * request_ = [NSURLRequest requestWithURL:url_];
+//    [wkWebView loadRequest:request_];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-//    if (webView) {
-//        NSURL *url = [[NSURL alloc]initWithString:@""];
-//        NSURLRequest * request = [NSURLRequest requestWithURL:url];
-//        [webView loadRequest:request];
-//        [webView stopLoading];
-//        [webView setDelegate:nil];
-//        [webView removeFromSuperview];
-//        webView = nil;
-//    }
-    if (wkWebView) {
+    if (webView) {
         NSURL *url = [[NSURL alloc]initWithString:@""];
         NSURLRequest * request = [NSURLRequest requestWithURL:url];
-        [wkWebView loadRequest:request];
-        [wkWebView stopLoading];
-        [wkWebView removeFromSuperview];
-        wkWebView = nil;
+        [webView loadRequest:request];
+        [webView stopLoading];
+        [webView setDelegate:nil];
+        [webView removeFromSuperview];
+        webView = nil;
     }
+//    if (wkWebView) {
+//        NSURL *url = [[NSURL alloc]initWithString:@""];
+//        NSURLRequest * request = [NSURLRequest requestWithURL:url];
+//        [wkWebView loadRequest:request];
+//        [wkWebView stopLoading];
+//        [wkWebView removeFromSuperview];
+//        wkWebView = nil;
+//    }
 }
 
 -(void)webViewDidStartLoad:(UIWebView *)webView{
