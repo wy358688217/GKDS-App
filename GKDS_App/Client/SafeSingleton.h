@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface SafeSingleton : NSObject
-#define HMSingletonH(name) + (instancetype)shared##name;
+#define HMSingletonH(name) + (instancetype)get##name;
 
 #if __has_feature(objc_arc)
 
@@ -25,7 +25,7 @@ _instace = [super allocWithZone:zone]; \
 return _instace; \
 } \
 \
-+ (instancetype)shared##name \
++ (instancetype)get##name \
 { \
 static dispatch_once_t onceToken; \
 dispatch_once(&onceToken, ^{ \
@@ -37,7 +37,7 @@ return _instace; \
 - (id)copyWithZone:(NSZone *)zone \
 { \
 return _instace; \
-}
+}\
 
 #else
 
@@ -53,7 +53,7 @@ _instace = [super allocWithZone:zone]; \
 return _instace; \
 } \
 \
-+ (instancetype)shared##name \
++ (instancetype)get##name \
 { \
 static dispatch_once_t onceToken; \
 dispatch_once(&onceToken, ^{ \

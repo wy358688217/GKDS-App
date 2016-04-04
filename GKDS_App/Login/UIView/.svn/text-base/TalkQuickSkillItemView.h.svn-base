@@ -1,0 +1,38 @@
+//
+//  TalkQuickSkillItemView.h
+//  fTalk
+//
+//  Created by baifeng on 15/8/29.
+//
+//
+
+#import <UIKit/UIKit.h>
+#include "base0/platform.h"
+
+
+typedef enum TalkQuickSkillItemPriceType {
+    kTalkQuickSkillItemNone = 0,
+    kTalkQuickSkillItemGoods = 1,
+    kTalkQuickSkillItemCash = 2,
+    kTalkQuickSkillItemDiamond = 3,
+} TalkQuickSkillItemPriceType;
+
+@class TalkQuickSkillItemView;
+typedef void (^TalkQuickSkillItemClickFunc)(TalkQuickSkillItemView* sender);
+
+@interface TalkQuickSkillItemBlockConfig : NSObject
+@property (nonatomic,strong) TalkQuickSkillItemClickFunc skillFunc;
+@property (nonatomic,strong) TalkQuickSkillItemClickFunc priceSelected;
+@end
+
+@interface TalkQuickSkillItemView : UIView
+-(void)setPriceType:(TalkQuickSkillItemPriceType)kType;
+-(void)setStarValue:(NSInteger)iValue;
+-(void)setStarStyle:(UIImage*)imageGray withHighlightImage:(UIImage*)imageLight;
+-(void)setSkillId:(NSInteger)_skillId;
+- (void)setSkillUserID:(USERID)userid;
+//-(NSUInteger)getPayType;
+-(int)getSkillId;
+- (void)setIsUserSkillGroup:(BOOL)isSkillGroup;
+@property (nonatomic) TalkQuickSkillItemBlockConfig* blockConfig;
+@end

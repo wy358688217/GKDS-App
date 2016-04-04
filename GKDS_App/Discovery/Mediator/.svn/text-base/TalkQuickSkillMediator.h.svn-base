@@ -1,0 +1,16 @@
+//
+//  TalkQuickSkillMediator.h
+//  fTalk
+//
+//  Created by baifeng on 15/8/26.
+//
+//
+
+#import "Mediator.h"
+
+#define kTalkQuickSkillMediator @"kTalkQuickSkillMediator"
+#define kTalkQuickSkillViewShow @"kTalkQuickSkillViewShow"
+#define kTalkQuickSkillViewHide @"kTalkQuickSkillViewHide"
+#define kChallengeTimeUpdataMediator   @"kChallengeTimeUpdataMediator"    //跨服跳转刷新
+@interface TalkQuickSkillMediator : Mediator
+@end

@@ -1,0 +1,383 @@
+//
+//  TalkQuickSkillItemView.m
+//  fTalk
+//
+//  Created by baifeng on 15/8/29.
+//
+//
+
+#import "TalkQuickSkillItemView.h"
+#import "BFGroupView.h"
+#import "ITPropsCenter.h"
+#import "ITConfigs.h"
+#import "ITSkillUseDataInfo.h"
+#import "ITPropDataInfo.h"
+#import "ITSkillDataInfo.h"
+#import "NetworkStateProxy.h"
+#import "SimpleAPI.h"
+#import "ITAppConfigJson.h"
+#import "ChallengeUserProtoBuf.h"
+#import "ITUserSkillDataCenter.h"
+#import "UIColor+ITAdditions.h"
+#import "ChallengeTipsMediator.h"
+
+@implementation TalkQuickSkillItemBlockConfig
+@end
+
+
+@implementation TalkQuickSkillItemView
+{
+    int  mSkillId;
+    USERID  _miUserId;
+    
+    IBOutlet UIImageView *_iconImage;
+    IBOutlet UIImageView *_iconBottomImage;
+    IBOutlet UILabel *_skillNameLabel;
+    IBOutlet UIImageView *_achievementPlus;
+    IBOutlet UIImageView *_achievementNoPlus;
+    IBOutlet BFGroupView *_mpStarView;
+    
+    IBOutlet UIButton *_mpButtonOpen; // 技能开启
+    IBOutlet UIButton *_mpButtonAction;
+    IBOutlet UILabel *_mpLabelNoOpen;
+    
+    IBOutlet UIImageView *_mpWeakTips;
+    IBOutlet UILabel *_mpVariablePriceLabel;
+    IBOutlet UIView  *_priceView;
+    
+    IBOutlet UILabel *_descDownLable;
+    TalkQuickSkillItemPriceType _mkPriceType;
+    BOOL            _isUserSkillGroup;
+}
+
+- (void)dealloc
+{
+    SAFE_RELEASE(_iconImage);
+    SAFE_RELEASE(_skillNameLabel);
+    SAFE_RELEASE(_achievementPlus);
+    SAFE_RELEASE(_achievementNoPlus);
+    SAFE_RELEASE(_mpStarView);
+}
+
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self initMember];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self initMember];
+    }
+    return self;
+}
+
+-(void)initMember
+{
+    BFGroupAlignAttr attr = {
+        5,
+        {5.0f,6.0f},
+        {11.0f,10.0f},
+    };
+    
+    [_mpStarView resizeGroup:5 withAlignAttr:attr withCreater:^UIView *{
+        UIButton* button = [[UIButton alloc] init];
+        [button setUserInteractionEnabled:NO];
+        [button setFrame:CGRectMake(0.0f, 0.0f, 10.0f, 10.0f)];
+        return button;
+    }];
+    
+    _isUserSkillGroup = NO;
+    [self showLightAchievementPlus:NO];
+    [self setPriceType:kTalkQuickSkillItemNone];
+}
+
+- (void)setSkillUserID:(USERID)userid
+{
+    _miUserId = userid;
+}
+
+//挑战状态,这两个技能的小号显示1倍
+- (BOOL)isChallengeState:(int)skillId
+{
+    if (skillId == ENUM_SKILL_TYPE_CHOUBIANZI_ID || skillId == ENUM_SKILL_TYPE_TANNAOZI_ID){
+        BOOL isState =  [ChallengeNotifyInfoProtoBuf_MANAGE isChallengeState:_miUserId];
+        if (isState){
+            return YES;
+        }
+    }
+    return NO;
+}
+
+-(void)setPriceType:(TalkQuickSkillItemPriceType)kType
+{
+    NSInteger iPropRate = 1;
+    NSInteger iCashRate = 1;
+    NSInteger iDiamondRate = 1;
+    NSInteger _level = [SKILL_USER_CENTER getUserSkillTotalLevelsWithUserId:[ITConfigs shareConfigs].userid skillId:mSkillId];
+    
+    ITSkillUseDetailDataInfo * _selfSkillDetailItem = [[ITPropsCenter share] getSkillUseDetailInfoWithLevel:_level withSkillId:mSkillId];
+     
+    switch (kType) {
+        case kTalkQuickSkillItemGoods:
+        {
+            if (!_mpButtonOpen.hidden) {
+                return; 
+            }
+            
+            iPropRate = _selfSkillDetailItem.propNum;
+            if (_isUserSkillGroup){
+                iPropRate = _selfSkillDetailItem.miColony_prop_cost;
+            }
+            NSInteger propId = _selfSkillDetailItem.propId;
+            NSInteger count = [SKILL_USER_CENTER getUserPropCountWithUserId:[ITConfigs shareConfigs].userid propId:propId];
+
+            ITPropDetailDataInfo *_propDetailDataInfo = [[ITPropsCenter share]getPropDetailDataInfoWithPropId:_selfSkillDetailItem.propId];
+            NSString * _selfHasPropNumStr             = [NSString stringWithFormat:@"(拥有:%ld)",count];
+            NSString * _intactStr                     = [NSString stringWithFormat:@"%@x%ld%@",_propDetailDataInfo.mpName,(long)iPropRate,_selfHasPropNumStr];
+            NSMutableAttributedString * _strAtt       = (NSMutableAttributedString*)[SimpleAPI makeAttributedString:_intactStr regionString:_selfHasPropNumStr regionStringColor:[UIColor blackColor]];
+            for (int i = 0; i <= (_intactStr.length - _selfHasPropNumStr.length); i++) {
+                NSString * _s1 = [_intactStr substringWithRange:NSMakeRange(i, _selfHasPropNumStr.length)];
+                if ([_s1 isEqualToString:_selfHasPropNumStr]) {
+                    [_strAtt addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:8.f] range:NSMakeRange(i,_selfHasPropNumStr.length)];
+                }
+                _mpVariablePriceLabel.attributedText = _strAtt;
+                _mkPriceType = kTalkQuickSkillItemGoods;
+            }
+        }
+            break;
+        case kTalkQuickSkillItemCash:
+        {
+            if (!_mpButtonOpen.hidden) {
+                return;
+            }
+            if (_isUserSkillGroup){
+                _mpVariablePriceLabel.text = [NSString stringWithFormat:@"%d元宝x%ld",_selfSkillDetailItem.miColony_coin_cost,iCashRate];
+            }
+            else{
+                _mpVariablePriceLabel.text = [NSString stringWithFormat:@"%d元宝x%ld",_selfSkillDetailItem.coinCost,iCashRate];
+            }
+            _mkPriceType = kTalkQuickSkillItemCash;
+        }
+            break;
+        case kTalkQuickSkillItemDiamond:
+        {
+            if (_isUserSkillGroup){
+                _mpVariablePriceLabel.text = [NSString stringWithFormat:@"%d钻石x%ld",_selfSkillDetailItem.miColony_diamond_cost,iDiamondRate];
+            }
+            else{
+                _mpVariablePriceLabel.text = [NSString stringWithFormat:@"%d钻石x%ld",_selfSkillDetailItem.diamondCost,iDiamondRate];
+            }
+            _mkPriceType = kTalkQuickSkillItemDiamond;
+        }
+            break;
+        default:
+            break;
+    }
+    _mkPriceType = kType;
+}
+
+-(void)setStarStyle:(UIImage*)imageGray withHighlightImage:(UIImage*)imageLight
+{
+    for (NSInteger i=0; i < _mpStarView.getGroupSize; i++) {
+        UIButton* button = [_mpStarView getGroupItem:i];
+        [button setImage:imageGray forState:UIControlStateNormal];
+        [button setImage:imageLight forState:UIControlStateSelected];
+    }
+}
+
+-(void)setStarValue:(NSInteger)iValue
+{
+    // 显示iValue个亮色星星
+    for (NSInteger i=0; i < _mpStarView.getGroupSize; i++)
+    {
+        UIButton* button = [_mpStarView getGroupItem:i];
+        if (i < iValue)
+        {
+            if (![SKILL_USER_CENTER checkSkillItem:mSkillId userId:_miUserId])
+            {
+                button.selected = NO;
+            }
+            else
+            {
+                button.selected = YES;
+            }
+        }
+        else
+        {
+            button.selected = NO;
+        }
+    }
+}
+
+- (void)setIsUserSkillGroup:(BOOL)isSkillGroup
+{
+    _isUserSkillGroup = isSkillGroup;
+}
+
+- (void)showLightAchievementPlus:(BOOL)_bl
+{
+    [_achievementPlus setHidden:!_bl];
+}
+
+-(void)setSkillId:(NSInteger)_skillId
+{
+    mSkillId = _skillId;
+    ENUM_SKILL_STATE _skillState = [[ITPropsCenter share] getSkillStateWithSkillId:mSkillId];
+    ITSkillDetailDataInfo *_skillDetailInfo = [[ITPropsCenter share] getSkillDetailDataInfoWithSkillId:_skillId];
+    [_skillNameLabel setText:_skillDetailInfo.mpName];
+    _skillNameLabel.textColor = [UIColor colorByRGBString:@"303030"];
+
+    BOOL _canUse = [SKILL_USER_CENTER checkSkillItem:_skillId userId:_miUserId];
+    
+    NSInteger allLevel = [SKILL_USER_CENTER getUserSkillTotalLevelsWithUserId:[ITConfigs shareConfigs].userid skillId:mSkillId];
+
+    //可用,单体使用,或者 达到技能等级的群体使用
+    if (_canUse && (!_isUserSkillGroup || (_isUserSkillGroup && allLevel >= [[ITAppConfigJson configJson] appGroupSkillLevel])))
+    {
+        if (_skillId != ENUM_SKILL_TYPE_SHUNSHOU_ID || (!_isUserSkillGroup && _skillId == ENUM_SKILL_TYPE_SHUNSHOU_ID)){
+            if (_skillState == ENUM_SKILL_STATE_CLOSE || _skillState == ENUM_SKILL_STATE_CLOSE_CANOPEN) {
+                
+                [self showOpenButton:YES];
+                [_iconBottomImage setImage:[UIImage imageNamed:@"it_skill_list_locked_square.png"]];
+                [[ITPropsCenter share] setSkillImageWithSkillId:mSkillId withImageView:_iconImage];
+                return;
+            }
+            [self showOpenButton:NO];
+            
+            [_iconBottomImage setImage:[UIImage imageNamed:@"it_skill_list_upgrade_square.png"]];
+            [[ITPropsCenter share] setSkillImageWithSkillId:_skillId withImageView:_iconImage];
+        }
+        else{
+            _skillNameLabel.textColor = [UIColor colorByRGBString:@"9e9e9e"];
+            [_iconBottomImage setImage:[UIImage imageNamed:@"it_skill_list_locked_square.png"]];
+            [[ITPropsCenter share] setSkillImageWithSkillId:_skillId withImageView:_iconImage isLock:YES];
+            [_mpButtonOpen setHidden:YES];
+            [_mpButtonAction setHidden:YES];
+            [_mpLabelNoOpen setHidden:YES];
+            if (_skillState == ENUM_SKILL_STATE_CLOSE || _skillState == ENUM_SKILL_STATE_CLOSE_CANOPEN)
+            {
+                [_mpLabelNoOpen setHidden:NO];
+            }
+            [_mpStarView setHidden:NO];
+            [_priceView setHidden:YES];
+            
+            //如果是可以,但是被置灰则修改描述
+            if (_canUse){
+                _descDownLable.text = @"不能群攻";
+            }
+            else{
+                _descDownLable.text = @"跨服不可用";
+            }
+        }
+
+    }
+    else
+    {
+        _skillNameLabel.textColor = [UIColor colorByRGBString:@"9e9e9e"];
+        [_iconBottomImage setImage:[UIImage imageNamed:@"it_skill_list_locked_square.png"]];
+        [[ITPropsCenter share] setSkillImageWithSkillId:_skillId withImageView:_iconImage isLock:YES];
+        [_mpButtonOpen setHidden:YES];
+        [_mpButtonAction setHidden:YES];
+        [_mpLabelNoOpen setHidden:YES];
+        if (_skillState == ENUM_SKILL_STATE_CLOSE || _skillState == ENUM_SKILL_STATE_CLOSE_CANOPEN)
+        {
+            [_mpLabelNoOpen setHidden:NO];
+        }
+        [_mpStarView setHidden:NO];
+        [_priceView setHidden:YES];
+        
+        //如果是可以,但是被置灰则修改描述
+        if (_canUse){
+            _descDownLable.text = @"不能群攻";
+        }
+        else{
+            _descDownLable.text = @"跨服不可用";
+        }
+    }
+}
+
+-(void)showOpenButton:(BOOL)bValue
+{
+    [_mpButtonOpen setHidden:!bValue];
+    [_mpButtonAction setHidden:bValue];
+    [_mpLabelNoOpen setHidden:!bValue];
+    [_mpStarView setHidden:bValue];
+    [_priceView setHidden:NO];
+}
+
+- (NSUInteger)getPayType
+{
+    ENUM_SKILL_TYPE kType;
+    switch (_mkPriceType) {
+        case kTalkQuickSkillItemGoods:
+            kType = ENUM_SKILL_TYPE_ITEM;
+            break;
+        case kTalkQuickSkillItemCash:
+            kType = ENUM_SKILL_TYPE_CASH;
+            break;
+        case kTalkQuickSkillItemDiamond:
+            kType = ENUM_SKILL_TYPE_DIAMOND;
+            break;
+        default:
+            kType = ENUM_SKILL_TYPE_SYS_CHOOSE;
+            break;
+    }
+    return kType;
+}
+
+- (int)getSkillId
+{
+    return mSkillId;
+}
+
+#pragma mark 点击事件
+
+- (IBAction)onUseSkill:(id)sender
+{
+    BOOL same = [SKILL_USER_CENTER userSameServer:_miUserId];
+    if (!same)
+    {
+        BOOL isState =  [ChallengeNotifyInfoProtoBuf_MANAGE isChallengeState:_miUserId];
+        if (!isState)
+        {
+            [PPCLIENT sendNotification:kShowSenderChallengeTips body:@(_miUserId)];
+            return;
+        }
+    }
+
+    if (_mpButtonOpen.hidden==NO) {
+        // 未开启,无法使用
+        return;
+    }
+    if (self.blockConfig && self.blockConfig.skillFunc) {
+        self.blockConfig.skillFunc(self);
+    }
+}
+
+- (IBAction)onAdditionClick:(id)sender
+{
+    // 成就加成信息
+}
+
+- (IBAction)onOpenSkill:(id)sender
+{
+    // 开启技能
+    if (![NETWORK_STATE_PROXY isValidNetwork])
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"派派提示" message:@"当前网络不可用" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+        
+        return;
+    }
+    
+    if ([[ITPropsCenter share] sendHeroUpgradeSkillwithSkillId:mSkillId withPayType:ENUM_CASH_USE_TYPE_CASH withIsOpen:YES withItemId:0])
+    {
+        [APP_PROGRESS_HUD coverScreen:NO];
+        [APP_PROGRESS_HUD showCircleAndText:@"正在开启技能" withDuration:@5];
+    }
+}
+
+@end

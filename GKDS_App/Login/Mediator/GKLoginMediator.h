@@ -8,6 +8,12 @@
 
 #import "Mediator.h"
 
+#define kUserLoginWithOther             @"kUserLoginWithOther"
+#define kUserLoginWithQQ                @"kUserLoginWithQQ"
+#define kUserLoginWithSina              @"kUserLoginWithSina"
+#define kUserLoginWithWeiXin            @"kUserLoginWithWeiXin"
+#define kUserLoginWithCellPhoneNumber   @"kUserLoginWithCellPhoneNumber"
+
 @interface GKLoginMediator : Mediator
 
 @end

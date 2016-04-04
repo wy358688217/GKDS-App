@@ -1,0 +1,32 @@
+//
+//  TalkQuickSkillView.h
+//  fTalk
+//
+//  Created by baifeng on 15/8/29.
+//
+//
+
+#import <UIKit/UIKit.h>
+#import "DrawerViewProtocol.h"
+#import "googlepb.h"
+
+typedef enum TalkQuickSkillViewCurrency {
+    kTalkQuickSkillViewCurrencyNone = 0,
+    kTalkQuickSkillViewCurrencyItem = 1,
+    kTalkQuickSkillViewCurrencyCash = 2,
+    kTalkQuickSkillViewCurrencyDiamond = 3,
+    kTalkQuickSkillViewCurrencyUnknown,
+} TalkQuickSkillViewCurrency;
+
+typedef enum UserSkillSingleType{
+    UserSkillSingleType_None = 0,
+    UserSkillSingleType_Single = 1,
+    UserSkillSingleType_Group = 2,
+}UserSkillSingleType;
+
+@interface TalkQuickSkillView : UIView <DrawerViewProtocol>
+@property (nonatomic) NSNumber* nActionWho;
+@property (nonatomic) TalkQuickSkillViewCurrency kCurrency;
+- (void)setChallengeTime;
+- (void)setDefferentView;
+@end

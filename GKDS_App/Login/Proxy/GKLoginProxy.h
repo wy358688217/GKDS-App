@@ -11,7 +11,7 @@
 
 
 #define kGKLoginProxy @"kGKLoginProxy"
-#define GK_LOGIN_PROXY ((kGKLoginProxy*)PPCLIENT_PROXY(kGKLoginProxy))
+#define GK_LOGIN_PROXY ((GKLoginProxy*)PPCLIENT_PROXY(kGKLoginProxy))
 @interface GKLoginProxy : Proxy
 
 @end

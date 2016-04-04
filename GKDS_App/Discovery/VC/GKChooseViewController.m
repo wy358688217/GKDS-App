@@ -7,6 +7,9 @@
 //
 
 #import "GKChooseViewController.h"
+#import "PPClient.h"
+#import "GKNavigationControllerProxy.h"
+#import "GKRecommendViewController.h"
 
 @interface GKChooseViewController ()
 
@@ -17,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"选择兴趣";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +28,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark -- 点击事件
+- (IBAction)onPopRootVc:(id)sender {
+    [[GK_NAV_PROXY fetchCurTopViewController].navigationController popToRootViewControllerAnimated:YES];
 }
-*/
+
+- (IBAction)onPopNextVc:(id)sender {
+    GKRecommendViewController * vc = [[GKRecommendViewController alloc]init];
+    [[GK_NAV_PROXY fetchCurTopViewController].navigationController pushViewController:vc animated:YES];
+}
 
 @end

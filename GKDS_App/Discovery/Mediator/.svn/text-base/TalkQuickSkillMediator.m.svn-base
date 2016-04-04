@@ -1,0 +1,159 @@
+//
+//  TalkQuickSkillMediator.m
+//  fTalk
+//
+//  Created by baifeng on 15/8/26.
+//
+//
+
+#import "TalkQuickSkillMediator.h"
+#import "PPClient.h"
+#import "SystemField.h"
+#import "UserNavigationProxy.h"
+#import "DrawerMaster.h"
+#import "TalkQuickSkillView.h"
+#import "TalkRoomMediator.h"
+#import "ChatroomNewViewController.h"
+#import "TalkRoomData.h"
+#import "UserInfoCacheProxy.h"
+#import "ITUserSkillDataCenter.h"
+
+@implementation TalkQuickSkillMediator
+{
+    __weak DrawerMaster* _mpDrawerMaster;
+    __weak TalkQuickSkillView* _mpQuickSkillView;
+    NSInteger _miRoomID;
+}
+
+-(void)checkDrawerMaster
+{
+    if (_mpDrawerMaster==nil) {
+        PPClient* pClient = PPCLIENT;
+        if ([pClient hasMediator:kTalkRoomMediator]==NO) {
+            return;
+        }
+        TalkRoomMediator* mediator = (TalkRoomMediator*)PPCLIENT_MEDIATOR(kTalkRoomMediator);
+        ChatroomNewViewController* roomVC = (ChatroomNewViewController*)mediator.talkRoomVc;
+        if (roomVC) {
+            PPAssertKind(roomVC, ChatroomNewViewController, @"checkDrawerMaster 参数类型错误!");
+            _mpDrawerMaster = [roomVC getDrawerMaster];
+            _miRoomID = roomVC.infoConfig.iRoomID;
+        }
+    }
+}
+
+-(void)handleNotification:(id<INotification>)notification
+{
+    if (IsStringEqual(notification.name, kTalkQuickSkillViewShow)) {
+        
+        [self checkDrawerMaster];
+        
+        PPAssertKind(notification.body, NSNumber, @"kTalkSendGiftViewShow body 参数类型错误!");
+        NSNumber* nUserId = notification.body;
+        
+        DrawerMaster* master = _mpDrawerMaster;
+        
+        if (master==nil) {
+            return;
+        }
+        
+        if ([master viewInScreen:@"TalkQuickSkillView"]) {
+            // 快捷技能菜单已经在屏幕上,重用之
+            [_mpQuickSkillView setNActionWho:nUserId];
+            return;
+        }
+        
+        [_mpDrawerMaster showViewWithClassName:@"TalkQuickSkillView" withFinishCall:nil fromNib:YES cache:YES viewIniter:^(UIView *view) {
+            TalkQuickSkillView* initskillView = (TalkQuickSkillView *)view;
+            [initskillView setNActionWho:nUserId];
+        } viewUpdater:^(UIView *view) {
+            TalkQuickSkillView* updatakillView = (TalkQuickSkillView *)view;
+            [updatakillView setNActionWho:nUserId];
+        }];
+        _mpQuickSkillView = (TalkQuickSkillView*)_mpDrawerMaster.getVisibleView;
+        
+    }else if (IsStringEqual(notification.name, kChallengeTimeUpdataMediator)){
+        
+        //pk刷新
+        if (_mpQuickSkillView != nil) {
+            [_mpQuickSkillView setChallengeTime];
+        }
+        
+    }else if (IsStringEqual(notification.name, kTalkQuickSkillViewHide)) {
+        
+        [_mpDrawerMaster hide];
+        
+    }else if (IsStringEqual(notification.name, kServerIdCheckNotification)) {
+        
+        DrawerMaster* master = _mpDrawerMaster;
+        
+        if (master==nil) {
+            return;
+        }
+        
+        NSArray* array = notification.body;
+        PPAssertKind(array, NSArray, @"参数类型错误!");
+        
+        if ([array count] < 3) {
+            return;
+        }
+        
+        if ([master viewInScreen:@"TalkQuickSkillView"]) {
+            // 刷新
+            ITConfigs* config = [ITConfigs shareConfigs];
+            NSNumber* nValue = _mpQuickSkillView.nActionWho;
+            if (config.userid==[array[0] longLongValue] && [nValue longLongValue]==[array[1] longLongValue])
+            {
+                // 是自己和对方的id,则进行处理
+                [_mpQuickSkillView setNActionWho:nValue];
+                [master alignView:kDrawerMasterAlginTop];
+                return;
+            }
+        }
+        
+    }else if (IsStringEqual(notification.name, kPresentSkillChangeCostSpecial)) {
+        
+        NSNumber* nValue = notification.body;
+        PPAssertKind(nValue, NSNumber, @"参数类型错误!");
+        if (_mpQuickSkillView) {
+            NSInteger kValue = [nValue integerValue];
+            if (kValue==ENUM_SKILL_TYPE_DIAMOND) {
+                [_mpQuickSkillView setKCurrency:kTalkQuickSkillViewCurrencyDiamond];
+            }else if (kValue==ENUM_SKILL_TYPE_CASH) {
+                [_mpQuickSkillView setKCurrency:kTalkQuickSkillViewCurrencyCash];
+            }else if (kValue==ENUM_SKILL_TYPE_ITEM) {
+                [_mpQuickSkillView setKCurrency:kTalkQuickSkillViewCurrencyItem];
+            }
+        }
+        
+    }
+    else if (IsStringEqual(notification.name, KUserDifferServerStateNotification))
+    {
+        if (_mpQuickSkillView != nil) {
+            [_mpQuickSkillView setDefferentView];
+        }
+    }
+}
+
+-(NSArray *)listNotificationInterests
+{
+    return @[kTalkQuickSkillViewShow,
+             kTalkQuickSkillViewHide,
+             kChallengeTimeUpdataMediator,
+             kServerIdCheckNotification,
+             KUserDifferServerStateNotification,
+             //kPresentSkillChangeCostSpecial
+             ];
+}
+
+-(void)onRegister
+{
+    
+}
+
+-(void)onRemove
+{
+    
+}
+
+@end

@@ -1,5 +1,5 @@
 //
-//  GKSysytemModule.h
+//  GKSystemModule.h
 //  GKDS_App
 //
 //  Created by apple on 16/4/2.
@@ -8,6 +8,6 @@
 
 #import "Module.h"
 
-@interface GKSysytemModule : Module
+@interface GKSystemModule : Module
 
 @end

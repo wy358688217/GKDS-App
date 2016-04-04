@@ -1,0 +1,927 @@
+//
+//  TalkQuickSkillView.m
+//  fTalk
+//
+//  Created by baifeng on 15/8/29.
+//
+//
+
+#import "TalkQuickSkillView.h"
+#import "TalkQuickSkillItemView.h"
+#import "BFGroupView.h"
+#import "SimpleAPI.h"
+#import "ITPropsCenter.h"
+#import "ITConfigs.h"
+#import "ITSkillDataInfo.h"
+#import "PPClient.h"
+#import "AppProgressHUD.h"
+#import "AppField.h"
+#import "ITSkillUseDataInfo.h"
+#import "TalkRoomMediator.h"
+#import "BFObserver.h"
+#import "SystemField.h"
+#import "UserNavigationProxy.h"
+#import "const/ErrorCodeDef.h"
+#import "BFAlertView.h"
+#import "ITWebViewType.h"
+#import "PPVcManager.h"
+#import "ITWebViewTool.h"
+#import "TalkRoomProxy.h"
+#import "BFGroupMenu.h"
+#import "TalkSendGiftCurrencyView.h"
+#import "TalkSendGiftTipsView.h"
+#import "UIView+UIView_ITAdditions.h"
+#import "UserInfoCacheProxy.h"
+#import "ITAppConfigJson.h"
+#import "ChallengeUserProtoBuf.h"
+#import "googlepb.h"
+#import "TimeCountDownView.h"
+#import "ChallengeTipsMediator.h"
+#import "ITCashAlertView.h"
+#import "ITChallengeItem.h"
+#import "ChallengeUserProxy.h"
+#import "UIView+animation.h"
+#import "UserInfoProtoBuf.h"
+#import "BFMediator.h"
+#import "TalkQuickSkillMediator.h"
+#import "ITUserSkillDataCenter.h"
+#import "SkillGroupViewController.h"
+
+@implementation TalkQuickSkillView
+{
+    
+    IBOutlet UIImageView    *_mpImageUserHead;
+    IBOutlet UILabel        *_mpLabelUserName;
+    IBOutlet UILabel        *_descTextLable;
+    IBOutlet UIView         *_mpViewAgeBox;
+    IBOutlet UIImageView    *_mpSexBg;
+    IBOutlet UIImageView    *_mpSexIcon;
+    IBOutlet UILabel        *_mpLabelAge;
+    IBOutlet UILabel        *_mpLabelUserID;
+    IBOutlet UILabel        *_mpLabelLv;
+    
+    IBOutlet BFGroupView *_mpSkillBox;
+    IBOutlet UIView *_mpTipsBox;
+    IBOutlet UIView *_mpCostBox;
+    IBOutlet UILabel *_mpLabelCost;
+    
+    IBOutlet UILabel *_defferentDescLable;
+    IBOutlet UIButton *_challengeBtn;
+    IBOutlet TimeCountDownView *_challengeTimeView;
+    IBOutlet UIView            *_challengeView;
+    
+    IBOutlet UIView *_lineView;
+    IBOutlet UIView *_challengeWaiteView;
+    IBOutlet UILabel *_challengeWaiteLable;
+    IBOutlet UIImageView *_challengeWaiteImage;
+    
+    IBOutlet UIImageView *_singleSkillSelectImage;
+    IBOutlet UIImageView *_groupSkillSelectImage;
+    
+    UserSkillSingleType _userSkillSingleType;
+    int             _endTime;
+    int             _number;
+    int             _changeNum;
+    BOOL            _isTimeing;
+    BOOL            _isTimeChangeing;
+    
+    BFObserver * mBFObserver;
+    BFGroupMenu* _mpCostMenu;
+    BFMediator* _mpMediator;
+    
+    NSMutableArray* _mpStarGrayArray;
+    NSMutableArray* _mpStarLightArray;
+    
+    IBOutlet NSLayoutConstraint *_defferentViewHight;
+    IBOutlet NSLayoutConstraint *_defferentWidth;
+    
+    IBOutlet NSLayoutConstraint *_mpConstraintNameWidth;
+    IBOutlet NSLayoutConstraint *_mpConstraintIdWidth;
+    
+    IBOutlet NSLayoutConstraint *_lineHeight;
+}
+
+static TalkQuickSkillViewCurrency kLastCurrency = kTalkQuickSkillViewCurrencyNone;
+
+- (void)dealloc
+{
+    [mBFObserver shutDown];
+    [_mpStarGrayArray removeAllObjects];
+    [_mpStarLightArray removeAllObjects];
+}
+
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self initMember];
+}
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self initMember];
+    }
+    return self;
+}
+
+- (void)checkObserver
+{
+    if (mBFObserver == nil) {
+        mBFObserver = [[BFObserver alloc] init];
+        WEAK_BLOCK_OBJECT(self);
+        [mBFObserver powerUp:^(NSNotification *notification) {
+            BLOCK_OBJECT(self);
+            [weak_self handleNotification:notification];
+        } listInterests:@[KUseSkillResultNotification,KPropsNumChangeNotification,KSkillChangeNotification,kRefreshUiWithPropListNotification]];
+    }
+    
+    if (_mpMediator == nil){
+        _mpMediator = [[BFMediator alloc] init];
+        WEAK_BLOCK_OBJECT(self);
+        [_mpMediator powerUp:^(id<INotification> notification) {
+            BLOCK_OBJECT(self);
+            [weak_self handleNotification2:notification];
+        } listInterests:@[kUserFullInfoPackageUpdate]];
+    }
+
+    
+    UISwipeGestureRecognizer* swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onDrag:)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionDown;
+    [self addGestureRecognizer:swipeGesture];
+}
+
+-(void)onDrag:(id)sender
+{
+    [PPCLIENT sendNotification:kTalkRoomCloseQuickMenu];
+}
+
+- (void)handleNotification:(NSNotification* )notification
+{
+    if (IsStringEqual(notification.name,KUseSkillResultNotification)) {
+        
+        if ([TALK_ROOM_PROXY talkRoomVc]==nil) {
+            return; // 聊天室未显示在屏幕上,不处理这个消息
+        }
+        
+        NSDictionary *recvObject = notification.userInfo;
+        
+        if (recvObject && [recvObject isKindOfClass:[NSDictionary class]])
+        {
+            int type = [[recvObject objectForKey:KSkillType] integerValue];
+            int64_t errCode = [[recvObject objectForKey:kPropsCenterErrorCode]longLongValue];
+            NSString *errMsg = [recvObject objectForKey:KErrorMsg];
+            NSNumber *resultNum = [recvObject objectForKey:KSkillResult];
+            if (errCode == RET_ERR_UPGRADE_SKILL_ENOUGH_PREMISE_SKILL)
+            {
+                errMsg = @"技能开启条件不足";
+            }
+            if ([[recvObject objectForKey:KSkillType] integerValue] ==  ENUM_SKILL_OPERA_TYPE_SKILL_USE)
+            {
+                NSString *errMsg = [recvObject objectForKey:KErrorMsg];
+                NSNumber * resultNum = [recvObject objectForKey:KSkillResult];
+                if (resultNum.boolValue)
+                {
+                    [APP_PROGRESS_HUD showText:errMsg withDuration:@2];
+                    return;
+                }
+                [APP_PROGRESS_HUD showText:errMsg withDuration:@2];
+            }
+            else if (type == ENUM_SKILL_OPERA_TYPE_SKILL_UP)
+            {
+                if (resultNum.boolValue)
+                {
+                    [APP_PROGRESS_HUD showText:errMsg withDuration:@1.0f];
+                    return;
+                }
+                
+                BFAlertView* alertView = [[BFAlertView alloc] initWithTitle:@"提示" message:errMsg cancelButtonTitle:@"确定" otherButtonTitles:@"等级说明", nil];
+                UIViewController* topVC = [PPMM fetchCurTopViewController];
+                WEAK_BLOCK_OBJECT(topVC);
+                [alertView addNotificationWithName:@"1" withBlock:^(id<INotification>) {
+                    BLOCK_OBJECT(topVC);
+                    [ITWebViewTool gotoWebViewType:kWebViewUserLevelInfoUrlKey parentVC:weak_topVC];
+                }];
+                [alertView show];
+                
+                [APP_PROGRESS_HUD hide];
+            }
+        }
+
+    }else if (IsStringEqual(notification.name,KSkillChangeNotification)){
+        
+        [self loadSkillInfo];
+        
+    }else if (IsStringEqual(notification.name,KPropsNumChangeNotification)){
+        
+        [self loadSkillInfo];
+        
+    }else if (IsStringEqual(notification.name,kRefreshUiWithPropListNotification)){
+        
+        [self loadSkillInfo];
+        
+    }
+}
+
+-(void)handleNotification2:(id<INotification>)notification
+{
+    if (IsStringEqual(notification.name, kUserFullInfoPackageUpdate)) {
+        
+        // 数据更新,刷新视图
+        NSNumber* nValue = notification.body;
+        PPAssertKind(nValue, NSNumber, @"TalkUserInfoView kUserFullInfoPackageUpdate 参数类型错误!");
+        if (nValue.unsignedLongLongValue != _nActionWho.unsignedLongLongValue) {
+            return;
+        }
+        // 处理
+        [self setUserInfo];
+    }
+}
+
+
+-(void)initMember
+{
+    [self checkObserver];
+    
+    [[ITPropsCenter share] requestSkillInfo];
+    [[ITPropsCenter share] requestPropListInfoItem];
+    
+    CGRect frame = self.frame;
+    CGFloat fScale = SCREEN_WIDTH / 320.0f;
+    frame.size.width *= fScale;
+    //frame.size.height *= fScale;
+    [self setFrame:frame];
+    [self layoutIfNeeded];
+    
+    _userSkillSingleType = UserSkillSingleType_Single;
+    
+    _mpStarGrayArray = [[NSMutableArray alloc] initWithCapacity:10];
+    _mpStarLightArray = [[NSMutableArray alloc] initWithCapacity:10];
+    
+    NSString* grayFile =  @"it_skill_list_starview_lock_%d.png";
+    NSString* lightFile = @"it_skill_list_starview_%d.png";
+    
+    for (NSInteger i=0; i < 12; i++) {
+        [_mpStarGrayArray addObject:[UIImage imageNamed:[NSString stringWithFormat:grayFile,i+1]]];
+        [_mpStarLightArray addObject:[UIImage imageNamed:[NSString stringWithFormat:lightFile,i+1]]];
+    }
+    
+    BFGroupAlignAttr attr = {
+        3,
+        {53*fScale,42},
+        {106*fScale,84},
+    };
+    
+    __block BFGroupAlignAttr block_attr = attr;
+    [_mpSkillBox resizeGroup:6 withAlignAttr:attr withCreater:^UIView *{
+        TalkQuickSkillItemView* view = (TalkQuickSkillItemView*)[SimpleAPI loadXib:@"TalkQuickSkillItemView" withIndex:0];
+        [view setFrame:CGRectMake(0.0f, 0.0f, block_attr.offset.x, block_attr.offset.y)];
+        return view;
+    }];
+    
+    [_mpImageUserHead selfToRound];
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoinfo)];
+    _mpImageUserHead.userInteractionEnabled = YES;
+    [_mpImageUserHead addGestureRecognizer:tapGes];
+    _lineHeight.constant = 0.5;
+}
+
+- (void)gotoinfo
+{
+    USERID _miUserId = [_nActionWho longLongValue];
+
+    if (_miUserId > 0){
+        [USER_NAV_PROXY gotoUserInfoVC:_miUserId friendInfo:nil fromInvite:NO roomId:0];
+    }
+}
+
+- (void)checkSkillDisplayType
+{
+    USERID _miUserId = [_nActionWho longLongValue];
+
+    NSMutableArray * _dataArray = [[ITPropsCenter share] getNewSortedSkillDataListWithUserID:[ITConfigs shareConfigs].userid];
+    if (![SKILL_USER_CENTER userSameServer:_miUserId] || [SKILL_USER_CENTER userGuestSame:_miUserId])
+    {
+        _dataArray = [[ITPropsCenter share] getChallengeSkillDataListWithUserID:[ITConfigs shareConfigs].userid];
+    }
+
+    ITPropsCenter * _propsCenter = [ITPropsCenter share];
+    ITConfigs * _configsCenter = [ITConfigs shareConfigs];
+    
+    int _index = 0;
+    for (int i = 0; i < _dataArray.count; i++) {
+        ITSkillDetailDataInfo *_dataInfo = [_dataArray objectAtIndex:i];
+        NSInteger skillId = _dataInfo.miId;
+
+        NSInteger _level = [SKILL_USER_CENTER getUserSkillLevelWithUserId:_configsCenter.userid skillId:skillId];
+
+        ITSkillUseDetailDataInfo * _selfSkillDetailItem = [_propsCenter getSkillUseDetailInfoWithLevel:_level withSkillId:skillId];
+        
+        NSInteger propId = _selfSkillDetailItem.propId;
+        NSInteger count = [SKILL_USER_CENTER getUserPropCountWithUserId:[ITConfigs shareConfigs].userid propId:propId];
+
+        if (count < _selfSkillDetailItem.propNum || ![SKILL_USER_CENTER checkSkillItem:skillId userId:_miUserId]) {
+            _index++;
+        }
+    }
+    
+    if (_index < _dataArray.count) {
+        [self setKCurrency:kTalkQuickSkillViewCurrencyItem];
+    }else{
+        int _minCoinCost = 0;
+        int _minDiamondCost = 0;
+        for (int i = 0; i < _dataArray.count; i++) {
+            ITSkillDetailDataInfo *_dataInfo = [_dataArray objectAtIndex:i];
+            NSInteger skillId = _dataInfo.miId;
+            //可使用的技能
+            if ([SKILL_USER_CENTER checkSkillItem:skillId userId:_miUserId]){
+                NSInteger _level = [SKILL_USER_CENTER getUserSkillLevelWithUserId:_configsCenter.userid skillId:skillId];
+                
+                ITSkillUseDetailDataInfo * _selfSkillDetailItem = [_propsCenter getSkillUseDetailInfoWithLevel:_level withSkillId:skillId];
+                if (_minCoinCost == 0) {
+                    _minCoinCost = _selfSkillDetailItem.coinCost;
+                }else if (_minCoinCost > _selfSkillDetailItem.coinCost) {
+                    _minCoinCost = _selfSkillDetailItem.coinCost;
+                }
+                if (_minDiamondCost == 0) {
+                    _minDiamondCost = _selfSkillDetailItem.diamondCost;
+                }else if (_minDiamondCost > _selfSkillDetailItem.diamondCost) {
+                    _minDiamondCost = _selfSkillDetailItem.diamondCost;
+                }
+            }
+        }
+        if (_configsCenter.cash >= _minCoinCost) {
+            // 元宝足够
+            [self setKCurrency:kTalkQuickSkillViewCurrencyCash];
+        }else if (_configsCenter.diamond >= _minDiamondCost) {
+            // 钻石足够
+            [self setKCurrency:kTalkQuickSkillViewCurrencyDiamond];
+        }else {
+            // 用户等级不大于10级默认元宝,否则默认钻石
+            UserAttributeNotify* attr = (UserAttributeNotify*)[UserAttributeNotify getPackage:kUserAttributeNotify];
+            HeroAttribute::HeroSelfAttributeID const& info = *[attr getAttribute];
+            if (info.level().level() <= 10) {
+                [self setKCurrency:kTalkQuickSkillViewCurrencyItem];
+            }else {
+                [self setKCurrency:kTalkQuickSkillViewCurrencyDiamond];
+            }
+        }
+    }
+}
+
+-(void)loadSkillInfo
+{
+    NSMutableArray * _dataArray = [[ITPropsCenter share] getNewSortedSkillDataListWithUserID:[ITConfigs shareConfigs].userid];
+    USERID _userId = [_nActionWho longLongValue];
+    if (![SKILL_USER_CENTER userSameServer:_userId] || [SKILL_USER_CENTER userGuestSame:_userId])
+    {
+        _dataArray = [[ITPropsCenter share] getChallengeSkillDataListWithUserID:[ITConfigs shareConfigs].userid];
+    }
+
+//    BOOL isState =  [ChallengeNotifyInfoProtoBuf_MANAGE isChallengeState:_userId];
+//    if (isState)
+//    {
+//        _dataArray = [[ITPropsCenter share] getChallengeSkillDataListWithUserID:[ITConfigs shareConfigs].userid];
+//    }
+
+    if (_dataArray.count < _mpSkillBox.getGroupSize) {
+        return;
+    }
+    
+    for (NSInteger i=0; i < _mpSkillBox.getGroupSize; i++) {
+        TalkQuickSkillItemView* view = [_mpSkillBox getGroupItem:i];
+        ITSkillDetailDataInfo *_dataInfo = [_dataArray objectAtIndex:i];
+        
+        USERID _userId = [_nActionWho longLongValue];
+        [view setSkillUserID:_userId];
+        if (_userSkillSingleType == UserSkillSingleType_Group){
+            [view setIsUserSkillGroup:YES];
+        }
+        else{
+            [view setIsUserSkillGroup:NO];
+        }
+        NSInteger skillId = _dataInfo.miId;
+        [view setSkillId:skillId];
+        [view setPriceType:(TalkQuickSkillItemPriceType)self.kCurrency];
+        
+        // 设置星星样式
+        NSInteger iSkillLv = [SKILL_USER_CENTER getUserSkillLevelWithUserId:[ITConfigs shareConfigs].userid skillId:skillId];
+        // 设置星星等级
+        NSInteger iStarLv = [SKILL_USER_CENTER getUserSkillStarNumWithUserId:[ITConfigs shareConfigs].userid skillId:skillId];;
+        
+        
+        int skiiLevel = 1;
+        if (iSkillLv>0){
+            skiiLevel =  (iSkillLv-1)*5+iStarLv;
+        }
+
+        if (iSkillLv > 0 && iSkillLv <= 12) {
+            UIImage* starGray = _mpStarGrayArray[iSkillLv-1];
+            UIImage* starLight = _mpStarLightArray[iSkillLv-1];
+            [view setStarStyle:starGray withHighlightImage:starLight];
+        }
+        
+        [view setStarValue:iStarLv];
+        
+        if (view.blockConfig == nil) {
+            // 处理技能事件
+            TalkQuickSkillItemBlockConfig* blockConfig = [[TalkQuickSkillItemBlockConfig alloc] init];
+            
+            WEAK_BLOCK_OBJECT(self);
+            blockConfig.skillFunc = ^(TalkQuickSkillItemView* sender) {
+                BLOCK_OBJECT(self);
+                [weak_self onUseSkill:sender];
+            };
+            blockConfig.priceSelected = ^(TalkQuickSkillItemView* sender) {
+                BLOCK_OBJECT(self);
+                [weak_self onSelectedPriceType:sender];
+            };
+            
+            [view setBlockConfig:blockConfig];
+        }
+    }
+    
+    //群体技能选项
+    [_singleSkillSelectImage setHidden:YES];
+    [_groupSkillSelectImage setHidden:YES];
+    if (_userSkillSingleType == UserSkillSingleType_Single){
+        [_singleSkillSelectImage setHidden:NO];
+    }
+    else if (_userSkillSingleType == UserSkillSingleType_Group){
+        [_groupSkillSelectImage setHidden:NO];
+    }
+}
+
+-(BOOL)differentServer:(uint64)iPeerID
+{
+    BOOL same = [SKILL_USER_CENTER userSameServer:iPeerID];
+    return !same;
+}
+
+-(void)setUserInfo
+{
+    USERID _miUserId = [_nActionWho longLongValue];
+    
+    UserFullInfoPackage* _package = (UserFullInfoPackage*)[ServerProtoBufPackage getPackage:kUserFullInfoPackage];
+    if ([_package hasUserInfo:_miUserId]==NO) {
+        [_package requestWithUserID:_miUserId];
+    }
+    
+    BaseStruct::ProtoUserFullInfo const& fullinfo = *[_package getUserInfo:_miUserId];
+    BaseStruct::ProtoUserBaseInfo const& baseinfo = fullinfo.base();
+    
+    // 头像
+    [SimpleAPI setUserHeadImage:_mpImageUserHead withUserID:_miUserId withIconToken:baseinfo.icontoken() withDefaultImage:[UIImage imageNamed:@"it_contact_default_header_icon.png"]];
+    
+    //====================================================================
+    // 计算年龄
+    NSInteger curYear = [NSDate getCurrentYear];
+    NSInteger birthday = baseinfo.birthday();
+    NSInteger age = curYear - birthday/10000.0f + 1;
+    age = age < 0 ? 0 : age;
+    
+    //====================================================================
+    // 名字,性别,等级
+    [self setUserName:[NSString stringWithUTF8String:baseinfo.nickname().c_str()]];
+    [self setSex:baseinfo.sex() withAge:age];
+    [self setLv:baseinfo.level()];
+    
+    //====================================================================
+    // 用户id
+    NSString* szUserID = [NSString stringWithFormat:@"ID:%qu",_miUserId];
+    [_mpLabelUserID setText:szUserID];
+    CGSize idSize = [szUserID sizeWithFont:_mpLabelUserID.font constrainedToSize:CGSizeMake(100.0f, 10.0f)];
+    _mpConstraintIdWidth.constant = idSize.width+4.0f;
+}
+
+-(void)setSex:(NSInteger)iSex withAge:(NSInteger)iAge
+{
+    [_mpLabelAge setText:@(iAge).stringValue];
+    if (iSex) {
+        [_mpSexBg setImage:[UIImage imageNamed:@"it_talk_quick_userinfo_11.png"]];
+        [_mpSexIcon setImage:[UIImage imageNamed:@"it_userInfo_boy_icon.png"]];
+        _descTextLable.text = @"(对他使用技能)";
+    }else {
+        [_mpSexBg setImage:[UIImage imageNamed:@"it_talk_quick_userinfo_12.png"]];
+        [_mpSexIcon setImage:[UIImage imageNamed:@"it_userInfo_girl_icon.png"]];
+        _descTextLable.text = @"(对她使用技能)";
+    }
+}
+
+-(void)setLv:(NSInteger)iLv
+{
+    NSString* text = [NSString stringWithFormat:@"LV%@",@(iLv)];
+    [_mpLabelLv setText:text];
+}
+
+-(void)setUserName:(NSString*)szName
+{
+    CGSize size = [szName sizeWithFont:_mpLabelUserName.font constrainedToSize:CGSizeMake(160.0f, 20.0f)];
+    UIColor* color = UIColorFromRGB(0x303030);
+    [_mpLabelUserName setAttributedText:[SimpleAPI makeAttributedString:szName regionString:szName regionStringColor:color]];
+    [_mpLabelUserName setFrame_width:size.width + 2.0];
+    _mpConstraintNameWidth.constant = size.width+2.0f;
+}
+
+-(void)setNActionWho:(NSNumber *)nActionWho
+{
+    _nActionWho = nActionWho;
+
+    [self loadSkillInfo];
+    //基本信息
+    [self setUserInfo];
+    //同异服视图
+    [self setDefferentView];
+    //设置pk视图
+    [self setChallengeTime];
+}
+
+- (void)setDefferentView
+{
+    BOOL isDefferentServer = [self differentServer:_nActionWho.unsignedLongLongValue];
+    _defferentDescLable.text = [[ITAppConfigJson configJson] appConfigsCrossServer_skillDesc];
+    
+    //控制视图宽度
+    int maxWedith = SCREEN_WIDTH - 116;
+    CGSize defftLabelSize   = [SimpleAPI getContentSize:_defferentDescLable andSize:CGSizeMake(maxWedith, 32)];
+    _defferentWidth.constant = defftLabelSize.width;
+    [_defferentDescLable setFrame_width:defftLabelSize.width];
+    
+    [_mpTipsBox setHidden:!isDefferentServer];
+    if (isDefferentServer){
+        _defferentViewHight.constant = 32;
+        [self setFrame_height:302];
+    }
+    else{
+        _defferentViewHight.constant = 0;
+        [self setFrame_height:270];
+    }
+    [self layoutIfNeeded];
+}
+
+- (IBAction)clickSkillIntroduce:(id)sender
+{
+    [USER_NAV_PROXY gotoWebSkillServerInfo];
+}
+
+//跨服挑战的倒计时
+- (void)setChallengeTime
+{
+    USERID _miUserId = [_nActionWho longLongValue];
+    //等待接受挑战的时间
+    int stateTime = [ChallengeSenderProtoBuf_MANAGE getRequestTime:_miUserId];
+    int timespace =  stateTime - CSystem::GetTime();
+    //挑战时间
+    ITChallengeItem *challengeItem = [ChallengeUserProxyPROXY getChallengeItemWithPeerID:_miUserId];
+
+    if (challengeItem && challengeItem.limitTime - CSystem::getServerTime() > 0){
+        
+        [_challengeView setHidden:NO];
+        [_challengeWaiteView setHidden:YES];
+        [_challengeBtn setHidden:YES];
+        _changeNum = challengeItem.limitTime - CSystem::getServerTime();
+        [_challengeTimeView setTextLableColor: UIColorFromRGB(0x00aeef) textFont:[UIFont systemFontOfSize:10.0]];
+        [self challengeTimeChanged];
+    }
+    else if (timespace > 0){
+        [_challengeView setHidden:YES];
+        [_challengeWaiteView setHidden:NO];
+        [_challengeBtn setHidden:YES];
+        _number = timespace;
+        [self setChallengeWaiteAnimation:timespace];
+    }
+    else{
+        [_challengeWaiteView setHidden:YES];
+        [_challengeBtn setHidden:NO];
+        _isTimeing = NO;
+        _isTimeChangeing = NO;
+        _number = 0;
+        _changeNum = 0;
+    }
+}
+
+//等待转圈倒计时
+- (void)setChallengeWaiteAnimation:(int)waiteTime
+{
+    [_challengeWaiteImage.layer removeAllAnimations];
+    
+    CABasicAnimation* rotationAnimation;
+    CAMediaTimingFunction *timing = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.timingFunction = timing;
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * waiteTime ];
+    rotationAnimation.duration = waiteTime;
+    rotationAnimation.cumulative = YES;
+    rotationAnimation.repeatCount = 0;
+    [_challengeWaiteImage.layer addAnimation:rotationAnimation forKey:@"WaiteImage"];
+    [self setChallengeWaiteTime:waiteTime];
+}
+
+- (void)setChallengeWaiteTime:(int)waiteTime
+{
+    if (_number <= 0){
+        if (!_isTimeChangeing) {
+            [_challengeView setHidden:YES];
+            [_challengeBtn setHidden:NO];
+        }
+        [_challengeWaiteView setHidden:YES];
+        _isTimeing = NO;
+        return;
+    }
+    _challengeWaiteLable.text = [NSString stringWithFormat:@"%d",waiteTime];
+    
+    if (_isTimeing){
+        return;
+    }
+    _isTimeing = YES;
+    
+    [UIView animateWithDuration:1
+                          delay:0
+                        options:UIViewAnimationCurveEaseOut
+                     animations:^{
+                         _challengeWaiteLable.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.01, 1.01);
+                     }
+                     completion:^(BOOL finished) {
+                         _number--;
+                         _isTimeing = NO;
+                         [self setChallengeWaiteTime:_number];
+                         _challengeWaiteLable.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, 1);
+                     }
+     
+     ];
+}
+
+//倒计时
+- (void)challengeTimeChanged
+{
+    if (_changeNum <= 0){
+        if (!_isTimeing){
+            [_challengeWaiteView setHidden:YES];
+            [_challengeBtn setHidden:NO];
+        }
+        [_challengeView setHidden:YES];
+        _isTimeChangeing = NO;
+        return;
+    }
+    [_challengeTimeView setTimeCount:_changeNum];
+    
+    if (_isTimeChangeing){
+        return;
+    }
+    _isTimeChangeing = YES;
+    
+    [UIView animateWithDuration:1
+                          delay:0
+                        options:UIViewAnimationCurveEaseOut
+                     animations:^{
+                         _challengeTimeView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.01, 1.01);
+                     }
+                     completion:^(BOOL finished) {
+                         _changeNum--;
+                         _isTimeChangeing = NO;
+                         [self challengeTimeChanged];
+                         _challengeTimeView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, 1);
+                     }
+     
+     ];
+    
+}
+
+//跨服挑战
+- (IBAction)clickChallengeBtn:(id)sender
+{
+    [PPCLIENT sendNotification:kShowSenderChallengeTips body:_nActionWho];
+}
+
+
+-(void)onSelectedPriceType:(TalkQuickSkillItemView*)sender
+{
+    
+}
+
+- (NSUInteger)getPayType
+{
+    ENUM_SKILL_TYPE kType;
+    switch (self.kCurrency) {
+        case kTalkQuickSkillViewCurrencyItem:
+            kType = ENUM_SKILL_TYPE_ITEM;
+            break;
+        case kTalkQuickSkillViewCurrencyCash:
+            kType = ENUM_SKILL_TYPE_CASH;
+            break;
+        case kTalkQuickSkillViewCurrencyDiamond:
+            kType = ENUM_SKILL_TYPE_DIAMOND;
+            break;
+        default:
+            kType = ENUM_SKILL_TYPE_SYS_CHOOSE;
+            break;
+    }
+    return kType;
+}
+
+//使用技能
+-(void)onUseSkill:(TalkQuickSkillItemView*)sender
+{
+    ENUM_SKILL_TYPE _type = (ENUM_SKILL_TYPE)[self getPayType];
+    int _skillId = [sender getSkillId];
+    if (_type == ENUM_SKILL_TYPE_SYS_CHOOSE) {
+        [APP_PROGRESS_HUD showText:@"请选择支付类型" withDuration:@2];
+        return;
+    }
+    
+    USERID _userId = [_nActionWho longLongValue];
+    BOOL bDifferent = [self differentServer:_userId];
+    ITSkillDetailDataInfo * skillInfoDetailItem = [[ITPropsCenter share] getSkillDetailDataInfoWithSkillId:_skillId];
+    
+    //群体技能的话,跳转选人
+    NSInteger level = [SKILL_USER_CENTER getUserSkillTotalLevelsWithUserId:[ITConfigs shareConfigs].userid skillId:_skillId];
+    if (level >= [[ITAppConfigJson configJson] appChooseGroupSkillLevel] && (_userSkillSingleType == UserSkillSingleType_Group)){
+        SkillGroupViewController *groupVC = [[SkillGroupViewController alloc]init];
+        [groupVC setDefaultUserId:_userId skillId:skillInfoDetailItem.miId costType:_type isDifferServer:bDifferent];
+        [[PPMM fetchCurTopViewController].navigationController pushViewController:groupVC animated:YES];
+        return;
+    }
+    
+    if (skillInfoDetailItem && _userId && _userId != 0)
+    {
+        [[ITPropsCenter share] userSkill:_skillId cashType:_type userID:_userId differServer:bDifferent isSingle:!(_userSkillSingleType == UserSkillSingleType_Group) otherList:nil];
+    }
+}
+
+- (IBAction)onPayment:(id)sender
+{
+    [USER_NAV_PROXY gotoPaymentModule];
+}
+
+- (IBAction)onCostSelect:(id)sender
+{
+    [_mpCostMenu setHidden:!_mpCostMenu.hidden];
+}
+
+- (IBAction)clickClose:(id)sender
+{
+    [PPCLIENT sendNotification:kTalkQuickSkillViewHide];
+}
+
+//单体技能
+- (IBAction)clickSingleSkill:(id)sender {
+    if (_userSkillSingleType == UserSkillSingleType_None ||
+        _userSkillSingleType == UserSkillSingleType_Group){
+        _userSkillSingleType = UserSkillSingleType_Single;
+        [_singleSkillSelectImage setHidden:NO];
+        [_groupSkillSelectImage setHidden:YES];
+    }
+    [self loadSkillInfo];
+}
+
+//群体技能. 先判断是否有可使用群体来判断是否能点,然后再判断时候有可选人群体做选人跳转
+- (IBAction)clickGroupSkill:(id)sender {
+    //判断有群体,过滤掉顺手牵羊
+    BOOL isCan = NO;
+    for (int i = ENUM_SKILL_TYPE_PIAOPIAOQUAN_ID; i <= ENUM_SKILL_TYPE_DAMEME_ID;i++)
+    {
+        NSInteger level = [SKILL_USER_CENTER getUserSkillTotalLevelsWithUserId:[ITConfigs shareConfigs].userid skillId:i];
+        if (level >= [[ITAppConfigJson configJson] appGroupSkillLevel] &&
+            i != ENUM_SKILL_TYPE_SHUNSHOU_ID){
+            isCan = YES;
+            break;
+        }
+    }
+    if (isCan == NO){
+        [APP_PROGRESS_HUD showMoreText:@"技能达到51级才能群体施放" touchEnable:YES withDuration:@(1)];
+        return;
+    }
+    
+    //跨服状态也不能群攻
+    
+    
+    if (_userSkillSingleType == UserSkillSingleType_None ||
+        _userSkillSingleType == UserSkillSingleType_Single){
+        _userSkillSingleType = UserSkillSingleType_Group;
+        [_singleSkillSelectImage setHidden:YES];
+        [_groupSkillSelectImage setHidden:NO];
+    }
+    [self loadSkillInfo];
+}
+
+-(void)setKCurrency:(TalkQuickSkillViewCurrency)kCurrency
+{
+    kLastCurrency = kCurrency;
+    _kCurrency = kCurrency;
+    NSArray* field = @[@"无",@"道具",@"元宝",@"钻石",@"无"];
+    NSString* text = [NSString stringWithFormat:@"消耗:%@",field[kCurrency]];
+    UIColor* color = UIColorFromRGB(0x5c5c5c);
+    [_mpLabelCost setAttributedText:[SimpleAPI makeAttributedString:text regionString:field[kCurrency] regionStringColor:color]];
+    
+    if (_mpCostMenu.getGroupSize >= 2) {
+        NSInteger kTag0 = 0;
+        NSInteger kTag1 = 0;
+        switch (kCurrency) {
+            case kTalkQuickSkillViewCurrencyItem:
+                kTag0 = kTalkQuickSkillViewCurrencyCash;
+                kTag1 = kTalkQuickSkillViewCurrencyDiamond;
+                break;
+            case kTalkQuickSkillViewCurrencyCash:
+                kTag0 = kTalkQuickSkillViewCurrencyItem;
+                kTag1 = kTalkQuickSkillViewCurrencyDiamond;
+                break;
+            case kTalkQuickSkillViewCurrencyDiamond:
+                kTag0 = kTalkQuickSkillViewCurrencyCash;
+                kTag1 = kTalkQuickSkillViewCurrencyItem;
+                break;
+            default:
+                break;
+        }
+        TalkSendGiftCurrencyView* view0 = [_mpCostMenu getGroupItem:0];
+        [view0 setTag:kTag0];
+        [view0 setTitle:field[kTag0]];
+        TalkSendGiftCurrencyView* view1 = [_mpCostMenu getGroupItem:1];
+        [view1 setTag:kTag1];
+        [view1 setTitle:field[kTag1]];
+    }
+    
+    [_mpCostMenu setHidden:YES];
+    
+    for (NSInteger i=0; i < _mpSkillBox.getGroupSize; i++) {
+        TalkQuickSkillItemView* view = [_mpSkillBox getGroupItem:i];
+        [view setPriceType:(TalkQuickSkillItemPriceType)kCurrency];
+    }
+    
+    PPAssert(kCurrency!=kTalkQuickSkillViewCurrencyUnknown, @"参数错误!");
+}
+
+-(void)buildCostMenu
+{
+    if (_mpCostMenu) {
+        return;
+    }
+    
+    BFGroupMenu* menu = [[BFGroupMenu alloc] init];
+    
+    UIImage* imageImp = [UIImage imageNamed:@"it_talk_quick_sendgift_13.png"];
+    UIImage * image = [imageImp stretchableImageWithLeftCapWidth:20 topCapHeight:20];
+    [menu initWithCreater:^UIView *{
+        TalkSendGiftCurrencyView* view = (TalkSendGiftCurrencyView*)[SimpleAPI loadXib:@"TalkSendGiftCurrencyView" withIndex:0];
+        return view;
+    } itemSize:CGSizeMake(66, 32) itemCount:2 bgImage:image];
+    
+    BFGroupView* groupView = menu.getGroupView;
+    CGRect frame = groupView.frame;
+    frame.size.width += 10.0f;
+    frame.size.height += 16.0f;
+    frame.origin.x = frame.origin.y = 0.0f;
+    [menu setFrame:frame];
+    [groupView setCenter:CGPointMake(frame.size.width*0.5f, frame.size.height*0.46f)];
+    
+    for (NSInteger i=0; i < menu.getGroupSize; i++) {
+        TalkSendGiftCurrencyView* view = [menu getGroupItem:i];
+        if (i+1==menu.getGroupSize) {
+            [view showLine:NO];
+        }
+        WEAK_BLOCK_OBJECT(self);
+        [view setClickFunc:^(TalkSendGiftCurrencyView *sender) {
+            BLOCK_OBJECT(self);
+            [weak_self setKCurrency:(TalkQuickSkillViewCurrency)sender.tag];
+            [weak_self loadSkillInfo];
+        }];
+    }
+    
+    CGRect mark = [self convertRect:_mpCostBox.frame fromView:_mpCostBox.superview];
+    CGSize const& markSize = mark.size;
+    CGSize const& menuSize = menu.frame.size;
+    
+    [self addSubview:(_mpCostMenu = menu)];
+    [_mpCostMenu setCenter:CGPointMake( mark.origin.x+markSize.width*0.5f , mark.origin.y-menuSize.height*0.7f )];
+    [_mpCostMenu setHidden:YES];
+}
+
+-(void)drawerViewWillShow
+{
+    [_mpCostMenu setHidden:YES];
+}
+
+-(void)drawerViewDidShow
+{
+    //每次打开都恢复到单体
+    _userSkillSingleType = UserSkillSingleType_Single;
+    [self buildCostMenu];
+    [self checkSkillDisplayType];
+    [self loadSkillInfo];
+}
+
+-(void)drawerViewWillHide
+{
+    
+}
+
+-(void)drawerViewDidHide
+{
+    
+}
+
+@end

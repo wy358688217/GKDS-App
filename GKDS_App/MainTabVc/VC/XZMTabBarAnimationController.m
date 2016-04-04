@@ -1,12 +1,6 @@
 
-//
-//  Created by 谢忠敏 on 15/6/27.
-//  Copyright (c) 2015年 谢忠敏. All rights reserved.
-//
-
 #import "XZMTabBarAnimationController.h"
 #import "XZMTabbarExtension.h"
-#import "ViewController.h"
 
 
 @interface XZMTabBarAnimationController ()<XZMTabbarExtensionDelegate>
@@ -28,22 +22,24 @@
     [super viewDidLoad];
     
     /** 添加子控制器 */
-    ViewController *hallVC = [[ViewController alloc] init];
-    [self tabBarChildViewController:hallVC norImage:[UIImage imageNamed:@"tabBar_0"] selImage:[UIImage imageNamed:@"tabBar_0_on"]];
+    UIViewController *hallVC = [[UIViewController alloc] init];
+    hallVC.view.backgroundColor = [UIColor whiteColor];
+    [self tabBarChildViewController:hallVC norImage:[UIImage imageNamed:@"tabBar_0.png"] selImage:[UIImage imageNamed:@"tabBar_0_on.png"]];
     
-    ViewController *arenaVC = [[ViewController alloc] init];
-    [self tabBarChildViewController:arenaVC norImage:[UIImage imageNamed:@"tabBar_1"] selImage:[UIImage imageNamed:@"tabBar_1_on"]];
+    UIViewController *arenaVC = [[UIViewController alloc] init];
+    arenaVC.view.backgroundColor = [UIColor redColor];
+    [self tabBarChildViewController:arenaVC norImage:[UIImage imageNamed:@"tabBar_1.png"] selImage:[UIImage imageNamed:@"tabBar_1_on.png"]];
     
-    ViewController *discoverVC = [[ViewController alloc] init];
-    [self tabBarChildViewController:discoverVC norImage:[UIImage imageNamed:@"tabBar_2"] selImage:[UIImage imageNamed:@"tabBar_2_on"]];
+    UIViewController *discoverVC = [[UIViewController alloc] init];
+    discoverVC.view.backgroundColor = [UIColor greenColor];
+    [self tabBarChildViewController:discoverVC norImage:[UIImage imageNamed:@"tabBar_2.png"] selImage:[UIImage imageNamed:@"tabBar_2_on.png"]];
     
-    ViewController *historyVC = [[ViewController alloc] init];
-    [self tabBarChildViewController:historyVC norImage:[UIImage imageNamed:@"tabBar_3"] selImage:[UIImage imageNamed:@"tabBar_3_on"]];
+    UIViewController *historyVC = [[UIViewController alloc] init];
+    historyVC.view.backgroundColor = [UIColor yellowColor];
+    [self tabBarChildViewController:historyVC norImage:[UIImage imageNamed:@"tabBar_3.png"] selImage:[UIImage imageNamed:@"tabBar_3_on.png"]];
     
     /** 自定义tabbar */
     [self setTatBar];
-    
-  
 }
 
 - (void)setTatBar
@@ -74,7 +70,8 @@
 
 /** View激将显示时 */
 - (void)viewWillAppear:(BOOL)animated
-{   [super viewWillAppear:animated];
+{
+    [super viewWillAppear:animated];
     for (UIView *childView in self.tabBar.subviews) {
         if (![childView isKindOfClass:[XZMTabbarExtension class]]) {
             [childView removeFromSuperview];
@@ -94,6 +91,7 @@
     /** 添加到模型数组 */
     [self.itemArray addObject:tabBarItem];
     [self addChildViewController:nav];
+    
 }
 
 /** 代理方法 */
@@ -102,6 +100,3 @@
 }
 
 @end
-// 版权属于原作者
-// http://code4app.com (cn) http://code4app.net (en)
-// 发布代码于最专业的源码分享网站: Code4App.com

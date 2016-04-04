@@ -8,6 +8,66 @@
 
 #import "GKSystemBuildCommand.h"
 
-@implementation GKSystemBuildCommand
+@implementation ModuleRegisterCommand
+
+- (void)execute:(id<INotification>)notification {
+    
+}
+
+@end
+
+@implementation ModuleUnRegisterCommand
+
+- (void)execute:(id<INotification>)notification {
+    
+}
+
+@end
+
+@implementation SystemProxyBuildCommand
+
+- (void)execute:(id<INotification>)notification {
+    
+}
+
+@end
+
+@implementation SystemProxyReBuildCommand
+
+- (void)execute:(id<INotification>)notification {
+    
+}
+
+@end
+
+@implementation SystemCommandBuildCommand
+
+- (void)execute:(id<INotification>)notification {
+    
+}
+
+@end
+
+@implementation SystemCommandReBuildCommand
+
+- (void)execute:(id<INotification>)notification {
+    
+}
+
+@end
+
+@implementation SystemMediatorBuildCommand
+
+- (void)execute:(id<INotification>)notification {
+    
+}
+
+@end
+
+@implementation SystemMediatorReBuildCommand
+
+- (void)execute:(id<INotification>)notification {
+    
+}
 
 @end

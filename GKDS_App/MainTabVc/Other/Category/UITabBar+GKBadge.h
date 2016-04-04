@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UITabBar (GKBadge)
-
+- (void)showBadgeOnItemIndex:(int)index;
+- (void)showBadgeOnItemIndex:(int)index number:(int)number;
+- (void)hideBadgeOnItemIndex:(int)index;
 @end

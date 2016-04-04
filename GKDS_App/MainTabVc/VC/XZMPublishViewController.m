@@ -1,15 +1,10 @@
-//
-//  XZMPublishViewController.m
-//  百思不得姐
-//
-//  Created by 谢忠敏 on 15/7/30.
-//  Copyright (c) 2015年 谢忠敏. All rights reserved.
-//
 
 #import "XZMPublishViewController.h"
 #import "XZMButton.h"
 #import "POP.h"
 #import "UIView+XZMFrame.h"
+#import "GKDiscoveryViewController.h"
+#import "GKNavigationControllerProxy.h"
 
 #define XZMScreenW [UIScreen mainScreen].bounds.size.width
 #define XZMScreenH [UIScreen mainScreen].bounds.size.height
@@ -182,6 +177,7 @@ static CGFloat XZMSpringDelay = 0.1;
     
     [btn pop_addAnimation:anima forKey:nil];
     
+    WEAK_BLOCK_OBJECT(self);
     [anima setCompletionBlock:^(POPAnimation *anima, BOOL finish) {
         
         
@@ -192,21 +188,20 @@ static CGFloat XZMSpringDelay = 0.1;
         [btn pop_addAnimation:anima2 forKey:nil];
         
         [anima2 setCompletionBlock:^(POPAnimation *anima, BOOL finish) {
-            
-            [self cancelWithCompletionBlock:^{
+            BLOCK_OBJECT(self);
+            [weak_self cancelWithCompletionBlock:^{
                // 切换对应控制器
+                BLOCK_OBJECT(self);
+                GKDiscoveryViewController * vc = [[GKDiscoveryViewController alloc]init];
+                [weak_self.navigationController pushViewController:vc animated:YES];
+//                UIViewController * topVc = [GK_NAV_PROXY fetchCurTopViewController];
+//                UINavigationController * nav = topVc.navigationController;
+//                [nav pushViewController:vc animated:YES];
             }];
         }];
         
     }];
-    
-   
-    
-
 }
 
 
 @end
-// 版权属于原作者
-// http://code4app.com (cn) http://code4app.net (en)
-// 发布代码于最专业的源码分享网站: Code4App.com

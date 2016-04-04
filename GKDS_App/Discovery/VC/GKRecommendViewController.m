@@ -7,6 +7,9 @@
 //
 
 #import "GKRecommendViewController.h"
+#import "PPClient.h"
+#import "GKNavigationControllerProxy.h"
+#import "GKDiscoveryViewController.h"
 
 @interface GKRecommendViewController ()
 
@@ -24,14 +27,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark -- 点击事件
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)onPopToDiscoveryVc:(id)sender {
+    NSArray * vcArray = self.navigationController.viewControllers;
+    for (UIViewController * vc in vcArray) {
+        if (IsClassOf(vc, GKDiscoveryViewController)) {
+            [[GK_NAV_PROXY fetchCurTopViewController].navigationController popToViewController:vc animated:YES];
+        }
+    }
 }
-*/
 
+- (IBAction)onPopRootVc:(id)sender {
+    [[GK_NAV_PROXY fetchCurTopViewController].navigationController popToRootViewControllerAnimated:YES];
+}
 @end

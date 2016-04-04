@@ -1,13 +1,13 @@
 //
-//  LoginViewController.h
-//  XZMTabbarExtensionDemo
+//  GKLoginViewController.h
+//  GKDS_App
 //
-//  Created by Mac_Nelson on 15/12/4.
-//  Copyright © 2015年 Mac_Duke. All rights reserved.
+//  Created by wang on 16/3/22.
+//  Copyright © 2016年 wang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface GKLoginViewController : UIViewController
 
 @end

@@ -7,7 +7,19 @@
 //
 
 #import "GKLoginModule.h"
+#import "GKLoginMediator.h"
+#import "GKLoginProxy.h"
 
 @implementation GKLoginModule
+
+- (void)onRegister {
+    [self registerProxy:[GKLoginProxy withProxyName:kGKLoginProxy]];
+    [self registerMediator:[GKLoginMediator withMediatorName:[GKLoginMediator NAME]]];
+}
+
+- (void)onRemove {
+    [self removeAllProxy];
+    [self removeAllMediator];
+}
 
 @end

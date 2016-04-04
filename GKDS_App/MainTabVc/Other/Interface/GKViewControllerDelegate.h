@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @protocol GKViewControllerDelegate <NSObject>
-
+@optional
+- (void)changeSubViewsStatus:(id)data;
 @end

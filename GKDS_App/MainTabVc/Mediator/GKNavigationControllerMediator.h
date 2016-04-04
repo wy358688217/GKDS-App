@@ -8,6 +8,8 @@
 
 #import "Mediator.h"
 
+#define kPushToDiscoveryViewController @"kPushToDiscoveryViewController"
+
 @interface GKNavigationControllerMediator : Mediator
 
 @end

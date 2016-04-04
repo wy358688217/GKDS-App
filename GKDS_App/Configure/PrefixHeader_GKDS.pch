@@ -9,7 +9,144 @@
 #ifndef PrefixHeader_GKDS_pch
 #define PrefixHeader_GKDS_pch
 
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#endif /* PrefixHeader_GKDS_pch */
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import "DDLog.h"
+#import "DDLegacyMacros.h"
+
+#ifdef DEBUG
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+static const int ddLogLevel = LOG_LEVEL_OFF;
+#endif
+
+#endif
+
+// 使用：GKLog(@"");
+//      是表达式时多对括号比较难看
+//      GKLog(([NSString stringWithFormat:@"tel://%@  %d", @"021-10086", 33]));
+
+#if defined(DEBUG)
+#define GKLog(STRLOG) NSLog(@"%@: %@ %@", self, NSStringFromSelector(_cmd), STRLOG)
+#define GKLogSP(format, ...) NSLog(@"%@: %@ %@", self, NSStringFromSelector(_cmd), ([NSString stringWithFormat:format, ## __VA_ARGS__]))
+#else
+#if TARGET_IPHONE_SIMULATOR
+// 模拟器中仍然显示日志
+#define GKLog(STRLOG)
+#define GKLogSP(format, ...)
+#else
+// release版本目前也增加日志吧,正式发部时再决定是否去掉
+#define GKLog(STRLOG)
+#define GKLogSP(format, ...)
+#endif
+#endif
+
+#ifndef GKLogEX
+#ifdef DEBUG
+#define GKLogEX(format, ...) NSLog(format, ## __VA_ARGS__)
+#else
+#define GKLogEX(format, ...)
+#endif
+#endif
+
+#if defined(ENTERPRISE_VERSION)
+#define GKLog(STRLOG) NSLog(@"%@: %@ %@", self, NSStringFromSelector(_cmd), STRLOG)
+#define GKLogSP(format, ...) NSLog(@"%@: %@ %@", self, NSStringFromSelector(_cmd), ([NSString stringWithFormat:format, ## __VA_ARGS__]))
+#define GKLogEX(format, ...) NSLog(format, ## __VA_ARGS__)
+#endif
+
+
+#define SAFE_TABLEVIEW_RELEASE(object) if(object){ object.dataSource = nil;object.delegate = nil;; object = nil;}
+#define SAFE_RELEASE(object) if(object){ object = nil;}
+#define SAFE_RELEASE_EX(object) if(object){[object removeFromSuperview]; object = nil;}
+#define SAFE_RELEASE_TIMER(timer) if(timer){[timer invalidate]; timer = nil;}
+#define SAFE_REMOVE_FROMSUPERVIEW(view) if(view && [view superview]) {[view removeFromSuperview];}
+
+#define LIBRARYDIRECTORY_BYAPPENDPATH(appendPath) [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"Caches/%@", appendPath]]
+
+// 得到拉伸后的图片
+#define strechableImage(imageName,width,height) [[UIImage imageNamed:imageName] stretchableImageWithLeftCapWidth:width topCapHeight:height]
+
+// 存储数据库  text字段
+#define DBTEXT(X) ((X)?(X):([NSNull null]))
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+//用于block的弱引用
+#define WEAK_SELF_OBJCET_BLOCK(selfObject, weakObject) __weak __typeof(selfObject)weakObject = selfObject;
+#define WEAK_OBJCET_STRONG_POINT(weakSelf, strongSelf) __strong __typeof(weakSelf)strongSelf = weakSelf;
+#define WEAK_BLOCK_OBJECT(object) WEAK_SELF_OBJCET_BLOCK(object,weak_##object##_kaf9097uq54ni8);
+#define BLOCK_OBJECT(object) WEAK_OBJCET_STRONG_POINT(weak_##object##_kaf9097uq54ni8,weak_##object);
+
+//某段代码运行时间
+#define TICK   NSDate *startTime = [NSDate date]
+#define TOCK(timeName)   NSLog(@"%@ Time: %f", timeName,-[startTime timeIntervalSinceNow])
+
+#define TICKS(timeName)   NSDate *timeName = [NSDate date]
+#define TOCKS(timeName)   NSLog(@"%@ Time: %f", NSStringFromClass([timeName class]),-[timeName timeIntervalSinceNow])
+
+//状态栏高度
+#define STATUS_BAR_HEIGHT 20
+//NavBar高度
+#define NAVIGATION_BAR_HEIGHT 44
+//状态栏 ＋ 导航栏 高度
+#define STATUS_AND_NAVIGATION_HEIGHT ((CONTENT_BEGIN_HEIGHT) + (NAVIGATION_BAR_HEIGHT))
+
+//屏幕 rect
+#define SCREEN_RECT ([UIScreen mainScreen].bounds)
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+//屏幕分辨率
+#define SCREEN_RESOLUTION (SCREEN_WIDTH * SCREEN_HEIGHT * ([UIScreen mainScreen].scale))
+
+//大于等于6.0的ios版本
+#define iOS6_OR_LATER ([UIDevice currentDevice].systemVersion.floatValue >= 6.0)
+//大于等于7.0的ios版本
+#define iOS7_OR_LATER ([UIDevice currentDevice].systemVersion.floatValue >= 7.0)
+//大于等于8.0的ios版本
+#define iOS8_OR_LATER ([UIDevice currentDevice].systemVersion.floatValue >= 8.0)
+
+//iOS6时，导航VC中view的起始高度
+#define CONTENT_BEGIN_HEIGHT (iOS7_OR_LATER ? STATUS_BAR_HEIGHT:0)
+//去掉默认导航栏的高度的 剩余高度
+#define CONTENT_HEIGHT (SCREEN_HEIGHT - CONTENT_BEGIN_HEIGHT - NAVIGATION_BAR_HEIGHT)
+//去掉状态栏高度
+#define CONTENT_NAV_HEIGHT (SCREEN_HEIGHT - CONTENT_BEGIN_HEIGHT)
+#define kErrorString            @"kErrorString"
+#define kResult                 @"kResult"
+
+
+#ifdef _DEBUG
+#define PPAssert(condition,msg) if (!(condition)) { \
+NSString* targetMsg = [NSString stringWithFormat:@"PPAssert: %@ [%@ %@]",msg,@(__FILE__),@(__LINE__)]; \
+GKLog(targetMsg); \
+assert(false); \
+}
+#define PPAssertKind(_obj,_kind,_msg) if (_obj) { \
+PPAssert([(_obj) isKindOfClass:[_kind class]],(_msg)); \
+}else { \
+GKLogSP(@"PPAssertKind: warning %@ is nil.[%@ %@]",NSStringFromClass([_kind class]),@(__FILE__),@(__LINE__)); \
+}
+#else
+#define PPAssert(condition,msg)
+#define PPAssertKind(_obj,_kind,_msg)
+#endif
+
+#define IsEqualToString(str1,str2) ([str1 isEqualToString:str2])
+#define IsClassOf(obj,class_type) [obj isKindOfClass:[class_type class]]
+
+#define kHTTPErrorCodeSuccess (200)
+#define kNStrFromCStr(cstr) [NSString stringWithUTF8String:cstr.c_str()]
+#define IntToSTring(i) [NSString stringWithFormat:@"%d",i]
+#define NumberInt(i) [NSNumber numberWithInt:i]
+#define NumberInt64(i) [NSNumber numberWithLongLong:i]
+
+#endif /* PrefixHeader_pch */
+

@@ -7,7 +7,7 @@
 //
 
 #import "SimpleCommand.h"
-
+#define kGKNavigationControllerCommand @"kGKNavigationControllerCommand"
 @interface GKNavigationControllerCommand : SimpleCommand
 
 @end
