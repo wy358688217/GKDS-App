@@ -196,6 +196,16 @@
 		2121AE311CA5666D00AF7E44 /* shareButtonCancelClick.png in Resources */ = {isa = PBXBuildFile; fileRef = 2121AE131CA5666D00AF7E44 /* shareButtonCancelClick.png */; };
 		2121AE321CA5666D00AF7E44 /* shareButtonCancelClick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2121AE141CA5666D00AF7E44 /* shareButtonCancelClick@2x.png */; };
 		2121AE331CA5666D00AF7E44 /* shareButtonCancelClick@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2121AE151CA5666D00AF7E44 /* shareButtonCancelClick@3x.png */; };
+		215D25911CB6A92800B7ABC5 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D258C1CB6A92800B7ABC5 /* read_me.txt */; };
+		215D25941CB6AC0B00B7ABC5 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 215D25931CB6AC0B00B7ABC5 /* WXApiManager.m */; };
+		215D25981CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215D25961CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.m */; };
+		215D25991CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215D25971CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.xib */; };
+		215D259B1CB6B12600B7ABC5 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 215D259A1CB6B12600B7ABC5 /* libWeChatSDK.a */; };
+		215D259D1CB6B15C00B7ABC5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215D259C1CB6B15C00B7ABC5 /* CoreTelephony.framework */; };
+		215D259F1CB6B16C00B7ABC5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 215D259E1CB6B16C00B7ABC5 /* libsqlite3.0.tbd */; };
+		215D25A11CB6B18A00B7ABC5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 215D25A01CB6B18A00B7ABC5 /* libz.tbd */; };
+		215D25A31CB6B19300B7ABC5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215D25A21CB6B19300B7ABC5 /* Security.framework */; };
+		215D25A51CB6B1A700B7ABC5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215D25A41CB6B1A700B7ABC5 /* SystemConfiguration.framework */; };
 		21855DDB1CAAC05700F9B9EA /* GKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21855DDA1CAAC05700F9B9EA /* GKNavigationController.m */; };
 		21855DDF1CAACC3D00F9B9EA /* GKRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21855DDD1CAACC3D00F9B9EA /* GKRecommendViewController.m */; };
 		21855DE01CAACC3D00F9B9EA /* GKRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21855DDE1CAACC3D00F9B9EA /* GKRecommendViewController.xib */; };
@@ -461,6 +471,21 @@
 		2121AE131CA5666D00AF7E44 /* shareButtonCancelClick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareButtonCancelClick.png; sourceTree = "<group>"; };
 		2121AE141CA5666D00AF7E44 /* shareButtonCancelClick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shareButtonCancelClick@2x.png"; sourceTree = "<group>"; };
 		2121AE151CA5666D00AF7E44 /* shareButtonCancelClick@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shareButtonCancelClick@3x.png"; sourceTree = "<group>"; };
+		215D258C1CB6A92800B7ABC5 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		215D258D1CB6A92800B7ABC5 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		215D258E1CB6A92800B7ABC5 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		215D258F1CB6A92800B7ABC5 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		215D25921CB6AC0B00B7ABC5 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
+		215D25931CB6AC0B00B7ABC5 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		215D25951CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKWeiXinPayViewController.h; sourceTree = "<group>"; };
+		215D25961CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKWeiXinPayViewController.m; sourceTree = "<group>"; };
+		215D25971CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKWeiXinPayViewController.xib; sourceTree = "<group>"; };
+		215D259A1CB6B12600B7ABC5 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		215D259C1CB6B15C00B7ABC5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		215D259E1CB6B16C00B7ABC5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		215D25A01CB6B18A00B7ABC5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		215D25A21CB6B19300B7ABC5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		215D25A41CB6B1A700B7ABC5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		21855DD81CAAAE7600F9B9EA /* GKViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKViewControllerDelegate.h; sourceTree = "<group>"; };
 		21855DD91CAAC05700F9B9EA /* GKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKNavigationController.h; sourceTree = "<group>"; };
 		21855DDA1CAAC05700F9B9EA /* GKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKNavigationController.m; sourceTree = "<group>"; };
@@ -652,8 +677,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215D25A51CB6B1A700B7ABC5 /* SystemConfiguration.framework in Frameworks */,
+				215D25A31CB6B19300B7ABC5 /* Security.framework in Frameworks */,
+				215D25A11CB6B18A00B7ABC5 /* libz.tbd in Frameworks */,
+				215D259F1CB6B16C00B7ABC5 /* libsqlite3.0.tbd in Frameworks */,
+				215D259D1CB6B15C00B7ABC5 /* CoreTelephony.framework in Frameworks */,
 				180F8E5B1CB1598000A17261 /* WebKit.framework in Frameworks */,
 				CE400D4886CAFF60D73F1F70 /* libPods-GKDS_App.a in Frameworks */,
+				215D259B1CB6B12600B7ABC5 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,10 +822,45 @@
 		19DD014C29AFF15B4141FCA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				215D25A41CB6B1A700B7ABC5 /* SystemConfiguration.framework */,
+				215D25A21CB6B19300B7ABC5 /* Security.framework */,
+				215D25A01CB6B18A00B7ABC5 /* libz.tbd */,
+				215D259E1CB6B16C00B7ABC5 /* libsqlite3.0.tbd */,
+				215D259C1CB6B15C00B7ABC5 /* CoreTelephony.framework */,
 				180F8E5A1CB1598000A17261 /* WebKit.framework */,
 				63CFC386F53C36AC60CB966C /* libPods-GKDS_App.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		215D25881CB6A92800B7ABC5 /* ThirdPartyPay */ = {
+			isa = PBXGroup;
+			children = (
+				215D25891CB6A92800B7ABC5 /* AliPay */,
+				215D258A1CB6A92800B7ABC5 /* WeiXin */,
+			);
+			path = ThirdPartyPay;
+			sourceTree = "<group>";
+		};
+		215D25891CB6A92800B7ABC5 /* AliPay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AliPay;
+			sourceTree = "<group>";
+		};
+		215D258A1CB6A92800B7ABC5 /* WeiXin */ = {
+			isa = PBXGroup;
+			children = (
+				215D259A1CB6B12600B7ABC5 /* libWeChatSDK.a */,
+				215D25921CB6AC0B00B7ABC5 /* WXApiManager.h */,
+				215D25931CB6AC0B00B7ABC5 /* WXApiManager.m */,
+				215D258C1CB6A92800B7ABC5 /* read_me.txt */,
+				215D258D1CB6A92800B7ABC5 /* WechatAuthSDK.h */,
+				215D258E1CB6A92800B7ABC5 /* WXApi.h */,
+				215D258F1CB6A92800B7ABC5 /* WXApiObject.h */,
+			);
+			path = WeiXin;
 			sourceTree = "<group>";
 		};
 		21855DD71CAAAE4200F9B9EA /* Interface */ = {
@@ -886,6 +952,7 @@
 		21C5090E1CA18421008DE0E6 /* GKDS_App */ = {
 			isa = PBXGroup;
 			children = (
+				215D25881CB6A92800B7ABC5 /* ThirdPartyPay */,
 				185ED4C71CAFBEC2009EFBCA /* Tools */,
 				21C509531CA185B5008DE0E6 /* System */,
 				21C50C501CA19A4D008DE0E6 /* Client */,
@@ -1274,6 +1341,9 @@
 				182C225E1CB0EBF40032BA67 /* GKWebViewController.h */,
 				182C225F1CB0EBF40032BA67 /* GKWebViewController.m */,
 				182C22601CB0EBF40032BA67 /* GKWebViewController.xib */,
+				215D25951CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.h */,
+				215D25961CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.m */,
+				215D25971CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1536,6 +1606,7 @@
 				18F0A7E21CAFA50600EFEB91 /* tabBar_friendTrends_click_icon.png in Resources */,
 				18F0A7CB1CAFA50600EFEB91 /* tabBar_0_on.png in Resources */,
 				21BE746C1CA5881200C36272 /* GKAboutMeViewController.xib in Resources */,
+				215D25911CB6A92800B7ABC5 /* read_me.txt in Resources */,
 				2121AE1D1CA5666D00AF7E44 /* publish-offline@2x.png in Resources */,
 				2121AE251CA5666D00AF7E44 /* publish-text.png in Resources */,
 				2121AE261CA5666D00AF7E44 /* publish-text@2x.png in Resources */,
@@ -1578,6 +1649,7 @@
 				18F0A7CC1CAFA50600EFEB91 /* tabBar_0_on@2x.png in Resources */,
 				18F0A7EB1CAFA50600EFEB91 /* tabBar_me_icon.png in Resources */,
 				18F0A7E11CAFA50600EFEB91 /* tabBar_essence_icon@3x.png in Resources */,
+				215D25991CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.xib in Resources */,
 				2121AE321CA5666D00AF7E44 /* shareButtonCancelClick@2x.png in Resources */,
 				18F0A7E41CAFA50600EFEB91 /* tabBar_friendTrends_click_icon@3x.png in Resources */,
 				2121AE2A1CA5666D00AF7E44 /* publish-video@3x.png in Resources */,
@@ -1715,6 +1787,7 @@
 				21C509AB1CA186A6008DE0E6 /* Module.m in Sources */,
 				21C509A11CA185C3008DE0E6 /* Mediator.m in Sources */,
 				2116F9B81CA37EED00919627 /* GKNavigationControllerProxy.m in Sources */,
+				215D25981CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.m in Sources */,
 				21C50CDA1CA19ADE008DE0E6 /* POPSpringAnimation.mm in Sources */,
 				21C50C431CA19553008DE0E6 /* GKDeviceCommand.m in Sources */,
 				189B01E91CAFD2680095B2D4 /* CADebugPrintf.cpp in Sources */,
@@ -1735,6 +1808,7 @@
 				2116F9BB1CA37F1400919627 /* GKNavigationControllerMediator.m in Sources */,
 				189B01F11CAFEA420095B2D4 /* GKSystemModule.m in Sources */,
 				21C50CC81CA19ADE008DE0E6 /* POPCustomAnimation.mm in Sources */,
+				215D25941CB6AC0B00B7ABC5 /* WXApiManager.m in Sources */,
 				21C50C1E1CA18D39008DE0E6 /* GKLoginViewController.m in Sources */,
 				21C5099E1CA185C3008DE0E6 /* MacroCommand.m in Sources */,
 				21855DDB1CAAC05700F9B9EA /* GKNavigationController.m in Sources */,
@@ -2081,6 +2155,10 @@
 				INFOPLIST_FILE = GKDS_App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GKDS_App/ThirdPartyPay/WeiXin",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wang.GKDS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_PNG_TEXT = YES;
@@ -2098,6 +2176,10 @@
 				INFOPLIST_FILE = GKDS_App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GKDS_App/ThirdPartyPay/WeiXin",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wang.GKDS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_PNG_TEXT = YES;

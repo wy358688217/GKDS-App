@@ -17,6 +17,10 @@
 #import "DDASLLogger.h"
 #import "DDTTYLogger.h"
 #import "GKDSLogFormatter.h"
+#import "WXApi.h"
+#import "WXApiManager.h"
+
+
 
 @interface GKDSAppDelegate ()
 
@@ -37,10 +41,21 @@
     self.window.rootViewController = [[GKLoginViewController alloc] init];
     [self.window makeKeyAndVisible];
     
+    [WXApi registerApp:@"wxb4ba3c02aa476ea1" withDescription:@"demo 2.0"];
+
+    
     [PPMODULE registerAllModules];
     [GK_NAV_PROXY setCurWindow:self.window];
     [PPCLIENT sendNotification:kSystemCommandDeviceStartUp];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -71,5 +86,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

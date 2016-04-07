@@ -83,10 +83,7 @@ const NSInteger  UncaughtExceptionHandlerReportAddressCount = 5;
     if (![[NSFileManager defaultManager] fileExistsAtPath:_libPath]){
         [[NSFileManager defaultManager] createDirectoryAtPath:_libPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
-    
-    NSArray<NSString *> * callStackSymbolsArray = [NSThread callStackSymbols];
-    NSArray<NSNumber *> * callStackReturnAddressesArray = [NSThread callStackReturnAddresses];
-    
+        
     NSString * dateStr = @"yyyy-MM-dd HH:mm:ss";
     NSDateFormatter * df = [[NSDateFormatter alloc]init];
     [df setDateFormat:dateStr];

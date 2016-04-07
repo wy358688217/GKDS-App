@@ -6,6 +6,7 @@
 #import "GKAboutMeViewController.h"
 #import "GKNavigationController.h"
 #import "GKWebViewController.h"
+#import "GKWeiXinPayViewController.h"
 @interface XZMTabBarViewController ()<UITabBarDelegate>
 
 @end
@@ -46,7 +47,7 @@
                              index:Moduel_Tab_Left_One];
     
     /** 新帖 */
-    UIViewController * twoVc = [[UIViewController alloc]init];
+    GKWeiXinPayViewController * twoVc = [[GKWeiXinPayViewController alloc]init];
     twoVc.view.backgroundColor = [UIColor redColor];
     [self setUpChildControllerWith:twoVc
                           norImage:[UIImage imageNamed:@"tabBar_new_icon"]
