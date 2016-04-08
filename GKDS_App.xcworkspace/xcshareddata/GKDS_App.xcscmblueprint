@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5DA9F4DBF29AB09A110DC796B66527C3B38B4782",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BD87E52A50EEB0DE180C7B3363B428E9A8B0849F" : 0,
+    "5DA9F4DBF29AB09A110DC796B66527C3B38B4782" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5E21EE72-F123-4F7C-A185-13BCA20930E8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BD87E52A50EEB0DE180C7B3363B428E9A8B0849F" : "",
+    "5DA9F4DBF29AB09A110DC796B66527C3B38B4782" : "GKDS-App\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GKDS_App",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GKDS_App.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wy358688217\/GKDS-App",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5DA9F4DBF29AB09A110DC796B66527C3B38B4782"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/OliverLetterer\/AFURLConnectionByteSpeedMeasure",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BD87E52A50EEB0DE180C7B3363B428E9A8B0849F"
+    }
+  ]
+}

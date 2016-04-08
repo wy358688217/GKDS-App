@@ -8,6 +8,7 @@
 
 #import "GKWeiXinPayViewController.h"
 #import "WXApiManager.h"
+#import "ALSystem.h"
 
 @interface GKWeiXinPayViewController ()<WXApiManagerDelegate>
 
@@ -18,6 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    NSDictionary * memoryInfo = [ALSystem memoryInformations];
+    NSDictionary * netWorkInfo = [ALSystem networkInformations];
+    NSDictionary * cpuInfo = [ALSystem processorInformations];
+    GKLog(memoryInfo);
+    GKLog(netWorkInfo);
+    GKLog(cpuInfo);
 }
 
 static const NSInteger kRecvGetMessageReqAlertTag = 1000;

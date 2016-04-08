@@ -57,6 +57,44 @@ install_resource()
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad2.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad3.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad4.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadAir.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadMini.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadMiniRetina.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone3Gs.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone4.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone4s.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5c.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5s.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone6.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone6Plus.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch3.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch4.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch5.plist"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad2.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad3.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad4.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadAir.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadMini.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadMiniRetina.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone3Gs.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone4.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone4s.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5c.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5s.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone6.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone6Plus.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch3.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch4.plist"
+  install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch5.plist"
+fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

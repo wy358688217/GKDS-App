@@ -5,6 +5,7 @@
 
 target 'GKDS_App' do
 pod 'CocoaLumberjack', '~> 2.2.0'
+pod 'ALSystemUtilities', '~> 1.3.4'
 end
 
 target 'GKDS_AppTests' do
