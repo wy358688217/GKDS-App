@@ -16,7 +16,7 @@
 		189B01F11CAFEA420095B2D4 /* GKSystemModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B01F01CAFEA420095B2D4 /* GKSystemModule.m */; };
 		189B01F61CB0010E0095B2D4 /* GKDSLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B01F31CB0010E0095B2D4 /* GKDSLogFormatter.m */; };
 		189B01F71CB0010E0095B2D4 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B01F51CB0010E0095B2D4 /* UncaughtExceptionHandler.m */; };
-		189B01FB1CB007240095B2D4 /* GKSystemProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B01FA1CB007240095B2D4 /* GKSystemProxy.m */; };
+		189B01FB1CB007240095B2D4 /* GKSystemProxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 189B01FA1CB007240095B2D4 /* GKSystemProxy.mm */; };
 		18F0A7C91CAFA50600EFEB91 /* tabBar_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0A7971CAFA50600EFEB91 /* tabBar_0.png */; };
 		18F0A7CA1CAFA50600EFEB91 /* tabBar_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0A7981CAFA50600EFEB91 /* tabBar_0@2x.png */; };
 		18F0A7CB1CAFA50600EFEB91 /* tabBar_0_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0A7991CAFA50600EFEB91 /* tabBar_0_on.png */; };
@@ -196,6 +196,8 @@
 		2121AE311CA5666D00AF7E44 /* shareButtonCancelClick.png in Resources */ = {isa = PBXBuildFile; fileRef = 2121AE131CA5666D00AF7E44 /* shareButtonCancelClick.png */; };
 		2121AE321CA5666D00AF7E44 /* shareButtonCancelClick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2121AE141CA5666D00AF7E44 /* shareButtonCancelClick@2x.png */; };
 		2121AE331CA5666D00AF7E44 /* shareButtonCancelClick@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2121AE151CA5666D00AF7E44 /* shareButtonCancelClick@3x.png */; };
+		21284E0E1CB9296F009F4DDA /* GKAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21284E0C1CB9296F009F4DDA /* GKAttentionViewController.m */; };
+		21284E0F1CB9296F009F4DDA /* GKAttentionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21284E0D1CB9296F009F4DDA /* GKAttentionViewController.xib */; };
 		215D25911CB6A92800B7ABC5 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D258C1CB6A92800B7ABC5 /* read_me.txt */; };
 		215D25941CB6AC0B00B7ABC5 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 215D25931CB6AC0B00B7ABC5 /* WXApiManager.m */; };
 		215D25981CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215D25961CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.m */; };
@@ -386,7 +388,7 @@
 		189B01F41CB0010E0095B2D4 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		189B01F51CB0010E0095B2D4 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		189B01F91CB007240095B2D4 /* GKSystemProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKSystemProxy.h; sourceTree = "<group>"; };
-		189B01FA1CB007240095B2D4 /* GKSystemProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKSystemProxy.m; sourceTree = "<group>"; };
+		189B01FA1CB007240095B2D4 /* GKSystemProxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GKSystemProxy.mm; sourceTree = "<group>"; };
 		18F0A7971CAFA50600EFEB91 /* tabBar_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBar_0.png; sourceTree = "<group>"; };
 		18F0A7981CAFA50600EFEB91 /* tabBar_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar_0@2x.png"; sourceTree = "<group>"; };
 		18F0A7991CAFA50600EFEB91 /* tabBar_0_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBar_0_on.png; sourceTree = "<group>"; };
@@ -471,6 +473,9 @@
 		2121AE131CA5666D00AF7E44 /* shareButtonCancelClick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareButtonCancelClick.png; sourceTree = "<group>"; };
 		2121AE141CA5666D00AF7E44 /* shareButtonCancelClick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shareButtonCancelClick@2x.png"; sourceTree = "<group>"; };
 		2121AE151CA5666D00AF7E44 /* shareButtonCancelClick@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shareButtonCancelClick@3x.png"; sourceTree = "<group>"; };
+		21284E0B1CB9296F009F4DDA /* GKAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAttentionViewController.h; sourceTree = "<group>"; };
+		21284E0C1CB9296F009F4DDA /* GKAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAttentionViewController.m; sourceTree = "<group>"; };
+		21284E0D1CB9296F009F4DDA /* GKAttentionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKAttentionViewController.xib; sourceTree = "<group>"; };
 		215D258C1CB6A92800B7ABC5 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
 		215D258D1CB6A92800B7ABC5 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		215D258E1CB6A92800B7ABC5 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -742,7 +747,7 @@
 			isa = PBXGroup;
 			children = (
 				189B01F91CB007240095B2D4 /* GKSystemProxy.h */,
-				189B01FA1CB007240095B2D4 /* GKSystemProxy.m */,
+				189B01FA1CB007240095B2D4 /* GKSystemProxy.mm */,
 			);
 			path = Proxy;
 			sourceTree = "<group>";
@@ -1344,6 +1349,9 @@
 				215D25951CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.h */,
 				215D25961CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.m */,
 				215D25971CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.xib */,
+				21284E0B1CB9296F009F4DDA /* GKAttentionViewController.h */,
+				21284E0C1CB9296F009F4DDA /* GKAttentionViewController.m */,
+				21284E0D1CB9296F009F4DDA /* GKAttentionViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1624,6 +1632,7 @@
 				2121AE2F1CA5666D00AF7E44 /* shareButtonCancel@2x.png in Resources */,
 				18F0A7F31CAFA50600EFEB91 /* tabBar_new_icon@3x.png in Resources */,
 				2121AE311CA5666D00AF7E44 /* shareButtonCancelClick.png in Resources */,
+				21284E0F1CB9296F009F4DDA /* GKAttentionViewController.xib in Resources */,
 				18F0A7CA1CAFA50600EFEB91 /* tabBar_0@2x.png in Resources */,
 				18F0A7F91CAFA50600EFEB91 /* tabBar_publish_icon@3x.png in Resources */,
 				18F0A7D61CAFA50600EFEB91 /* tabBar_3@2x.png in Resources */,
@@ -1792,6 +1801,7 @@
 				21C50CDA1CA19ADE008DE0E6 /* POPSpringAnimation.mm in Sources */,
 				21C50C431CA19553008DE0E6 /* GKDeviceCommand.m in Sources */,
 				189B01E91CAFD2680095B2D4 /* CADebugPrintf.cpp in Sources */,
+				21284E0E1CB9296F009F4DDA /* GKAttentionViewController.m in Sources */,
 				21C5C8601CA2EA37006E216C /* GKLoginProxy.m in Sources */,
 				21C50CDD1CA19ADE008DE0E6 /* POPVector.mm in Sources */,
 				21C50CD11CA19ADE008DE0E6 /* POPLayerExtras.mm in Sources */,
@@ -1799,7 +1809,7 @@
 				21C5C8541CA2E3F3006E216C /* GKLoginModule.m in Sources */,
 				21C50CD41CA19ADE008DE0E6 /* POPMath.mm in Sources */,
 				219BFAB51CA7FD72002A28D8 /* UITabBar+GKBadge.m in Sources */,
-				189B01FB1CB007240095B2D4 /* GKSystemProxy.m in Sources */,
+				189B01FB1CB007240095B2D4 /* GKSystemProxy.mm in Sources */,
 				21C5099D1CA185C3008DE0E6 /* View.m in Sources */,
 				21C50C5D1CA19A4D008DE0E6 /* PPModule.m in Sources */,
 				21855DDF1CAACC3D00F9B9EA /* GKRecommendViewController.m in Sources */,

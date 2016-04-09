@@ -28,10 +28,6 @@ static const int ddLogLevel = LOG_LEVEL_OFF;
 
 #endif
 
-// 使用：GKLog(@"");
-//      是表达式时多对括号比较难看
-//      GKLog(([NSString stringWithFormat:@"tel://%@  %d", @"021-10086", 33]));
-
 #if defined(DEBUG)
 #define GKLog(STRLOG) NSLog(@"%@: %@ %@", self, NSStringFromSelector(_cmd), STRLOG)
 #define GKLogSP(format, ...) NSLog(@"%@: %@ %@", self, NSStringFromSelector(_cmd), ([NSString stringWithFormat:format, ## __VA_ARGS__]))

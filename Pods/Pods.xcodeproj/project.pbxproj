@@ -10,6 +10,21 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>0034248309A261E98C96BC0BCBEB2FB2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>iPad2.plist</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad2.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>007997DEF4CBE466FE5ED367167F4D9A</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -23,7 +38,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0093DD5CF7EB12CFBA2DFC66DE284456</key>
+		<key>01932473F9744BD543DB7C9060B10BAA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -32,13 +47,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DDTTYLogger.h</string>
+			<string>ALSystemConstants.h</string>
 			<key>path</key>
-			<string>Classes/DDTTYLogger.h</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystemConstants.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>02DB8746F9A4D60A3A7689D88F91E58B</key>
+		<key>033955E4A7AF6FA7EEEB1DCA30C32E0D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -47,9 +62,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALBattery.h</string>
+			<string>DDAbstractDatabaseLogger.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALBattery/ALBattery.h</string>
+			<string>Classes/DDAbstractDatabaseLogger.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -137,39 +152,26 @@
 		<key>0741EC6E4F29402ABA369E063D4E7BE1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8BA712FA9BC66935FA39589913090C96</string>
+			<string>6774D25615308C491C21AF317EC91099</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>092CF1544AF8B7DDFA3655E82625062C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E0B51132E62907913FFB1DA649803B9A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>11237EF97DBFAE32446B56F268E290A4</key>
+		<key>07559F4B310BB8B0855D04105C432D06</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>iPodTouch5.plist</string>
+			<string>ALSystem_ProcessorConstants.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch5.plist</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_ProcessorConstants.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1226679227F51540B2C91CE79E1B3F1D</key>
+		<key>0BC82FC6BB6D1DCDE31A1C7284C0D3C9</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -178,7 +180,97 @@
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>CocoaLumberjack.xcconfig</string>
+			<string>Toast.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0E78D70B763A6A55237176BC18B272F7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libALSystemUtilities.a</string>
+			<key>path</key>
+			<string>libALSystemUtilities.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>0FF3195CBB61A40BA99B85C00188F8B5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1539D3798F9ECF2D0F7AE0CE6C1C387</string>
+				<string>A61330B734AB65C41111F2DDFBA7AB71</string>
+				<string>FF45F6BFCE56467149970A7DADB64640</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/ALSystemUtilities</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>105455BCD17F24CD778C1CDD5B45AEF1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ALLocalization.h</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALLocalization/ALLocalization.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>117EDE432256B612650C8E4A64F43388</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ALDisk.m</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALDisk/ALDisk.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12BC54C9D8120D946C4D18668D1E9AC4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DDASLLogCapture.m</string>
+			<key>path</key>
+			<string>Classes/DDASLLogCapture.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12D47E34F934F357FCD0FCBF94B0188B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>CocoaLumberjack-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -203,33 +295,18 @@
 			<key>productName</key>
 			<string>CocoaLumberjack</string>
 			<key>productReference</key>
-			<string>D2692B1FE63D42A2BBF2234FE72F6510</string>
+			<string>CA29E6F1F5E88456CE226EF14053E7FC</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
 		</dict>
 		<key>138051708B5A7AE0B3987BF224F58446</key>
 		<dict>
 			<key>fileRef</key>
-			<string>60263A60EEBABEBE9270C1C40178D10E</string>
+			<string>729D0B56FB51EF41CAB013694EA3B6CB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>158DA2A6073DA0F727DFD4B593BCE4DC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALMemory.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALMemory/ALMemory.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>171AD9CE547793599C3830A84B5CD68C</key>
+		<key>13DB7B0C45F210E81F15CFBDA9A2DDF0</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -244,14 +321,22 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>17D65F762E3759224B6DC2C89D4CA668</key>
+		<key>16087BD196754AA54F5DF3877C7FB679</key>
 		<dict>
-			<key>fileRef</key>
-			<string>207A3D3EDC559D2F2C4577E2B444B939</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>iPhone5.plist</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>17DD5FEB8DD72B52446543CEEA8A3D2C</key>
+		<key>16134E37C4ABAC5B8AA538ADB69BE689</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -260,11 +345,18 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DDAssertMacros.h</string>
+			<string>ALSystem_DiskConstants.h</string>
 			<key>path</key>
-			<string>Classes/DDAssertMacros.h</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_DiskConstants.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17D65F762E3759224B6DC2C89D4CA668</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D9E0985322C5012FD627DA631AB5CC93</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>188B49D5AB2908567BE7D4C6AC731F2A</key>
 		<dict>
@@ -279,14 +371,38 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1BAE13D71906F632FAB8C5B9FDD2EE0D</key>
+		<key>191643CCC9607A8AB63162D7FD0F1B3F</key>
 		<dict>
-			<key>fileRef</key>
-			<string>2134195B3F4D976F7286C382E21295B4</string>
+			<key>children</key>
+			<array>
+				<string>C8CE3DF3D8B8FDB519ADF0111E17EC9A</string>
+				<string>5BBDBB8A7F8C88A633EE5B940408EAC1</string>
+				<string>1AD284539D30C812FE79F059E110E412</string>
+				<string>4BB2EE379FA2ED28E4494418BC9EB65F</string>
+				<string>2C19638FB5E456AA53DA8549C9F5E48B</string>
+				<string>1AC4CB948268FCD14F23CAF2DE0B0AB2</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Extensions</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1C5E592545F643383E3BF46025203DB1</key>
+		<key>19796C60F859834ADB0727FD2D859D74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>1A0D729A5FCB6F1A9B86359DBDD93BFF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -295,16 +411,64 @@
 			<key>lastKnownFileType</key>
 			<string>text.plist.xml</string>
 			<key>name</key>
-			<string>iPodTouch3.plist</string>
+			<string>iPhone4s.plist</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch3.plist</string>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone4s.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1AC4CB948268FCD14F23CAF2DE0B0AB2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DDMultiFormatter.m</string>
+			<key>path</key>
+			<string>Classes/Extensions/DDMultiFormatter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1AD284539D30C812FE79F059E110E412</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DDDispatchQueueLogFormatter.h</string>
+			<key>path</key>
+			<string>Classes/Extensions/DDDispatchQueueLogFormatter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BAE13D71906F632FAB8C5B9FDD2EE0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>793F8ECB30DFF35C9DB1E5F2F5568BA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C53BEB0826B699179C0A10385CDA10E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>ALSystemUtilities</string>
+			<key>target</key>
+			<string>8F50BA18AEDEC7D9CE1F5F25151AA527</string>
+			<key>targetProxy</key>
+			<string>BF2FB79ED7445727920FB003821C8096</string>
 		</dict>
 		<key>1D170BD7E8EB420FBD5318D3D5550857</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>1226679227F51540B2C91CE79E1B3F1D</string>
+			<string>CF05D16FAE1A18A86DB5435C1ECEF178</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -335,10 +499,10 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>1D2A055166C3CBF9A12C9B53DC1E8842</key>
+		<key>1DB9089517C8DAF6EB7821F7A5798A00</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>9D214827289015DB3587668F11E48D07</string>
+			<string>188B49D5AB2908567BE7D4C6AC731F2A</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -348,7 +512,7 @@
 				<key>MACH_O_TYPE</key>
 				<string>staticlib</string>
 				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
+				<string>NO</string>
 				<key>OTHER_LDFLAGS</key>
 				<string></string>
 				<key>OTHER_LIBTOOLFLAGS</key>
@@ -365,9 +529,9 @@
 			<key>isa</key>
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Debug</string>
+			<string>Release</string>
 		</dict>
-		<key>1D3091C8B423860C5DF36112CD21B6A2</key>
+		<key>1DBBA92CA3F467FAA1A3C1C312A1120A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -376,95 +540,84 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALProcessor.h</string>
+			<string>DDASLLogger.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALProcessor/ALProcessor.h</string>
+			<string>Classes/DDASLLogger.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1E6A591B3DEE6317BB014BD71A50B689</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E609E32B8864D11A1E6FA2F136B34F95</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>1FA8AA41FBA6095E88B9AB187A08B63B</key>
+		<key>1E3E84F0DC76502E5248F973B7024779</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>CFNetwork.framework</string>
+			<string>SystemConfiguration.framework</string>
 			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework</string>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>207A3D3EDC559D2F2C4577E2B444B939</key>
+		<key>1E6A591B3DEE6317BB014BD71A50B689</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>D011B4A13448A15084898870D9E01E0E</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ALLocalization.m</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALLocalization/ALLocalization.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2134195B3F4D976F7286C382E21295B4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ALSystem.m</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystem.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>214F17C41546D23171322585CDDD02CF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C9FCAEC612E97998E59F8954928EDDE6</string>
+			<string>E79D6E195D6A4371C2DDBD066717DC0D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>22A95EC70E66C778649A903176D66272</key>
+		<key>2258B9C5C40F81493A94AF0640F23E6A</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>baseConfigurationReference</key>
+			<string>0BC82FC6BB6D1DCDE31A1C7284C0D3C9</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Toast/Toast-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>DDLegacyMacros.h</string>
-			<key>path</key>
-			<string>Classes/DDLegacyMacros.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>Release</string>
 		</dict>
 		<key>23430A93B189A69A1B5E291F4AAFEE59</key>
 		<dict>
 			<key>fileRef</key>
-			<string>02DB8746F9A4D60A3A7689D88F91E58B</string>
+			<string>E9398914633DFE5D5303494B3FE39610</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -475,34 +628,55 @@
 				</array>
 			</dict>
 		</dict>
-		<key>24002A6670E6882ECD6250D3E60F9CB2</key>
+		<key>2482B59EC7607E0675E66A0766F27D7D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>iPhone4.plist</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone4.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2500DBECEF200A2755562FB4F6CF0775</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>iPad3.plist</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad3.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>254FA1942BD580DDB00D80DD2F9D4459</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>93F3B1747340A9B33A1068408B360E5D</string>
+				<string>C64C3910C8360EEC433E45D0A4436F8D</string>
+				<string>50D3BDCE52956B69245CD84BC00DE6C1</string>
+				<string>2EDC99DCCAAC5AFE2A0699B4A27A368E</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Frameworks</string>
+			<string>Pods</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>24AB3769C0AAB404FE380825EC867855</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>ALSystemUtilities</string>
-			<key>target</key>
-			<string>8F50BA18AEDEC7D9CE1F5F25151AA527</string>
-			<key>targetProxy</key>
-			<string>B22460ED5885C5A357FEEE849C86FF4E</string>
 		</dict>
 		<key>2550AFE242C3B886407CBBE9940EFAA4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>31F83FFE62271848E576A3B735405330</string>
+			<string>07559F4B310BB8B0855D04105C432D06</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -513,36 +687,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>27D4D453F2A406E2BB6099A6DCC203C3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5A6DEBACEDB0A79BCEA67DDF5C6C5FAE</string>
-				<string>C5F1C6044835AAB243673BE8FEFEBAEE</string>
-				<string>E17EC8D3B45C7CB75412ACE7E0B48DF9</string>
-				<string>59B35AB093D8E213AB415DF96BA9D4AB</string>
-				<string>37AF0ECF02885D06B0962C058A919C99</string>
-				<string>FC7898660FB11C09A3DE049E2D2CF591</string>
-				<string>3A826434A29F62F608AD3EA68949763D</string>
-				<string>7E290EDA41472278C4F774CCEA8A625E</string>
-				<string>D7E2B5048ECC19C8414B1E16F7C09C78</string>
-				<string>43AC65519C68B02BB92ECFC920DCD75D</string>
-				<string>BFE1FF9B43403CB391088CFC91F6ED58</string>
-				<string>E349726D52316E0FFB854950BAA8860A</string>
-				<string>982DA951D3583FD6462DB9F874ECF2FE</string>
-				<string>E7CCF7E19C159004F1349CA889A8D892</string>
-				<string>1C5E592545F643383E3BF46025203DB1</string>
-				<string>A01325387FA1BF49CDF1796F5CE047D2</string>
-				<string>11237EF97DBFAE32446B56F268E290A4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2952602B6FB6AE4D869C5969A35396D6</key>
+		<key>26FDBADAFD10FF6EC7CE7741B4310616</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -551,16 +696,31 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DDContextFilterLogFormatter.h</string>
+			<string>ALSystem_ALBatteryConstants.h</string>
 			<key>path</key>
-			<string>Classes/Extensions/DDContextFilterLogFormatter.h</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_ALBatteryConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28CA5F0CCC1475F24AA4B02A3F19B7A0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DDFileLogger.m</string>
+			<key>path</key>
+			<string>Classes/DDFileLogger.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>29A6A88C0D7DA32496E6F3B430E6D3F8</key>
 		<dict>
 			<key>fileRef</key>
-			<string>158DA2A6073DA0F727DFD4B593BCE4DC</string>
+			<string>A9AA04ABC48772A286B6CCCFE3EA9B76</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -571,18 +731,27 @@
 				</array>
 			</dict>
 		</dict>
-		<key>2B792F1FCD78C186B228F324BCC188D0</key>
+		<key>2ACC6C5BB264307456CBD45AB0BE7573</key>
 		<dict>
+			<key>fileRef</key>
+			<string>19796C60F859834ADB0727FD2D859D74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2C19638FB5E456AA53DA8549C9F5E48B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>Foundation.framework</string>
+			<string>DDMultiFormatter.h</string>
 			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<string>Classes/Extensions/DDMultiFormatter.h</string>
 			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
@@ -598,10 +767,73 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>2DBBEAB4388ACAD8F783FB16E49DBF41</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0BC82FC6BB6D1DCDE31A1C7284C0D3C9</string>
+				<string>59A63987ACFA7F3F8F32EB5DCC7D631B</string>
+				<string>ED5312FEE7333E4F5F002049ACC3BA7D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Toast</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2E67606BF10D2823566DECB3728A5DDD</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>35982EF6C9F96DC7A8142D1A8FE6A7B8</string>
+				<string>1DB9089517C8DAF6EB7821F7A5798A00</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2EDC99DCCAAC5AFE2A0699B4A27A368E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8AE04E9BA070AC1A0E9EA51DADB46A9B</string>
+				<string>788B3DAE99F9C7CECC71515E61513C61</string>
+				<string>2DBBEAB4388ACAD8F783FB16E49DBF41</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Toast</string>
+			<key>path</key>
+			<string>Toast</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2FA8E9CD969A737338345AEC6E54E61D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DDLegacyMacros.h</string>
+			<key>path</key>
+			<string>Classes/DDLegacyMacros.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>300FF6DE3DB3A282890A6279994B57D1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F18148B44D1B245DD99C8235BAF3F209</string>
+			<string>01932473F9744BD543DB7C9060B10BAA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -612,22 +844,20 @@
 				</array>
 			</dict>
 		</dict>
-		<key>30A3E5B80EA8F580A4F36556E8D4AD33</key>
+		<key>30F1B50D5A1C447D92884BC2E2CC17C6</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>384A0A9ECB84934E41FC3F4A121374D8</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DDLog.h</string>
-			<key>path</key>
-			<string>Classes/DDLog.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>31F83FFE62271848E576A3B735405330</key>
+		<key>314F4AD6DA06AD5331CC548CF38CC4A5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -636,9 +866,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALSystem_ProcessorConstants.h</string>
+			<string>ALSystem_AccessoryConstants.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_ProcessorConstants.h</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_AccessoryConstants.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -670,39 +900,11 @@
 		<key>33B20162409AD43B404F6EFDF36E72C3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>54A21A07BCBE09C06DC9D4CCF29B3C11</string>
+			<string>A61330B734AB65C41111F2DDFBA7AB71</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>35F4D4537F3C71323A595DACE69C1A59</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>AudioToolbox.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AudioToolbox.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>3752556F949B1487D0CA7628F7C0C0CB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALJailbreak.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALJailbreak/ALJailbreak.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>37AF0ECF02885D06B0962C058A919C99</key>
+		<key>3535D825D6ABAA2F1D07633584C67403</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -711,44 +913,61 @@
 			<key>lastKnownFileType</key>
 			<string>text.plist.xml</string>
 			<key>name</key>
-			<string>iPadMini.plist</string>
+			<string>iPad4.plist</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadMini.plist</string>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad4.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3801C7D74EE7F36A3E04555FFE80F814</key>
+		<key>35982EF6C9F96DC7A8142D1A8FE6A7B8</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>F1923E0C300D4D4F3500E43D72E2B417</string>
-			</array>
+			<key>baseConfigurationReference</key>
+			<string>9D214827289015DB3587668F11E48D07</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Default</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>Debug</string>
 		</dict>
-		<key>381CF69C5AA1B5747A546556F52DE633</key>
+		<key>363CFF983CD390F76E20415A74F4D33F</key>
 		<dict>
-			<key>includeInIndex</key>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
 			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALCarrier.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALCarrier/ALCarrier.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<key>remoteGlobalIDString</key>
+			<string>F3837E7FEB5DDA0AFB2E039F23D6DD91</string>
+			<key>remoteInfo</key>
+			<string>Toast</string>
 		</dict>
-		<key>38B17B06DFF6A77CDB5DAAA312233E17</key>
+		<key>384A0A9ECB84934E41FC3F4A121374D8</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8CE8E83078D3A864BC89D5A7B75BA20D</string>
+			<string>8AE04E9BA070AC1A0E9EA51DADB46A9B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -759,20 +978,19 @@
 				</array>
 			</dict>
 		</dict>
-		<key>3A826434A29F62F608AD3EA68949763D</key>
+		<key>38B17B06DFF6A77CDB5DAAA312233E17</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>3F3AD12775643C81742A6FEDFC37419D</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>iPhone3Gs.plist</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone3Gs.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>3D1929340700AE302905262BB6EE9651</key>
 		<dict>
@@ -803,7 +1021,7 @@
 		<key>3DDD0FB94D61AB71C8F5C727EC7A0BD9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>171AD9CE547793599C3830A84B5CD68C</string>
+			<string>13DB7B0C45F210E81F15CFBDA9A2DDF0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -813,6 +1031,21 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>3EE5E98A7FD936217CB70B45F1D82A5E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DDASLLogger.m</string>
+			<key>path</key>
+			<string>Classes/DDASLLogger.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3F0AF2A42A8D011C4B6789BCFDE4A09D</key>
 		<dict>
@@ -827,10 +1060,32 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>3F3AD12775643C81742A6FEDFC37419D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ALSystem_LocalizationConstants.h</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_LocalizationConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>40996FDA710F7E0D811C1D6583BF1F2C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F42EF307E718C060D184AF577885AA66</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>41F221F9E8FDE456D3E9EB34B4C5EBF1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>862472279E054E11DA2D9DC15CDB574B</string>
+			<string>28CA5F0CCC1475F24AA4B02A3F19B7A0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -852,32 +1107,17 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>43AC65519C68B02BB92ECFC920DCD75D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>iPhone5.plist</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>44435875062184E8B689006901D89227</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4A9607C456BAAABEB040C74E2ED64656</string>
+			<string>93ECB070364644143E5D895068A6DC56</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>456BEEAD8F6C8D0B35D5A12E72068119</key>
 		<dict>
 			<key>fileRef</key>
-			<string>30A3E5B80EA8F580A4F36556E8D4AD33</string>
+			<string>DCC655E89DEE4E32E2C2EF0B070D2052</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -888,438 +1128,20 @@
 				</array>
 			</dict>
 		</dict>
-		<key>481FA6A25EF2DCC10E402E944DE3BE0A</key>
+		<key>462C45E9FF9735C1194B27C5E4A59FC2</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libALSystemUtilities.a</string>
-			<key>path</key>
-			<string>libALSystemUtilities.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>497E83FFF55184B577121E59A275ABFC</key>
-		<dict>
-			<key>includeInIndex</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
 			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>ALSystemUtilities.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<key>remoteGlobalIDString</key>
+			<string>12E2BC28C62976C425F4B71C2723F0B1</string>
+			<key>remoteInfo</key>
+			<string>CocoaLumberjack</string>
 		</dict>
-		<key>49BEDFB0128D686FCBEA72673BCB0353</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1D2A055166C3CBF9A12C9B53DC1E8842</string>
-				<string>DE941B5CF1E21EA44E31B387616F4DF7</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4A9607C456BAAABEB040C74E2ED64656</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreFoundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreFoundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>4BE683E58B727EAF74A091E991DA8742</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DDTTYLogger.m</string>
-			<key>path</key>
-			<string>Classes/DDTTYLogger.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CAAFD85FC04FBFFB61A22F14C8D4684</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2952602B6FB6AE4D869C5969A35396D6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>4DAD68D4A005ED5939D46CDFDA350F02</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F66E5FA7F0081D4C61931D8B4C84B67C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>4DAE59C431824681DFB9652857437D2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALSystem_NetworkConstants.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_NetworkConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>508BA2CAEC883859417CC63FC85C5F24</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E87BAAEF3ADD6BA680DB17BB4FAF54E1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>5210D5A5814193C2C6DBF88CFFB18363</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2952602B6FB6AE4D869C5969A35396D6</string>
-				<string>94640AA3680D52010B7359F7DE6E2CE2</string>
-				<string>81D5CC23C526DE24B9E862A17A8C279D</string>
-				<string>7313021381997556CE4FD950A212A618</string>
-				<string>9A9AA8E3A7E757FF4BBD6155BD1B54BF</string>
-				<string>855057093BBB988C91ACFE2A02C33A5D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Extensions</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>534FEBFBC7F550E69090A5366C5A96EF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F813F4807CB1A4BBA03CB2AAD57C9504</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>53A3F8FE18C7EB13FB765A27CAC3658F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8E7A3300690BD508E85F2A96E64B2D1F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>54A21A07BCBE09C06DC9D4CCF29B3C11</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ALSystemUtilities-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5539A292EFC958D90F290DBA5FF86220</key>
-		<dict>
-			<key>fileRef</key>
-			<string>81D5CC23C526DE24B9E862A17A8C279D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>5558592F2BDD6CCB731BCE1680F19AA4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CF4301D7543223BF08C4795A242FFCFD</string>
-				<string>B218389F58F537DEDC4B2029BF1A9F6D</string>
-				<string>02DB8746F9A4D60A3A7689D88F91E58B</string>
-				<string>F813F4807CB1A4BBA03CB2AAD57C9504</string>
-				<string>381CF69C5AA1B5747A546556F52DE633</string>
-				<string>8BA712FA9BC66935FA39589913090C96</string>
-				<string>F6ACAF9244E0BBE9E63E42F34B464C1A</string>
-				<string>7E0EAFF6FE006AAA09AF91AD00E57C4C</string>
-				<string>A8D87EFF26A8E24EBDCC3CD3A5E2B042</string>
-				<string>9883C4CB73791135CEBA0B957205C9E5</string>
-				<string>3752556F949B1487D0CA7628F7C0C0CB</string>
-				<string>58091C695540FACB3FA33C5CB3762108</string>
-				<string>98DEA9F01ACD468019BA87A4525C81EA</string>
-				<string>207A3D3EDC559D2F2C4577E2B444B939</string>
-				<string>158DA2A6073DA0F727DFD4B593BCE4DC</string>
-				<string>C9FCAEC612E97998E59F8954928EDDE6</string>
-				<string>BDFD473CEBDEE0C97480DD3260DADC5B</string>
-				<string>72F2A4AD1698022F649A3DC1FAD9738A</string>
-				<string>1D3091C8B423860C5DF36112CD21B6A2</string>
-				<string>D14538CA9C9B8D9AEC4CBBCDD94BC73F</string>
-				<string>8AE2C990C78911DA1624A4843D6BE867</string>
-				<string>2134195B3F4D976F7286C382E21295B4</string>
-				<string>DCC35DFC0EC22B7AFADB68D42C8FA8E9</string>
-				<string>C2481FBEDD6760875E091F0401205FDD</string>
-				<string>6A50C62FDFAAE68001465C7607B3B686</string>
-				<string>E288F83D5890CEDBFE1C49B196A58F87</string>
-				<string>8E7A3300690BD508E85F2A96E64B2D1F</string>
-				<string>E87BAAEF3ADD6BA680DB17BB4FAF54E1</string>
-				<string>8CE8E83078D3A864BC89D5A7B75BA20D</string>
-				<string>9D698F02CA74D94BE6ED123EF1B3E17F</string>
-				<string>4DAE59C431824681DFB9652857437D2F</string>
-				<string>31F83FFE62271848E576A3B735405330</string>
-				<string>F18148B44D1B245DD99C8235BAF3F209</string>
-				<string>E061E8956A9D720AA998756A6E31B4FB</string>
-				<string>27D4D453F2A406E2BB6099A6DCC203C3</string>
-				<string>C7EA5BA513B12D5FFA4CE972C617A2E2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ALSystemUtilities</string>
-			<key>path</key>
-			<string>ALSystemUtilities</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>58091C695540FACB3FA33C5CB3762108</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ALJailbreak.m</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALJailbreak/ALJailbreak.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>59B35AB093D8E213AB415DF96BA9D4AB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>iPadAir.plist</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadAir.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5A6DEBACEDB0A79BCEA67DDF5C6C5FAE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>iPad2.plist</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad2.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5AD89D95C7AFDD35B666A1F564C98EA0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DDAbstractDatabaseLogger.h</string>
-			<key>path</key>
-			<string>Classes/DDAbstractDatabaseLogger.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5DCBA219BC81D9190F11EE56F93BB908</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0093DD5CF7EB12CFBA2DFC66DE284456</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>60111D0DC8CC764AE5AC56096A342E42</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1FA8AA41FBA6095E88B9AB187A08B63B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>60263A60EEBABEBE9270C1C40178D10E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreTelephony.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreTelephony.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>6077EFC05DC2551A7F5A1CFAC0B90187</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C9C460587B0FF9AE0689F4D52CDD0B31</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>6475050C8BA464772209BD6AF03F1EB1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9A9AA8E3A7E757FF4BBD6155BD1B54BF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>656479029A5A15463E080FD25F8903B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C12FA48D92E9F7C1F891DE945C2824BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>67E741D303696F9A1E863BC42E6A9C79</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F87024051431EE2E48786F9B208CF9A1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>6A50C62FDFAAE68001465C7607B3B686</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALSystem_CarrierConstants.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_CarrierConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6DAEF151B35D00265D60C4AD34431DD9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>94640AA3680D52010B7359F7DE6E2CE2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>72F2A4AD1698022F649A3DC1FAD9738A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ALNetwork.m</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALNetwork/ALNetwork.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7313021381997556CE4FD950A212A618</key>
+		<key>4BB2EE379FA2ED28E4494418BC9EB65F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1334,10 +1156,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>77F9D7A399FE7EC3A07DEC3D2B27A0C9</key>
+		<key>4CAAFD85FC04FBFFB61A22F14C8D4684</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A8D87EFF26A8E24EBDCC3CD3A5E2B042</string>
+			<string>C8CE3DF3D8B8FDB519ADF0111E17EC9A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1348,27 +1170,507 @@
 				</array>
 			</dict>
 		</dict>
-		<key>7895549BCAD0B5393BACAB63405FAA47</key>
+		<key>4DAD68D4A005ED5939D46CDFDA350F02</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8FE88F6ABB9DD636A9018CEE7A62BA45</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4E6E9F96B9A441E2FD5F2C5C75D12419</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>ExternalAccessory.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/ExternalAccessory.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>508BA2CAEC883859417CC63FC85C5F24</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6549A0CEE32C9E893AB34F38BC884BF4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>50D3BDCE52956B69245CD84BC00DE6C1</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>1226679227F51540B2C91CE79E1B3F1D</string>
-				<string>AB93B58BD75D25F3D88C0BF69F8020F4</string>
-				<string>8EF28084A4F9A9365DD4006E030B7CB2</string>
+				<string>CB86A7B214FF617D523221C9B2C8704C</string>
+				<string>C7B94D5BDDFE8C075DA05A2AF54C5878</string>
+				<string>191643CCC9607A8AB63162D7FD0F1B3F</string>
+				<string>9418B8678E694C2B23769D1258513097</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Support Files</string>
+			<string>CocoaLumberjack</string>
 			<key>path</key>
-			<string>../Target Support Files/CocoaLumberjack</string>
+			<string>CocoaLumberjack</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>522BF7A68D27E81A300D90A4DFA19DC9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>iPhone6Plus.plist</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone6Plus.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534FEBFBC7F550E69090A5366C5A96EF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5C6ACB95C5006756B5343B8027D46AD4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53A3F8FE18C7EB13FB765A27CAC3658F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C9B10B32E2C0735D5D94C0E33102ECB2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>5473C4F55E7C2F461B31E50A8B2710A7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>iPodTouch3.plist</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch3.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5539A292EFC958D90F290DBA5FF86220</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1AD284539D30C812FE79F059E110E412</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>59A63987ACFA7F3F8F32EB5DCC7D631B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Toast-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5BBDBB8A7F8C88A633EE5B940408EAC1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DDContextFilterLogFormatter.m</string>
+			<key>path</key>
+			<string>Classes/Extensions/DDContextFilterLogFormatter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5BC77504A0D08D2991C8125D68F07CD0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>CocoaLumberjack</string>
+			<key>target</key>
+			<string>12E2BC28C62976C425F4B71C2723F0B1</string>
+			<key>targetProxy</key>
+			<string>462C45E9FF9735C1194B27C5E4A59FC2</string>
+		</dict>
+		<key>5C6ACB95C5006756B5343B8027D46AD4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ALBattery.m</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALBattery/ALBattery.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5CE8B8ED015267FB711F97BDC1432419</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ALJailbreak.m</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALJailbreak/ALJailbreak.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5DCBA219BC81D9190F11EE56F93BB908</key>
+		<dict>
+			<key>fileRef</key>
+			<string>679DC1C2E24270D9AE1B7680835F262D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>60111D0DC8CC764AE5AC56096A342E42</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE417111A2F554EFDB56FBDB1ADD428D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6077EFC05DC2551A7F5A1CFAC0B90187</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CA1D3807188FE8D0BEBBE7BA9B639D2D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>6475050C8BA464772209BD6AF03F1EB1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2C19638FB5E456AA53DA8549C9F5E48B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>653E35C0F1D3CAA90ED46A66EE35682F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Reachability.m</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Reachability/Reachability.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6549A0CEE32C9E893AB34F38BC884BF4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ALSystem_JailbreakConstants.h</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_JailbreakConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>656479029A5A15463E080FD25F8903B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3EE5E98A7FD936217CB70B45F1D82A5E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>6774D25615308C491C21AF317EC91099</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ALCarrier.m</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALCarrier/ALCarrier.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>679DC1C2E24270D9AE1B7680835F262D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DDTTYLogger.h</string>
+			<key>path</key>
+			<string>Classes/DDTTYLogger.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>67E741D303696F9A1E863BC42E6A9C79</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1DBBA92CA3F467FAA1A3C1C312A1120A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>6B8E4D06E0BD7753CE394D2F4601739A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>6D62FB033871255EDA4FA51298C777F6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ALSystem_MemoryConstants.h</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_MemoryConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DAEF151B35D00265D60C4AD34431DD9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5BBDBB8A7F8C88A633EE5B940408EAC1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>71A3DFD4CEC9316347E3B0209517FEE4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DDFileLogger.h</string>
+			<key>path</key>
+			<string>Classes/DDFileLogger.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>729D0B56FB51EF41CAB013694EA3B6CB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreTelephony.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreTelephony.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>73DD13355828343F4326A0AFE34F805E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DDTTYLogger.m</string>
+			<key>path</key>
+			<string>Classes/DDTTYLogger.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>73DE890EC7D2428299128E4E42055703</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ALProcessor.m</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALProcessor/ALProcessor.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>77F9D7A399FE7EC3A07DEC3D2B27A0C9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C71D9E1B8AF04637C37D7A656AE249E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>788B3DAE99F9C7CECC71515E61513C61</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIView+Toast.m</string>
+			<key>path</key>
+			<string>Toast/Toast/UIView+Toast.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>789C112A165BDAB084E029F9D6D3D463</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DDAssertMacros.h</string>
+			<key>path</key>
+			<string>Classes/DDAssertMacros.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>793F8ECB30DFF35C9DB1E5F2F5568BA2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ALSystem.m</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystem.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7AC173E9B4032D679E3491783E4ADDED</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D72AA2F2DEA0817A02ADFE1E4B276C73</string>
+				<string>40996FDA710F7E0D811C1D6583BF1F2C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>7D7069F9FF1C466388F8A98A93E2370B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6A50C62FDFAAE68001465C7607B3B686</string>
+			<string>EEE8CE1A27144CDEC2519929C62FAFAA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1384,9 +1686,9 @@
 			<key>children</key>
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>24002A6670E6882ECD6250D3E60F9CB2</string>
-				<string>9568DD7F061C71ADD642DF9083830508</string>
-				<string>B70BBE04A793AED7D331A9C604A09241</string>
+				<string>876F80F8AFD1240ED0B7B9EA9C5BFAD8</string>
+				<string>254FA1942BD580DDB00D80DD2F9D4459</string>
+				<string>B49DBB5E903E74C6790C489322F2D329</string>
 				<string>3F0AF2A42A8D011C4B6789BCFDE4A09D</string>
 			</array>
 			<key>isa</key>
@@ -1394,22 +1696,27 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7E0EAFF6FE006AAA09AF91AD00E57C4C</key>
+		<key>7DB9D6AD054126111F6B17A21D740629</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8EE8E79C6A389E2216CA623759474AEE</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ALDisk.m</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALDisk/ALDisk.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>7E290EDA41472278C4F774CCEA8A625E</key>
+		<key>7E3C702FFC77A5F79C09ED41CDE9FEF2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>917F1470552AEC1FDA207C52359B20A6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8005D1478828C2C4943A38239957F3BF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1418,33 +1725,13 @@
 			<key>lastKnownFileType</key>
 			<string>text.plist.xml</string>
 			<key>name</key>
-			<string>iPhone4.plist</string>
+			<string>iPadAir.plist</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone4.plist</string>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadAir.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7E3C702FFC77A5F79C09ED41CDE9FEF2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A753499D3BDC27661547A58195BC4BCF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>81398067005C712AFFA2BA11E3E2E771</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>12E2BC28C62976C425F4B71C2723F0B1</string>
-			<key>remoteInfo</key>
-			<string>CocoaLumberjack</string>
-		</dict>
-		<key>81D5CC23C526DE24B9E862A17A8C279D</key>
+		<key>83941A6836A151EE784A526BA340720F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1453,29 +1740,31 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DDDispatchQueueLogFormatter.h</string>
+			<string>ALJailbreak.h</string>
 			<key>path</key>
-			<string>Classes/Extensions/DDDispatchQueueLogFormatter.h</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALJailbreak/ALJailbreak.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>841B6454E71836C8E45911F7D98A3CB3</key>
+		<key>83B04D082C5C0BEDD7E0EAD6280338B8</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CoreGraphics.framework</string>
+			<string>ALCarrier.h</string>
 			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALCarrier/ALCarrier.h</string>
 			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>84AF2B77B683DA7E09E4987F6ABC0686</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F6ACAF9244E0BBE9E63E42F34B464C1A</string>
+			<string>B0F87455A6B3938655F192E12DBA2DC7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1486,33 +1775,29 @@
 				</array>
 			</dict>
 		</dict>
-		<key>855057093BBB988C91ACFE2A02C33A5D</key>
+		<key>876F80F8AFD1240ED0B7B9EA9C5BFAD8</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>D4E8C8C6268813292FA199BA7E187EEA</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>DDMultiFormatter.m</string>
-			<key>path</key>
-			<string>Classes/Extensions/DDMultiFormatter.m</string>
+			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>862472279E054E11DA2D9DC15CDB574B</key>
+		<key>8967A37B89A9589D5031889A49059680</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DDFileLogger.m</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>Classes/DDFileLogger.m</string>
+			<string>CocoaLumberjack-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1538,7 +1823,7 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>8AE2C990C78911DA1624A4843D6BE867</key>
+		<key>8AE04E9BA070AC1A0E9EA51DADB46A9B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1547,38 +1832,23 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALSystem.h</string>
+			<string>UIView+Toast.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystem.h</string>
+			<string>Toast/Toast/UIView+Toast.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>8B61C1C2AF107D60FD70C327CA9000B4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9883C4CB73791135CEBA0B957205C9E5</string>
+			<string>D7CBD812A47EA90F3E608C0226F9719D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>8BA712FA9BC66935FA39589913090C96</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ALCarrier.m</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALCarrier/ALCarrier.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>8CAC814AE0456F17284CE069AE33A547</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1D3091C8B423860C5DF36112CD21B6A2</string>
+			<string>F1ACA9EC60EA11F1CEC954EC6A832F85</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1589,48 +1859,12 @@
 				</array>
 			</dict>
 		</dict>
-		<key>8CE8E83078D3A864BC89D5A7B75BA20D</key>
+		<key>8EE8E79C6A389E2216CA623759474AEE</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>B0CA498005774DB77DBBA6CD2B3572C4</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALSystem_LocalizationConstants.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_LocalizationConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8E7A3300690BD508E85F2A96E64B2D1F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALSystem_HardwareConstants.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_HardwareConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8EF28084A4F9A9365DD4006E030B7CB2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CocoaLumberjack-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>8F50BA18AEDEC7D9CE1F5F25151AA527</key>
 		<dict>
@@ -1653,67 +1887,26 @@
 			<key>productName</key>
 			<string>ALSystemUtilities</string>
 			<key>productReference</key>
-			<string>481FA6A25EF2DCC10E402E944DE3BE0A</string>
+			<string>0E78D70B763A6A55237176BC18B272F7</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
 		</dict>
-		<key>906BA39B4449184A264475B0AAA9CD7B</key>
+		<key>8FE88F6ABB9DD636A9018CEE7A62BA45</key>
 		<dict>
-			<key>fileRef</key>
-			<string>17DD5FEB8DD72B52446543CEEA8A3D2C</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>91D64BB76CB5FB0039F61A78A6F94059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B218389F58F537DEDC4B2029BF1A9F6D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9258A7B71D4C13DBFC66C4B8BE43B79A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5AD89D95C7AFDD35B666A1F564C98EA0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>93F3B1747340A9B33A1068408B360E5D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>35F4D4537F3C71323A595DACE69C1A59</string>
-				<string>1FA8AA41FBA6095E88B9AB187A08B63B</string>
-				<string>4A9607C456BAAABEB040C74E2ED64656</string>
-				<string>841B6454E71836C8E45911F7D98A3CB3</string>
-				<string>60263A60EEBABEBE9270C1C40178D10E</string>
-				<string>F229CA406ACEC73126B0C3D5000A60BA</string>
-				<string>2B792F1FCD78C186B228F324BCC188D0</string>
-				<string>A753499D3BDC27661547A58195BC4BCF</string>
-				<string>A374AFEDCB7FEC4746F7805FD01A1F0C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>iOS</string>
+			<string>Reachability.h</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Reachability/Reachability.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>94640AA3680D52010B7359F7DE6E2CE2</key>
+		<key>900BEFA7AACD079A042902C80EF98652</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1722,54 +1915,126 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>DDContextFilterLogFormatter.m</string>
+			<string>DDLog.m</string>
 			<key>path</key>
-			<string>Classes/Extensions/DDContextFilterLogFormatter.m</string>
+			<string>Classes/DDLog.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>94EF75E62F869BEF8BA3A0979F6BD1B4</key>
+		<key>906BA39B4449184A264475B0AAA9CD7B</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>49BEDFB0128D686FCBEA72673BCB0353</string>
-			<key>buildPhases</key>
-			<array>
-				<string>092CF1544AF8B7DDFA3655E82625062C</string>
-				<string>CF4A8AEE3E4AAFD94574087804308926</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>24AB3769C0AAB404FE380825EC867855</string>
-				<string>C500E5FD93B84FC2FC3C7C13B65DEB33</string>
-			</array>
+			<key>fileRef</key>
+			<string>789C112A165BDAB084E029F9D6D3D463</string>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-GKDS_App</string>
-			<key>productName</key>
-			<string>Pods-GKDS_App</string>
-			<key>productReference</key>
-			<string>9B524B1495072D245BD6F773E230D9F4</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>9568DD7F061C71ADD642DF9083830508</key>
+		<key>917F1470552AEC1FDA207C52359B20A6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Security.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>91D64BB76CB5FB0039F61A78A6F94059</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A7475B2706A0D0046325871D90493333</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9258A7B71D4C13DBFC66C4B8BE43B79A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>033955E4A7AF6FA7EEEB1DCA30C32E0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>93ECB070364644143E5D895068A6DC56</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreFoundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreFoundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>9418B8678E694C2B23769D1258513097</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>5558592F2BDD6CCB731BCE1680F19AA4</string>
-				<string>C769F7E7A1972D8F1313CDB6B6FDFEB8</string>
+				<string>CF05D16FAE1A18A86DB5435C1ECEF178</string>
+				<string>12D47E34F934F357FCD0FCBF94B0188B</string>
+				<string>8967A37B89A9589D5031889A49059680</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Pods</string>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/CocoaLumberjack</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>982DA951D3583FD6462DB9F874ECF2FE</key>
+		<key>94A3CFC468F260314A213921BF0D2EEB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>iPadMini.plist</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadMini.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>98C9F1A75C2BB0AFD94546E36EE5A98C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AudioToolbox.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AudioToolbox.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>99C172C249425BB4C77E963C983736AD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>98C9F1A75C2BB0AFD94546E36EE5A98C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9A5BD2DA0C88F696222BD29592983059</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1784,73 +2049,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9883C4CB73791135CEBA0B957205C9E5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ALHardware.m</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALHardware/ALHardware.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98DEA9F01ACD468019BA87A4525C81EA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALLocalization.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALLocalization/ALLocalization.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>99C172C249425BB4C77E963C983736AD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>35F4D4537F3C71323A595DACE69C1A59</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9A9AA8E3A7E757FF4BBD6155BD1B54BF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DDMultiFormatter.h</string>
-			<key>path</key>
-			<string>Classes/Extensions/DDMultiFormatter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9B4122AED993A4FF578FAD0496DA0EAD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DCC35DFC0EC22B7AFADB68D42C8FA8E9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>9B524B1495072D245BD6F773E230D9F4</key>
+		<key>9AE34ED7881F862E53F9238F5298E789</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>archive.ar</string>
@@ -1865,12 +2064,41 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
+		<key>9B4122AED993A4FF578FAD0496DA0EAD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>314F4AD6DA06AD5331CC548CF38CC4A5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>9CF6D04A6A48D7C651695D0255A97C22</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D14538CA9C9B8D9AEC4CBBCDD94BC73F</string>
+			<string>73DE890EC7D2428299128E4E42055703</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D126A3D00F0357B92BCFAAE65D2D10B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>iPhone5s.plist</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5s.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9D214827289015DB3587668F11E48D07</key>
 		<dict>
@@ -1885,25 +2113,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9D698F02CA74D94BE6ED123EF1B3E17F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALSystem_MemoryConstants.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_MemoryConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>9DFB1378A337698012F7CE5D593DC04F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A540FA041209415E18892E98C42ED12F</string>
+			<string>12BC54C9D8120D946C4D18668D1E9AC4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1912,17 +2125,10 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>9EA12686EF8D59D4459165473613E91B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2B792F1FCD78C186B228F324BCC188D0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>9F5B684C1C3BA68E78AF1BD7F9CA8699</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4DAE59C431824681DFB9652857437D2F</string>
+			<string>F8A5C4452139A661BC4A7FFEA9020EA1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1933,32 +2139,47 @@
 				</array>
 			</dict>
 		</dict>
-		<key>A01325387FA1BF49CDF1796F5CE047D2</key>
+		<key>9F60DA93E68F0F51353643D0E0738D5F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>iPodTouch4.plist</string>
+			<string>ALSystem.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch4.plist</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystem.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A14B5804295D2CC918B0988084F0A7FB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ALAccessory.h</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALAccessory/ALAccessory.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A2389DF583A4A946355EAEDE36B29A0B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2B792F1FCD78C186B228F324BCC188D0</string>
+			<string>19796C60F859834ADB0727FD2D859D74</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>A29AF2C55C276478E5FCBBB996DCE94E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8AE2C990C78911DA1624A4843D6BE867</string>
+			<string>9F60DA93E68F0F51353643D0E0738D5F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1972,7 +2193,7 @@
 		<key>A2D0EE5602557677B5D9AB8D46F2F1AF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FB386C3218B61E174B5523CE68D6722C</string>
+			<string>C8BD123CAB46C37D5DD5CEC276D4C1B6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1986,42 +2207,14 @@
 		<key>A34EF7C35E4E0657AFC8B4BA0B343867</key>
 		<dict>
 			<key>fileRef</key>
-			<string>AB93B58BD75D25F3D88C0BF69F8020F4</string>
+			<string>12D47E34F934F357FCD0FCBF94B0188B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>A374AFEDCB7FEC4746F7805FD01A1F0C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>SystemConfiguration.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>A540FA041209415E18892E98C42ED12F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DDASLLogCapture.m</string>
-			<key>path</key>
-			<string>Classes/DDASLLogCapture.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A5EDC34823EF7421FD375CE668D7049C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>98DEA9F01ACD468019BA87A4525C81EA</string>
+			<string>105455BCD17F24CD778C1CDD5B45AEF1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2032,10 +2225,23 @@
 				</array>
 			</dict>
 		</dict>
+		<key>A61330B734AB65C41111F2DDFBA7AB71</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ALSystemUtilities-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>A6C9F62F7C92008E8617ABAC38635FAA</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>1226679227F51540B2C91CE79E1B3F1D</string>
+			<string>CF05D16FAE1A18A86DB5435C1ECEF178</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -2066,20 +2272,51 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>A753499D3BDC27661547A58195BC4BCF</key>
+		<key>A7475B2706A0D0046325871D90493333</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>Security.framework</string>
+			<string>ALAccessory.m</string>
 			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALAccessory/ALAccessory.m</string>
 			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A8D87EFF26A8E24EBDCC3CD3A5E2B042</key>
+		<key>A8B7C3DF79B5F8622CFD0EE1B5216072</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0034248309A261E98C96BC0BCBEB2FB2</string>
+				<string>2500DBECEF200A2755562FB4F6CF0775</string>
+				<string>3535D825D6ABAA2F1D07633584C67403</string>
+				<string>8005D1478828C2C4943A38239957F3BF</string>
+				<string>94A3CFC468F260314A213921BF0D2EEB</string>
+				<string>E41D1942E4370D1F790251637C589C2B</string>
+				<string>E3867537DEBB1B170CF734F15B3141DF</string>
+				<string>2482B59EC7607E0675E66A0766F27D7D</string>
+				<string>1A0D729A5FCB6F1A9B86359DBDD93BFF</string>
+				<string>16087BD196754AA54F5DF3877C7FB679</string>
+				<string>F6AABB607E44096352DE100BB4A211DC</string>
+				<string>9D126A3D00F0357B92BCFAAE65D2D10B</string>
+				<string>9A5BD2DA0C88F696222BD29592983059</string>
+				<string>522BF7A68D27E81A300D90A4DFA19DC9</string>
+				<string>5473C4F55E7C2F461B31E50A8B2710A7</string>
+				<string>DF3BFB20793F7859D67A670CC50EFBD8</string>
+				<string>F003B57C69AD69910EEE795CC06CAFF6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9AA04ABC48772A286B6CCCFE3EA9B76</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2088,37 +2325,53 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALHardware.h</string>
+			<string>ALMemory.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALHardware/ALHardware.h</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALMemory/ALMemory.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A9FB82A0D814625720B1105576177508</key>
+		<key>A9CC8D2220E8AE4CDDF0B6787E9290CE</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>Reachability.m</string>
+			<string>ALNetwork.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Reachability/Reachability.m</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALNetwork/ALNetwork.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AB93B58BD75D25F3D88C0BF69F8020F4</key>
+		<key>ACA6A3C2CD557475659BF617DAB8A4EC</key>
 		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>libToast.a</string>
 			<key>path</key>
-			<string>CocoaLumberjack-dummy.m</string>
+			<string>libToast.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>AE3BE9687EC44AD0D4BDD47C757D7F2A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8FE88F6ABB9DD636A9018CEE7A62BA45</string>
+				<string>653E35C0F1D3CAA90ED46A66EE35682F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>no-arc</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2135,38 +2388,25 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B218389F58F537DEDC4B2029BF1A9F6D</key>
+		<key>B0F87455A6B3938655F192E12DBA2DC7</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALAccessory.m</string>
+			<string>ALDisk.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALAccessory/ALAccessory.m</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALDisk/ALDisk.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B22460ED5885C5A357FEEE849C86FF4E</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>8F50BA18AEDEC7D9CE1F5F25151AA527</string>
-			<key>remoteInfo</key>
-			<string>ALSystemUtilities</string>
 		</dict>
 		<key>B353D5D40F92F8FACC4DDEC16B1D3BAE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CF4301D7543223BF08C4795A242FFCFD</string>
+			<string>A14B5804295D2CC918B0988084F0A7FB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2250,13 +2490,14 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>B70BBE04A793AED7D331A9C604A09241</key>
+		<key>B49DBB5E903E74C6790C489322F2D329</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>481FA6A25EF2DCC10E402E944DE3BE0A</string>
-				<string>D2692B1FE63D42A2BBF2234FE72F6510</string>
-				<string>9B524B1495072D245BD6F773E230D9F4</string>
+				<string>0E78D70B763A6A55237176BC18B272F7</string>
+				<string>CA29E6F1F5E88456CE226EF14053E7FC</string>
+				<string>9AE34ED7881F862E53F9238F5298E789</string>
+				<string>ACA6A3C2CD557475659BF617DAB8A4EC</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -2306,7 +2547,7 @@
 		<key>BBCA69A708A7B3DD861FB839B3A251B3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>22A95EC70E66C778649A903176D66272</string>
+			<string>2FA8E9CD969A737338345AEC6E54E61D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2316,6 +2557,17 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>BCA89C2E673908341204DC4AF1B8F340</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Toast</string>
+			<key>target</key>
+			<string>F3837E7FEB5DDA0AFB2E039F23D6DD91</string>
+			<key>targetProxy</key>
+			<string>363CFF983CD390F76E20415A74F4D33F</string>
 		</dict>
 		<key>BD239380A48ED8FD2B81038AE4DEE40C</key>
 		<dict>
@@ -2352,25 +2604,10 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>BD53433F5E8914B8D2B7EEC46FF26BB2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DDFileLogger.h</string>
-			<key>path</key>
-			<string>Classes/DDFileLogger.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>BD7AE620409F9E8D5BE7A31948562291</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E288F83D5890CEDBFE1C49B196A58F87</string>
+			<string>16134E37C4ABAC5B8AA538ADB69BE689</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2384,29 +2621,27 @@
 		<key>BD9BFC98BF7E817608E6FAC785414114</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7E0EAFF6FE006AAA09AF91AD00E57C4C</string>
+			<string>117EDE432256B612650C8E4A64F43388</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>BDFD473CEBDEE0C97480DD3260DADC5B</key>
+		<key>BE417111A2F554EFDB56FBDB1ADD428D</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>ALNetwork.h</string>
+			<string>CFNetwork.framework</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALNetwork/ALNetwork.h</string>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>DEVELOPER_DIR</string>
 		</dict>
 		<key>BE590331008FE94EE8C3A415D20A9667</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C2481FBEDD6760875E091F0401205FDD</string>
+			<string>26FDBADAFD10FF6EC7CE7741B4310616</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2420,7 +2655,7 @@
 		<key>BEF4C4ADA8FBF44CC817CA8CC40B16B3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A9FB82A0D814625720B1105576177508</string>
+			<string>653E35C0F1D3CAA90ED46A66EE35682F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2429,10 +2664,23 @@
 				<string>-fno-objc-arc</string>
 			</dict>
 		</dict>
+		<key>BF2FB79ED7445727920FB003821C8096</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>8F50BA18AEDEC7D9CE1F5F25151AA527</string>
+			<key>remoteInfo</key>
+			<string>ALSystemUtilities</string>
+		</dict>
 		<key>BF525D162B9ABC5DFA69FB7A8779F76E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4BE683E58B727EAF74A091E991DA8742</string>
+			<string>73DD13355828343F4326A0AFE34F805E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2441,44 +2689,99 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>BFE1FF9B43403CB391088CFC91F6ED58</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>iPhone5c.plist</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5c.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C12FA48D92E9F7C1F891DE945C2824BC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DDASLLogger.m</string>
-			<key>path</key>
-			<string>Classes/DDASLLogger.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>C155B3021F9C56CFC1F01AC3F52991A7</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A374AFEDCB7FEC4746F7805FD01A1F0C</string>
+			<string>1E3E84F0DC76502E5248F973B7024779</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>C2481FBEDD6760875E091F0401205FDD</key>
+		<key>C2EF6122367253B94CA91F356295D5C8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6B8E4D06E0BD7753CE394D2F4601739A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C4C9F1F2867FC6E49E163F7987473901</key>
+		<dict>
+			<key>fileRef</key>
+			<string>83941A6836A151EE784A526BA340720F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C515A390D549AF8A16A76DD72388BD2C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>71A3DFD4CEC9316347E3B0209517FEE4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C64C3910C8360EEC433E45D0A4436F8D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A14B5804295D2CC918B0988084F0A7FB</string>
+				<string>A7475B2706A0D0046325871D90493333</string>
+				<string>E9398914633DFE5D5303494B3FE39610</string>
+				<string>5C6ACB95C5006756B5343B8027D46AD4</string>
+				<string>83B04D082C5C0BEDD7E0EAD6280338B8</string>
+				<string>6774D25615308C491C21AF317EC91099</string>
+				<string>B0F87455A6B3938655F192E12DBA2DC7</string>
+				<string>117EDE432256B612650C8E4A64F43388</string>
+				<string>C71D9E1B8AF04637C37D7A656AE249E7</string>
+				<string>D7CBD812A47EA90F3E608C0226F9719D</string>
+				<string>83941A6836A151EE784A526BA340720F</string>
+				<string>5CE8B8ED015267FB711F97BDC1432419</string>
+				<string>105455BCD17F24CD778C1CDD5B45AEF1</string>
+				<string>D9E0985322C5012FD627DA631AB5CC93</string>
+				<string>A9AA04ABC48772A286B6CCCFE3EA9B76</string>
+				<string>E79D6E195D6A4371C2DDBD066717DC0D</string>
+				<string>A9CC8D2220E8AE4CDDF0B6787E9290CE</string>
+				<string>F9E16BF893CFAB05F8A9A576D6B1C86B</string>
+				<string>F1ACA9EC60EA11F1CEC954EC6A832F85</string>
+				<string>73DE890EC7D2428299128E4E42055703</string>
+				<string>9F60DA93E68F0F51353643D0E0738D5F</string>
+				<string>793F8ECB30DFF35C9DB1E5F2F5568BA2</string>
+				<string>314F4AD6DA06AD5331CC548CF38CC4A5</string>
+				<string>26FDBADAFD10FF6EC7CE7741B4310616</string>
+				<string>EEE8CE1A27144CDEC2519929C62FAFAA</string>
+				<string>16134E37C4ABAC5B8AA538ADB69BE689</string>
+				<string>C9B10B32E2C0735D5D94C0E33102ECB2</string>
+				<string>6549A0CEE32C9E893AB34F38BC884BF4</string>
+				<string>3F3AD12775643C81742A6FEDFC37419D</string>
+				<string>6D62FB033871255EDA4FA51298C777F6</string>
+				<string>F8A5C4452139A661BC4A7FFEA9020EA1</string>
+				<string>07559F4B310BB8B0855D04105C432D06</string>
+				<string>01932473F9744BD543DB7C9060B10BAA</string>
+				<string>AE3BE9687EC44AD0D4BDD47C757D7F2A</string>
+				<string>A8B7C3DF79B5F8622CFD0EE1B5216072</string>
+				<string>0FF3195CBB61A40BA99B85C00188F8B5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ALSystemUtilities</string>
+			<key>path</key>
+			<string>ALSystemUtilities</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C71D9E1B8AF04637C37D7A656AE249E7</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2487,109 +2790,86 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALSystem_ALBatteryConstants.h</string>
+			<string>ALHardware.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_ALBatteryConstants.h</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALHardware/ALHardware.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C2EF6122367253B94CA91F356295D5C8</key>
+		<key>C7B94D5BDDFE8C075DA05A2AF54C5878</key>
 		<dict>
-			<key>fileRef</key>
-			<string>841B6454E71836C8E45911F7D98A3CB3</string>
+			<key>children</key>
+			<array>
+				<string>C8A0B89FEA172740193283CDADCFC87A</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C4C9F1F2867FC6E49E163F7987473901</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3752556F949B1487D0CA7628F7C0C0CB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>C500E5FD93B84FC2FC3C7C13B65DEB33</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>CocoaLumberjack</string>
-			<key>target</key>
-			<string>12E2BC28C62976C425F4B71C2723F0B1</string>
-			<key>targetProxy</key>
-			<string>81398067005C712AFFA2BA11E3E2E771</string>
+			<string>Default</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C515A390D549AF8A16A76DD72388BD2C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD53433F5E8914B8D2B7EEC46FF26BB2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>C5F1C6044835AAB243673BE8FEFEBAEE</key>
+		<key>C8A0B89FEA172740193283CDADCFC87A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>iPad3.plist</string>
+			<string>CocoaLumberjack.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad3.plist</string>
+			<string>Classes/CocoaLumberjack.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C769F7E7A1972D8F1313CDB6B6FDFEB8</key>
+		<key>C8BD123CAB46C37D5DD5CEC276D4C1B6</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>D396FF82B28C73886E5322FA73DEE181</string>
-				<string>3801C7D74EE7F36A3E04555FFE80F814</string>
-				<string>5210D5A5814193C2C6DBF88CFFB18363</string>
-				<string>7895549BCAD0B5393BACAB63405FAA47</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CocoaLumberjack</string>
+			<string>DDLog+LOGV.h</string>
 			<key>path</key>
-			<string>CocoaLumberjack</string>
+			<string>Classes/DDLog+LOGV.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C7EA5BA513B12D5FFA4CE972C617A2E2</key>
+		<key>C8CE3DF3D8B8FDB519ADF0111E17EC9A</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>497E83FFF55184B577121E59A275ABFC</string>
-				<string>54A21A07BCBE09C06DC9D4CCF29B3C11</string>
-				<string>E23264964662C26B1648B9B218E9FAAD</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>Support Files</string>
+			<string>DDContextFilterLogFormatter.h</string>
 			<key>path</key>
-			<string>../Target Support Files/ALSystemUtilities</string>
+			<string>Classes/Extensions/DDContextFilterLogFormatter.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C9C460587B0FF9AE0689F4D52CDD0B31</key>
+		<key>C9B10B32E2C0735D5D94C0E33102ECB2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ALSystem_HardwareConstants.h</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_HardwareConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CA1D3807188FE8D0BEBBE7BA9B639D2D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2604,25 +2884,53 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C9FCAEC612E97998E59F8954928EDDE6</key>
+		<key>CA29E6F1F5E88456CE226EF14053E7FC</key>
 		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>ALMemory.m</string>
+			<string>libCocoaLumberjack.a</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALMemory/ALMemory.m</string>
+			<string>libCocoaLumberjack.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>CB86A7B214FF617D523221C9B2C8704C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>033955E4A7AF6FA7EEEB1DCA30C32E0D</string>
+				<string>CA1D3807188FE8D0BEBBE7BA9B639D2D</string>
+				<string>D011B4A13448A15084898870D9E01E0E</string>
+				<string>12BC54C9D8120D946C4D18668D1E9AC4</string>
+				<string>1DBBA92CA3F467FAA1A3C1C312A1120A</string>
+				<string>3EE5E98A7FD936217CB70B45F1D82A5E</string>
+				<string>789C112A165BDAB084E029F9D6D3D463</string>
+				<string>71A3DFD4CEC9316347E3B0209517FEE4</string>
+				<string>28CA5F0CCC1475F24AA4B02A3F19B7A0</string>
+				<string>2FA8E9CD969A737338345AEC6E54E61D</string>
+				<string>DCC655E89DEE4E32E2C2EF0B070D2052</string>
+				<string>900BEFA7AACD079A042902C80EF98652</string>
+				<string>C8BD123CAB46C37D5DD5CEC276D4C1B6</string>
+				<string>13DB7B0C45F210E81F15CFBDA9A2DDF0</string>
+				<string>679DC1C2E24270D9AE1B7680835F262D</string>
+				<string>73DD13355828343F4326A0AFE34F805E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Core</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>CBB6BB497EC1A4C36506AD74ECDCD99F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F1923E0C300D4D4F3500E43D72E2B417</string>
+			<string>C8A0B89FEA172740193283CDADCFC87A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2636,7 +2944,7 @@
 		<key>CBE9D423903459AA26EA3DAB39185A00</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>497E83FFF55184B577121E59A275ABFC</string>
+			<string>D1539D3798F9ECF2D0F7AE0CE6C1C387</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -2667,14 +2975,61 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>CBF6384297B1109092C0A1154C89356E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0BC82FC6BB6D1DCDE31A1C7284C0D3C9</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Toast/Toast-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
 		<key>CCECB57442BA44E442DE4FC4C7B20406</key>
 		<dict>
 			<key>fileRef</key>
-			<string>58091C695540FACB3FA33C5CB3762108</string>
+			<string>5CE8B8ED015267FB711F97BDC1432419</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>CF4301D7543223BF08C4795A242FFCFD</key>
+		<key>CF05D16FAE1A18A86DB5435C1ECEF178</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>CocoaLumberjack.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D011B4A13448A15084898870D9E01E0E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2683,80 +3038,22 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALAccessory.h</string>
+			<string>DDASLLogCapture.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALAccessory/ALAccessory.h</string>
+			<string>Classes/DDASLLogCapture.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CF4A8AEE3E4AAFD94574087804308926</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9EA12686EF8D59D4459165473613E91B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D14538CA9C9B8D9AEC4CBBCDD94BC73F</key>
+		<key>D1539D3798F9ECF2D0F7AE0CE6C1C387</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ALProcessor.m</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALProcessor/ALProcessor.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D2692B1FE63D42A2BBF2234FE72F6510</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libCocoaLumberjack.a</string>
-			<key>path</key>
-			<string>libCocoaLumberjack.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D396FF82B28C73886E5322FA73DEE181</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5AD89D95C7AFDD35B666A1F564C98EA0</string>
-				<string>C9C460587B0FF9AE0689F4D52CDD0B31</string>
-				<string>E609E32B8864D11A1E6FA2F136B34F95</string>
-				<string>A540FA041209415E18892E98C42ED12F</string>
-				<string>F87024051431EE2E48786F9B208CF9A1</string>
-				<string>C12FA48D92E9F7C1F891DE945C2824BC</string>
-				<string>17DD5FEB8DD72B52446543CEEA8A3D2C</string>
-				<string>BD53433F5E8914B8D2B7EEC46FF26BB2</string>
-				<string>862472279E054E11DA2D9DC15CDB574B</string>
-				<string>22A95EC70E66C778649A903176D66272</string>
-				<string>30A3E5B80EA8F580A4F36556E8D4AD33</string>
-				<string>E790048064E5E0FF6C5D41D4B8DB4CFF</string>
-				<string>FB386C3218B61E174B5523CE68D6722C</string>
-				<string>171AD9CE547793599C3830A84B5CD68C</string>
-				<string>0093DD5CF7EB12CFBA2DFC66DE284456</string>
-				<string>4BE683E58B727EAF74A091E991DA8742</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Core</string>
+			<string>ALSystemUtilities.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2786,7 +3083,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>B70BBE04A793AED7D331A9C604A09241</string>
+			<string>B49DBB5E903E74C6790C489322F2D329</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -2797,8 +3094,31 @@
 			<array>
 				<string>8F50BA18AEDEC7D9CE1F5F25151AA527</string>
 				<string>12E2BC28C62976C425F4B71C2723F0B1</string>
-				<string>94EF75E62F869BEF8BA3A0979F6BD1B4</string>
+				<string>E0726B57DC105CEBE7F40F46FB660C80</string>
+				<string>F3837E7FEB5DDA0AFB2E039F23D6DD91</string>
 			</array>
+		</dict>
+		<key>D4E8C8C6268813292FA199BA7E187EEA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>98C9F1A75C2BB0AFD94546E36EE5A98C</string>
+				<string>BE417111A2F554EFDB56FBDB1ADD428D</string>
+				<string>93ECB070364644143E5D895068A6DC56</string>
+				<string>6B8E4D06E0BD7753CE394D2F4601739A</string>
+				<string>729D0B56FB51EF41CAB013694EA3B6CB</string>
+				<string>4E6E9F96B9A441E2FD5F2C5C75D12419</string>
+				<string>19796C60F859834ADB0727FD2D859D74</string>
+				<string>F42EF307E718C060D184AF577885AA66</string>
+				<string>917F1470552AEC1FDA207C52359B20A6</string>
+				<string>1E3E84F0DC76502E5248F973B7024779</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D5304CE4548B6208DF04940B66FC1BE5</key>
 		<dict>
@@ -2817,7 +3137,7 @@
 		<key>D70BDFA09F4803DCFEAD7AF5DFE21C6A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E790048064E5E0FF6C5D41D4B8DB4CFF</string>
+			<string>900BEFA7AACD079A042902C80EF98652</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2826,36 +3146,70 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>D7E2B5048ECC19C8414B1E16F7C09C78</key>
+		<key>D72AA2F2DEA0817A02ADFE1E4B276C73</key>
+		<dict>
+			<key>fileRef</key>
+			<string>19796C60F859834ADB0727FD2D859D74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D7CBD812A47EA90F3E608C0226F9719D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>iPhone4s.plist</string>
+			<string>ALHardware.m</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone4s.plist</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALHardware/ALHardware.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D841E365A9C39EA921AD6B06A21309ED</key>
+		<dict>
+			<key>fileRef</key>
+			<string>788B3DAE99F9C7CECC71515E61513C61</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
 		</dict>
 		<key>D86F62CA5DFEB5481E009AF3C783B179</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2B792F1FCD78C186B228F324BCC188D0</string>
+			<string>19796C60F859834ADB0727FD2D859D74</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>D9E0985322C5012FD627DA631AB5CC93</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ALLocalization.m</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALLocalization/ALLocalization.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>DADD69E207C545F1695F9A3D340AE85B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>72F2A4AD1698022F649A3DC1FAD9738A</string>
+			<string>F9E16BF893CFAB05F8A9A576D6B1C86B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>DCC35DFC0EC22B7AFADB68D42C8FA8E9</key>
+		<key>DCC655E89DEE4E32E2C2EF0B070D2052</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2864,16 +3218,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALSystem_AccessoryConstants.h</string>
+			<string>DDLog.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_AccessoryConstants.h</string>
+			<string>Classes/DDLog.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>DE3BBED43BE9BA4C0E135C316387AD01</key>
 		<dict>
 			<key>fileRef</key>
-			<string>381CF69C5AA1B5747A546556F52DE633</string>
+			<string>83B04D082C5C0BEDD7E0EAD6280338B8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2884,42 +3238,25 @@
 				</array>
 			</dict>
 		</dict>
-		<key>DE941B5CF1E21EA44E31B387616F4DF7</key>
+		<key>DF3BFB20793F7859D67A670CC50EFBD8</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>188B49D5AB2908567BE7D4C6AC731F2A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>XCBuildConfiguration</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
 			<key>name</key>
-			<string>Release</string>
+			<string>iPodTouch4.plist</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch4.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>DF7DAD7D1E9E3DE3AEC6057B4A2E7AD0</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>497E83FFF55184B577121E59A275ABFC</string>
+			<string>D1539D3798F9ECF2D0F7AE0CE6C1C387</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -2950,19 +3287,33 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>E061E8956A9D720AA998756A6E31B4FB</key>
+		<key>E0726B57DC105CEBE7F40F46FB660C80</key>
 		<dict>
-			<key>children</key>
+			<key>buildConfigurationList</key>
+			<string>2E67606BF10D2823566DECB3728A5DDD</string>
+			<key>buildPhases</key>
 			<array>
-				<string>F66E5FA7F0081D4C61931D8B4C84B67C</string>
-				<string>A9FB82A0D814625720B1105576177508</string>
+				<string>7DB9D6AD054126111F6B17A21D740629</string>
+				<string>E749C85054360849FCF8D709CDFB26CC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>1C53BEB0826B699179C0A10385CDA10E</string>
+				<string>5BC77504A0D08D2991C8125D68F07CD0</string>
+				<string>BCA89C2E673908341204DC4AF1B8F340</string>
 			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>no-arc</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>Pods-GKDS_App</string>
+			<key>productName</key>
+			<string>Pods-GKDS_App</string>
+			<key>productReference</key>
+			<string>9AE34ED7881F862E53F9238F5298E789</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
 		<key>E0897F9C46664A16E5FDB7DE785F7094</key>
 		<dict>
@@ -2976,13 +3327,6 @@
 			<string>Pods-GKDS_App-frameworks.sh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E0B51132E62907913FFB1DA649803B9A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B0CA498005774DB77DBBA6CD2B3572C4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>E0C8BB684C9CCC379207FFA69ED0D571</key>
 		<dict>
@@ -2998,25 +3342,10 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>E17EC8D3B45C7CB75412ACE7E0B48DF9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>iPad4.plist</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad4.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>E1ED34DB49C6A05D740B8425F88CEC20</key>
 		<dict>
 			<key>fileRef</key>
-			<string>855057093BBB988C91ACFE2A02C33A5D</string>
+			<string>1AC4CB948268FCD14F23CAF2DE0B0AB2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3025,35 +3354,7 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>E23264964662C26B1648B9B218E9FAAD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E288F83D5890CEDBFE1C49B196A58F87</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALSystem_DiskConstants.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_DiskConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E349726D52316E0FFB854950BAA8860A</key>
+		<key>E3867537DEBB1B170CF734F15B3141DF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3062,9 +3363,9 @@
 			<key>lastKnownFileType</key>
 			<string>text.plist.xml</string>
 			<key>name</key>
-			<string>iPhone5s.plist</string>
+			<string>iPhone3Gs.plist</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5s.plist</string>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone3Gs.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3081,37 +3382,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E609E32B8864D11A1E6FA2F136B34F95</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DDASLLogCapture.h</string>
-			<key>path</key>
-			<string>Classes/DDASLLogCapture.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E790048064E5E0FF6C5D41D4B8DB4CFF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DDLog.m</string>
-			<key>path</key>
-			<string>Classes/DDLog.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E7CCF7E19C159004F1349CA889A8D892</key>
+		<key>E41D1942E4370D1F790251637C589C2B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3120,13 +3391,48 @@
 			<key>lastKnownFileType</key>
 			<string>text.plist.xml</string>
 			<key>name</key>
-			<string>iPhone6Plus.plist</string>
+			<string>iPadMiniRetina.plist</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone6Plus.plist</string>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadMiniRetina.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E87BAAEF3ADD6BA680DB17BB4FAF54E1</key>
+		<key>E44626E28471574EA6C4FD85E4E29FD4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>59A63987ACFA7F3F8F32EB5DCC7D631B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E749C85054360849FCF8D709CDFB26CC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2ACC6C5BB264307456CBD45AB0BE7573</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E79D6E195D6A4371C2DDBD066717DC0D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ALMemory.m</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALMemory/ALMemory.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E9398914633DFE5D5303494B3FE39610</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3135,16 +3441,30 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALSystem_JailbreakConstants.h</string>
+			<string>ALBattery.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_JailbreakConstants.h</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALBattery/ALBattery.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EABF500B14CAAA2CDED5D082EE04A5C0</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>CBF6384297B1109092C0A1154C89356E</string>
+				<string>2258B9C5C40F81493A94AF0640F23E6A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>ECAE1F0123897354BBB08B5870F44C8F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9D698F02CA74D94BE6ED123EF1B3E17F</string>
+			<string>6D62FB033871255EDA4FA51298C777F6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3155,14 +3475,57 @@
 				</array>
 			</dict>
 		</dict>
+		<key>ED5312FEE7333E4F5F002049ACC3BA7D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Toast-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EEE8CE1A27144CDEC2519929C62FAFAA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ALSystem_CarrierConstants.h</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_CarrierConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F003B57C69AD69910EEE795CC06CAFF6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>iPodTouch5.plist</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch5.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>F0D9ADE51A7316A69B10D41FC3C42A58</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F229CA406ACEC73126B0C3D5000A60BA</string>
+			<string>4E6E9F96B9A441E2FD5F2C5C75D12419</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>F18148B44D1B245DD99C8235BAF3F209</key>
+		<key>F1ACA9EC60EA11F1CEC954EC6A832F85</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3171,39 +3534,11 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ALSystemConstants.h</string>
+			<string>ALProcessor.h</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystemConstants.h</string>
+			<string>ALSystemUtilities/ALSystemUtilities/ALProcessor/ALProcessor.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1923E0C300D4D4F3500E43D72E2B417</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CocoaLumberjack.h</string>
-			<key>path</key>
-			<string>Classes/CocoaLumberjack.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F229CA406ACEC73126B0C3D5000A60BA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>ExternalAccessory.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/ExternalAccessory.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
 		</dict>
 		<key>F363FDFD6902F503527387B219313D56</key>
 		<dict>
@@ -3226,82 +3561,45 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F66E5FA7F0081D4C61931D8B4C84B67C</key>
+		<key>F3837E7FEB5DDA0AFB2E039F23D6DD91</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildConfigurationList</key>
+			<string>EABF500B14CAAA2CDED5D082EE04A5C0</string>
+			<key>buildPhases</key>
+			<array>
+				<string>FC9C2E3EB210EAA26C404062685AF1AC</string>
+				<string>7AC173E9B4032D679E3491783E4ADDED</string>
+				<string>30F1B50D5A1C447D92884BC2E2CC17C6</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Toast</string>
+			<key>productName</key>
+			<string>Toast</string>
+			<key>productReference</key>
+			<string>ACA6A3C2CD557475659BF617DAB8A4EC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>F42EF307E718C060D184AF577885AA66</key>
+		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>Reachability.h</string>
+			<string>QuartzCore.framework</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Reachability/Reachability.h</string>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>F6ACAF9244E0BBE9E63E42F34B464C1A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ALDisk.h</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALDisk/ALDisk.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F813F4807CB1A4BBA03CB2AAD57C9504</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ALBattery.m</string>
-			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/ALBattery/ALBattery.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F87024051431EE2E48786F9B208CF9A1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DDASLLogger.h</string>
-			<key>path</key>
-			<string>Classes/DDASLLogger.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FB386C3218B61E174B5523CE68D6722C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DDLog+LOGV.h</string>
-			<key>path</key>
-			<string>Classes/DDLog+LOGV.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FC7898660FB11C09A3DE049E2D2CF591</key>
+		<key>F6AABB607E44096352DE100BB4A211DC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3310,16 +3608,60 @@
 			<key>lastKnownFileType</key>
 			<string>text.plist.xml</string>
 			<key>name</key>
-			<string>iPadMiniRetina.plist</string>
+			<string>iPhone5c.plist</string>
 			<key>path</key>
-			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPadMiniRetina.plist</string>
+			<string>ALSystemUtilities/ALSystemUtilities/Resources/iPhone/iPhone5c.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F8A5C4452139A661BC4A7FFEA9020EA1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ALSystem_NetworkConstants.h</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALSystemConstants/ALSystem_NetworkConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F9E16BF893CFAB05F8A9A576D6B1C86B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ALNetwork.m</string>
+			<key>path</key>
+			<string>ALSystemUtilities/ALSystemUtilities/ALNetwork/ALNetwork.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FC9C2E3EB210EAA26C404062685AF1AC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E44626E28471574EA6C4FD85E4E29FD4</string>
+				<string>D841E365A9C39EA921AD6B06A21309ED</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>FE6239BDE2049B920243DC0F907F57B9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7313021381997556CE4FD950A212A618</string>
+			<string>4BB2EE379FA2ED28E4494418BC9EB65F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3328,10 +3670,23 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>FF45F6BFCE56467149970A7DADB64640</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ALSystemUtilities-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>FFE1275667611DEA3AAED4EBF00DDC7E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BDFD473CEBDEE0C97480DD3260DADC5B</string>
+			<string>A9CC8D2220E8AE4CDDF0B6787E9290CE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>

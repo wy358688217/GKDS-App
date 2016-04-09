@@ -7,6 +7,7 @@
 #import "GKNavigationController.h"
 #import "GKWebViewController.h"
 #import "GKWeiXinPayViewController.h"
+#import "GKAttentionViewController.h"
 @interface XZMTabBarViewController ()<UITabBarDelegate>
 
 @end
@@ -56,7 +57,7 @@
                              index:Moduel_Tab_Left_Two];
     
     /** 关注 */
-    UIViewController * fourVc = [[UIViewController alloc]init];
+    GKAttentionViewController * fourVc = [[GKAttentionViewController alloc]init];
     fourVc.view.backgroundColor = [UIColor greenColor];
     [self setUpChildControllerWith:fourVc
                           norImage:[UIImage imageNamed:@"tabBar_friendTrends_icon"]
