@@ -71,6 +71,10 @@
     NSString * curClientVersion = [GK_SYS_PROXY curClientVersion];
     NSString * curIOSVersion = [GK_SYS_PROXY curIOSVersion];
     NSString * curNetStatus = [GK_SYS_PROXY curNetStatus];
+    NSString * curPhoneGPUModel = [GK_SYS_PROXY curPhoneGPUModel];
+    NSString * curPhoneGPUName = [GK_SYS_PROXY curPhoneGPUName];
+    GKLogSP(@"显卡类型为：%@",curPhoneGPUModel);
+    GKLogSP(@"显卡名字为：%@",curPhoneGPUName);
     GKLog(curNetworkOperators);
     GKLog(curClientVersion);
     GKLog(curNetStatus);

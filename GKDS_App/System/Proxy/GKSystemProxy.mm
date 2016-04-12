@@ -7,16 +7,24 @@
 //
 
 #import "GKSystemProxy.h"
+#import <CoreTelephony/CTCarrier.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <GLKit/GLKit.h>
+
 #import <mach/mach.h>
 #import <sys/sysctl.h>
 #import "ALProcessor.h"
 #import "ALMemory.h"
 #import "ALHardware.h"
-#import <CoreTelephony/CTCarrier.h>
-#import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import "Reachability.h"
+
 #include "ifaddrs.h"
 #include "net/if.h"
+#include <sys/utsname.h>
+#include <sys/types.h>
+#include <sys/sysctl.h>
+
+#import "SystemConstants.h"
 
 @implementation GKSystemProxy {
     BOOL isPublicNet;
@@ -74,30 +82,21 @@
 
 - (NSArray<NSNumber *>*)netBandData {
     struct ifaddrs *ifa_list = 0, *ifa;
-    if (getifaddrs(&ifa_list) == -1)
-    {
+    if (getifaddrs(&ifa_list) == -1) {
         return 0;
     }
     
     NSInteger iBytes = 0;
     NSInteger oBytes = 0;
-    
-    for (ifa = ifa_list; ifa; ifa = ifa->ifa_next)
-    {
-        if (AF_LINK != ifa->ifa_addr->sa_family)
-            continue;
-        
-        if (!(ifa->ifa_flags & IFF_UP) && !(ifa->ifa_flags & IFF_RUNNING))
-            continue;
-        
-        if (ifa->ifa_data == 0)
-            continue;
+    //监控显卡上下行流量
+    for (ifa = ifa_list; ifa; ifa = ifa->ifa_next) {
+        if (AF_LINK != ifa->ifa_addr->sa_family) continue;
+        if (!(ifa->ifa_flags & IFF_UP) && !(ifa->ifa_flags & IFF_RUNNING))  continue;
+        if (ifa->ifa_data == 0) continue;
         
         /* Not a loopback device. */
-        if (strncmp(ifa->ifa_name, "lo", 2))
-        {
+        if (strncmp(ifa->ifa_name, "lo", 2)) {
             struct if_data *if_data = (struct if_data *)ifa->ifa_data;
-            
             iBytes += if_data->ifi_ibytes;
             oBytes += if_data->ifi_obytes;
         }
@@ -136,7 +135,6 @@
 - (NSString *)humanReadableSpeedFromSpeed:(double)speed
 {
     static NSArray *speedMeasures = nil;
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         speedMeasures = (@[
@@ -152,7 +150,6 @@
         speed /= 1024.0;
         counter++;
     }
-    
     return [NSString stringWithFormat:@"%.1f %@", speed, speedMeasures[counter]];
 }
 
@@ -213,18 +210,21 @@
 }
 
 - (NSString *)curPhoneGPUModel {
-    return @"暂时无法获取";
+    EAGLContext * ctx = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    [EAGLContext setCurrentContext:ctx];
+    return [NSString stringWithCString:(const char*)glGetString(GL_VERSION) encoding:NSASCIIStringEncoding];
 }
 
 - (NSString *)curPhoneGPUName {
-    NSString * name = [ALHardware gpu];
-    if (name.length <= 0) {
-        name = @"暂时无法获取";
-    }
-    return name;
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString * result = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+    iDevice_t dev = MachineToIdevice(result);
+    NSString * gpuName = (NSString *)GraphicCardNameTable[dev];
+    return gpuName;
 }
 
-- (NSString *)curPhoneGPUSize {
+- (NSString *)curPhoneGPUSize {    
     return @"暂时无法获取";
 }
 

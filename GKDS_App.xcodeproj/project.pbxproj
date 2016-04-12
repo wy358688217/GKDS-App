@@ -217,6 +217,7 @@
 		219BFABA1CA80D81002A28D8 /* GKUITabBarMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 219BFAB91CA80D81002A28D8 /* GKUITabBarMediator.m */; };
 		219BFABB1CA80D81002A28D8 /* GKUITabBarMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 219BFAB91CA80D81002A28D8 /* GKUITabBarMediator.m */; };
 		219BFABC1CA80D81002A28D8 /* GKUITabBarMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 219BFAB91CA80D81002A28D8 /* GKUITabBarMediator.m */; };
+		219FBB091CBA1E4400A61D14 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219FBB081CBA1E4400A61D14 /* OpenGLES.framework */; };
 		21BE74661CA585DE00C36272 /* GKDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BE74641CA585DE00C36272 /* GKDiscoveryViewController.m */; };
 		21BE74671CA585DE00C36272 /* GKDiscoveryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21BE74651CA585DE00C36272 /* GKDiscoveryViewController.xib */; };
 		21BE746B1CA5881200C36272 /* GKAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BE74691CA5881200C36272 /* GKAboutMeViewController.m */; };
@@ -501,6 +502,8 @@
 		219BFAB41CA7FD72002A28D8 /* UITabBar+GKBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+GKBadge.m"; sourceTree = "<group>"; };
 		219BFAB81CA80D81002A28D8 /* GKUITabBarMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUITabBarMediator.h; sourceTree = "<group>"; };
 		219BFAB91CA80D81002A28D8 /* GKUITabBarMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUITabBarMediator.m; sourceTree = "<group>"; };
+		219FBB071CBA010E00A61D14 /* SystemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemConstants.h; path = GKDS_App/System/SystemConstants.h; sourceTree = SOURCE_ROOT; };
+		219FBB081CBA1E4400A61D14 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		21BE74631CA585DE00C36272 /* GKDiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDiscoveryViewController.h; sourceTree = "<group>"; };
 		21BE74641CA585DE00C36272 /* GKDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDiscoveryViewController.m; sourceTree = "<group>"; };
 		21BE74651CA585DE00C36272 /* GKDiscoveryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKDiscoveryViewController.xib; sourceTree = "<group>"; };
@@ -682,6 +685,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219FBB091CBA1E4400A61D14 /* OpenGLES.framework in Frameworks */,
 				215D25A51CB6B1A700B7ABC5 /* SystemConfiguration.framework in Frameworks */,
 				215D25A31CB6B19300B7ABC5 /* Security.framework in Frameworks */,
 				215D25A11CB6B18A00B7ABC5 /* libz.tbd in Frameworks */,
@@ -827,6 +831,7 @@
 		19DD014C29AFF15B4141FCA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				219FBB081CBA1E4400A61D14 /* OpenGLES.framework */,
 				215D25A41CB6B1A700B7ABC5 /* SystemConfiguration.framework */,
 				215D25A21CB6B19300B7ABC5 /* Security.framework */,
 				215D25A01CB6B18A00B7ABC5 /* libz.tbd */,
@@ -1014,6 +1019,7 @@
 				189B01F81CB006F10095B2D4 /* Proxy */,
 				21C50C401CA193FA008DE0E6 /* Command */,
 				21C509541CA185B5008DE0E6 /* SystemField.h */,
+				219FBB071CBA010E00A61D14 /* SystemConstants.h */,
 				189B01EF1CAFEA420095B2D4 /* GKSystemModule.h */,
 				189B01F01CAFEA420095B2D4 /* GKSystemModule.m */,
 			);
