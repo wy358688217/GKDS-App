@@ -196,7 +196,7 @@ static CGFloat XZMSpringDelay = 0.1;
                 [weak_self.navigationController pushViewController:vc animated:YES];
 //                UIViewController * topVc = [GK_NAV_PROXY fetchCurTopViewController];
 //                UINavigationController * nav = topVc.navigationController;
-//                [nav pushViewController:vc animated:YES];
+
             }];
         }];
         

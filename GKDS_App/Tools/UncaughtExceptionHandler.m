@@ -72,7 +72,6 @@ const NSInteger  UncaughtExceptionHandlerReportAddressCount = 5;
 
     NSString * exceptionInfo = [NSString stringWithFormat:@"Exception reason：%@\nException name：%@\nException stack：%@\nExceptionAddress stack：%@\niPhoneInfo:%@\n CrashTime:%@",name, reason, stackArray,stackArrayAddress,iphoneInfo,dateAndTime];
     GKLogSP(@"捕获到的异常日志:%@", exceptionInfo);
-    
     //在此可以发送给服务器后者发送指定邮箱
     //写入本地
     [self saveCrash:exceptionInfo];

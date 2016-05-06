@@ -11,11 +11,13 @@
 #import "GKDeviceCommand.h"
 #import "GKUserDataCommand.h"
 #import "SystemField.h"
+#import "GKDataBaseProxy.h"
 
 @implementation GKSystemModule
 
 - (void)onRegister {
     [self registerProxy:[GKSystemProxy withProxyName:kGKSystemProxy]];
+    [self registerProxy:[GKDataBaseProxy withProxyName:kGKDataBaseProxy]];
     [self registerCommand:kSystemCommandDeviceStartUp withCommand:[DeviceStartUpCommand class]];
     [self registerCommand:kSystemCommandDeviceShutDown withCommand:[DeviceShutDownCommand class]];
     [self registerCommand:kSystemCommandDeviceSleep withCommand:[DeviceSleepCommand class]];

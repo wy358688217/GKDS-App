@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GKDiscoveryViewController">
@@ -21,113 +21,159 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="145" id="aPs-Zp-hHb"/>
                         <constraint firstAttribute="height" constant="82" id="ce2-e4-6mi"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="82" id="tMw-1Y-uTP"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="vxG-jn-p2S"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Next"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="onNext:" destination="-1" eventType="touchUpInside" id="XTe-3d-rfP"/>
+                        <action selector="onNext:" destination="-1" eventType="touchUpInside" id="5r2-vx-lQ9"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srS-JJ-g1Q">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srS-JJ-g1Q">
                     <rect key="frame" x="120" y="113" width="80" height="80"/>
                     <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="6J8-G8-EIC"/>
+                        <constraint firstAttribute="height" constant="80" id="HzE-aX-3fz"/>
+                    </constraints>
+                    <state key="normal" title="建表"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="40"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="onNext:" destination="-1" eventType="touchUpInside" id="GjF-mu-V6Q"/>
+                        <action selector="onCreate:" destination="-1" eventType="touchUpInside" id="SaK-yP-ysq"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTD-yg-F2r">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTD-yg-F2r">
                     <rect key="frame" x="232" y="189" width="80" height="80"/>
                     <color key="backgroundColor" red="0.4585294405" green="1" blue="0.97929790940000006" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="YB4-YK-syF"/>
+                        <constraint firstAttribute="width" constant="80" id="lDb-4I-2g0"/>
+                    </constraints>
+                    <state key="normal" title="改"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="40"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="onNext:" destination="-1" eventType="touchUpInside" id="hGy-vm-jQf"/>
+                        <action selector="onUpdate:" destination="-1" eventType="touchUpInside" id="RLg-yz-fln"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4z8-1v-Bn1">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4z8-1v-Bn1">
                     <rect key="frame" x="194" y="288" width="80" height="80"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="0hn-Q9-j7k"/>
+                        <constraint firstAttribute="width" constant="80" id="HMu-8v-JMl"/>
+                    </constraints>
+                    <state key="normal" title="多线程"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="40"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="onNext:" destination="-1" eventType="touchUpInside" id="avl-Aa-n1J"/>
+                        <action selector="onMultiThread:" destination="-1" eventType="touchUpInside" id="CGE-bz-KIx"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-nQ-VJd">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-nQ-VJd">
                     <rect key="frame" x="43" y="288" width="80" height="80"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="2Zx-Gq-HyK"/>
+                        <constraint firstAttribute="height" constant="80" id="kvR-lI-TsU"/>
+                    </constraints>
+                    <state key="normal" title="查"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="40"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="onNext:" destination="-1" eventType="touchUpInside" id="UBb-za-Trf"/>
+                        <action selector="onSelect:" destination="-1" eventType="touchUpInside" id="ICf-hB-5vj"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8W1-h5-cwB">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8W1-h5-cwB">
                     <rect key="frame" x="120" y="366" width="80" height="80"/>
                     <color key="backgroundColor" red="1" green="0.3362700206389837" blue="0.16656669398652768" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Ba5-4K-UBD"/>
+                        <constraint firstAttribute="height" constant="80" id="LfD-9V-s90"/>
+                    </constraints>
+                    <state key="normal" title="删表"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="40"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="onNext:" destination="-1" eventType="touchUpInside" id="xb3-U4-Vwy"/>
+                        <action selector="onDrop:" destination="-1" eventType="touchUpInside" id="uQY-XB-RLF"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cw-vF-xSL">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cw-vF-xSL">
                     <rect key="frame" x="120" y="206" width="80" height="80"/>
                     <color key="backgroundColor" red="0.82443218268895779" green="0.23322580614053789" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Rje-6I-ghQ"/>
+                        <constraint firstAttribute="height" constant="80" id="WIP-uN-iUo"/>
+                    </constraints>
+                    <state key="normal" title="删"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="40"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="onNext:" destination="-1" eventType="touchUpInside" id="Ulp-ie-Vn4"/>
+                        <action selector="onDelete:" destination="-1" eventType="touchUpInside" id="Nfn-mA-Y3y"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUO-t3-NXB">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUO-t3-NXB">
                     <rect key="frame" x="8" y="189" width="80" height="80"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="P87-8j-Ehg"/>
+                        <constraint firstAttribute="height" constant="80" id="cJa-UT-FZY"/>
+                    </constraints>
+                    <state key="normal" title="增"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="40"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="onNext:" destination="-1" eventType="touchUpInside" id="YDe-bG-VIc"/>
+                        <action selector="onInsert:" destination="-1" eventType="touchUpInside" id="x4T-L2-E3U"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="4z8-1v-Bn1" firstAttribute="top" secondItem="1Cw-vF-xSL" secondAttribute="bottom" constant="2" id="11R-PK-KJJ"/>
+                <constraint firstItem="BUO-t3-NXB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="189" id="3qT-NW-RVL"/>
+                <constraint firstAttribute="trailing" secondItem="4z8-1v-Bn1" secondAttribute="trailing" constant="46" id="4DQ-2o-qSd"/>
+                <constraint firstItem="8W1-h5-cwB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="366" id="4Jv-OL-ZnT"/>
+                <constraint firstItem="8W1-h5-cwB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5wR-2d-Zy1"/>
                 <constraint firstAttribute="bottom" secondItem="Lry-d1-DcI" secondAttribute="bottom" id="9pV-2V-Uzj"/>
+                <constraint firstItem="srS-JJ-g1Q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="113" id="JT4-G3-E1Y"/>
+                <constraint firstAttribute="trailing" secondItem="FTD-yg-F2r" secondAttribute="trailing" constant="8" id="K8o-CW-Lwy"/>
+                <constraint firstAttribute="bottom" secondItem="Lry-d1-DcI" secondAttribute="bottom" id="Ko0-US-Ren"/>
+                <constraint firstItem="ggf-nQ-VJd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="43" id="Tma-Hm-MAq"/>
+                <constraint firstItem="1Cw-vF-xSL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WDy-gv-ecg"/>
                 <constraint firstAttribute="trailing" secondItem="Lry-d1-DcI" secondAttribute="trailing" id="YR3-vG-fxa"/>
+                <constraint firstItem="srS-JJ-g1Q" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZqW-nC-Zxk"/>
+                <constraint firstItem="ggf-nQ-VJd" firstAttribute="top" secondItem="BUO-t3-NXB" secondAttribute="bottom" constant="19" id="dAN-PH-Bz7"/>
+                <constraint firstItem="BUO-t3-NXB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="eH0-pf-2ET"/>
+                <constraint firstAttribute="trailing" secondItem="Lry-d1-DcI" secondAttribute="trailing" id="l7H-PQ-rQ7"/>
+                <constraint firstItem="FTD-yg-F2r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="189" id="lWd-Sc-pPc"/>
+                <constraint firstItem="1Cw-vF-xSL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="206" id="tjz-0N-wfl"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="114" y="313"/>

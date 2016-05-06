@@ -19,6 +19,9 @@
 #import "GKDSLogFormatter.h"
 #import "WXApi.h"
 #import "WXApiManager.h"
+#import "GKNavigationController.h"
+#import "GKWebViewController.h"
+#import "GKWeiXinPayViewController.h"
 
 
 
@@ -41,9 +44,8 @@
     self.window.rootViewController = [[GKLoginViewController alloc] init];
     [self.window makeKeyAndVisible];
     
-    [WXApi registerApp:@"wxb4ba3c02aa476ea1" withDescription:@"demo 2.0"];
+    [WXApi registerApp:@"wxc2d5e97c3da83d31" withDescription:@"国考大师"];//wxc2d5e97c3da83d31
 
-    
     [PPMODULE registerAllModules];
     [GK_NAV_PROXY setCurWindow:self.window];
     [PPCLIENT sendNotification:kSystemCommandDeviceStartUp];

@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -41,6 +40,7 @@
     [PPCLIENT sendNotification:kPushToDiscoveryViewController];
     [PPCLIENT sendNotification:kShowTabBarBadgeWithIndex body:@(1) type:IntToSTring(1)];
     [PPCLIENT sendNotification:kShowCurrentTabBarBadge];
+
 }
 
 - (IBAction)onTest:(id)sender {
@@ -62,6 +62,7 @@
 - (IBAction)onCrashThree:(id)sender {
     //演示-键值对引用nil
     [[NSMutableDictionary dictionary]setObject:nil forKey:@"nil"];
+
 }
 
 - (IBAction)onCrashFour:(id)sender {

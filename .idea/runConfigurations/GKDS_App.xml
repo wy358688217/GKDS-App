@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="GKDS_App" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="GKDS_App" TARGET_NAME="GKDS_App" CONFIG_NAME="Debug" SCHEME_NAME="GKDS_App" RUN_TARGET_PROJECT_NAME="GKDS_App" RUN_TARGET_NAME="GKDS_App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <envs>
+      <env name="XcodeColors" value="YES" />
+    </envs>
+    <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+      <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+    </EXTENSION>
+    <method />
+  </configuration>
+</component>

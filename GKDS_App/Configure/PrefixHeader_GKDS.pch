@@ -146,3 +146,6 @@ GKLogSP(@"PPAssertKind: warning %@ is nil.[%@ %@]",NSStringFromClass([_kind clas
 
 #endif /* PrefixHeader_pch */
 
+#define RandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
+#define RandomData [NSString stringWithFormat:@"随机数据---%d", arc4random_uniform(1000000)]
+#define RandomNumber arc4random_uniform(1000000)

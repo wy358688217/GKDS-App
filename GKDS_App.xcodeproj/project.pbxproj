@@ -350,6 +350,7 @@
 		21C5C8571CA2E413006E216C /* GKMainTabModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C5C8561CA2E413006E216C /* GKMainTabModule.m */; };
 		21C5C85D1CA2EA1C006E216C /* GKLoginMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C5C85C1CA2EA1C006E216C /* GKLoginMediator.m */; };
 		21C5C8601CA2EA37006E216C /* GKLoginProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C5C85F1CA2EA37006E216C /* GKLoginProxy.m */; };
+		21EC038B1CD5CCB900509310 /* GKDataBaseProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC038A1CD5CCB900509310 /* GKDataBaseProxy.m */; };
 		CE400D4886CAFF60D73F1F70 /* libPods-GKDS_App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CFC386F53C36AC60CB966C /* libPods-GKDS_App.a */; };
 /* End PBXBuildFile section */
 
@@ -676,6 +677,8 @@
 		21C5C85C1CA2EA1C006E216C /* GKLoginMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLoginMediator.m; sourceTree = "<group>"; };
 		21C5C85E1CA2EA37006E216C /* GKLoginProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLoginProxy.h; sourceTree = "<group>"; };
 		21C5C85F1CA2EA37006E216C /* GKLoginProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLoginProxy.m; sourceTree = "<group>"; };
+		21EC03891CD5CCB900509310 /* GKDataBaseProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDataBaseProxy.h; sourceTree = "<group>"; };
+		21EC038A1CD5CCB900509310 /* GKDataBaseProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDataBaseProxy.m; sourceTree = "<group>"; };
 		63CFC386F53C36AC60CB966C /* libPods-GKDS_App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKDS_App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		806292CFB5E463C1A92393CF /* Pods-GKDS_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKDS_App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKDS_App/Pods-GKDS_App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -752,6 +755,8 @@
 			children = (
 				189B01F91CB007240095B2D4 /* GKSystemProxy.h */,
 				189B01FA1CB007240095B2D4 /* GKSystemProxy.mm */,
+				21EC03891CD5CCB900509310 /* GKDataBaseProxy.h */,
+				21EC038A1CD5CCB900509310 /* GKDataBaseProxy.m */,
 			);
 			path = Proxy;
 			sourceTree = "<group>";
@@ -1578,7 +1583,7 @@
 				TargetAttributes = {
 					21C5090B1CA18421008DE0E6 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = TFSRT6S8Q5;
+						DevelopmentTeam = 249H75BGT5;
 					};
 					21C509241CA18421008DE0E6 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1834,6 +1839,7 @@
 				21C509A21CA185C3008DE0E6 /* Notification.m in Sources */,
 				189B01EB1CAFD2680095B2D4 /* GKLogUtils.mm in Sources */,
 				21C50CBF1CA19ADE008DE0E6 /* POPAnimator.mm in Sources */,
+				21EC038B1CD5CCB900509310 /* GKDataBaseProxy.m in Sources */,
 				21C5C8571CA2E413006E216C /* GKMainTabModule.m in Sources */,
 				189B01F61CB0010E0095B2D4 /* GKDSLogFormatter.m in Sources */,
 				21C509A01CA185C3008DE0E6 /* Facade.m in Sources */,
