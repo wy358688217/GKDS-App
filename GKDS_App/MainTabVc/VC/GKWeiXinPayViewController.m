@@ -9,23 +9,30 @@
 #import "GKWeiXinPayViewController.h"
 #import "WXApiManager.h"
 #import "ALSystem.h"
+#import "AFNetworking.h"
 
 @interface GKWeiXinPayViewController ()<WXApiManagerDelegate>
 
 @end
 
 @implementation GKWeiXinPayViewController
+- (IBAction)onTestAlertView:(id)sender {
+    UIAlertView * tipsView = [[UIAlertView alloc] initWithTitle:@"系统提示" message:@"老师下课啦，同学记得巩固复习喔！" delegate:self cancelButtonTitle:@"离开教室" otherButtonTitles:nil];
+    [tipsView show];
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    NSDictionary * memoryInfo = [ALSystem memoryInformations];
-    NSDictionary * netWorkInfo = [ALSystem networkInformations];
-    NSDictionary * cpuInfo = [ALSystem processorInformations];
-    GKLog(memoryInfo);
-    GKLog(netWorkInfo);
-    GKLog(cpuInfo);
+//    NSDictionary * memoryInfo = [ALSystem memoryInformations];
+//    NSDictionary * netWorkInfo = [ALSystem networkInformations];
+//    NSDictionary * cpuInfo = [ALSystem processorInformations];
+//    GKLog(memoryInfo);
+//    GKLog(netWorkInfo);
+//    GKLog(cpuInfo);
 }
 
 static const NSInteger kRecvGetMessageReqAlertTag = 1000;
@@ -116,10 +123,11 @@ static const NSInteger kRecvGetMessageReqAlertTag = 1000;
 #pragma mark -- 微信支付点击事件
 - (IBAction)onWeinPay:(id)sender {
     
+    [self requestOrder];
+    return;
     NSString *res = [self handle];
     if( ![@"" isEqual:res] ){
-        UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"支付失败" message:res delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        
+        UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"支付失败" message:res delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alter show];
     }
 }
@@ -143,7 +151,7 @@ static const NSInteger kRecvGetMessageReqAlertTag = 1000;
     // 注意:参数配置请查看服务器端Demo
     // 更新时间：2015年11月20日
     //============================================================
-    NSString *urlString   = @"http://wxpay.weixin.qq.com/pub_v2/app/app_pay.php?plat=ios";
+    NSString *urlString   = @"http://10.10.100.170:8082/gkapp_server/py/data";//@"http://wxpay.weixin.qq.com/pub_v2/app/app_pay.php?plat=ios";
     //解析服务端返回json数据
     //加载一个NSURL对象
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
@@ -189,5 +197,126 @@ static const NSInteger kRecvGetMessageReqAlertTag = 1000;
     return @"";
 }
 
+- (NSString *)handlePay:(NSDictionary*)orderDict {
+    
+    /**
+     *  data:数据对象
+     orderItems:
+     title;标题
+     cover;封面地址
+     count;订购数
+     price;单价
+     contact;默认联系方式
+     type;条目类型
+     typeName;条目类型名称
+     totalPrice:总价
+     payTypes: 支持的支付渠道1支付宝 2微信 3银联只有渠道支持页面上才能显示并按顺序先后展示
+     type:渠道类型
+     def:是否默认选中渠道 0否 1是
+
+     */
+    NSString *urlString   = @"http://10.10.100.170:8082/gkapp_server/py/data";
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+//    params[@"contact"] = @"2331570398";
+//    params[@"payType"] = @(2);
+//    params[@"grant_type"] = @"authorization_code";
+//    params[@"redirect_uri"] = @"http://";
+//    params[@"code"] = code;
+    return @"";
+}
+
+- (void)requestOrder {
+    
+    
+    [self test];
+    return;
+    // order/items
+    WEAK_BLOCK_OBJECT(self);
+    NSString *urlString   = @"http://10.10.100.170:8082/gkapp_server/order/items";
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSMutableArray *params = [NSMutableArray array];
+    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+    dict[@"itemId"] = @(1);
+    dict[@"itemType"] = @(2);
+    dict[@"itemCount"] = @(1);
+    [params addObject:dict];
+    
+//    NSString * items = [self.class objectConvertJson:params];
+    [manager GET:urlString parameters:@{ @"data" : params } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        BLOCK_OBJECT(self);
+        
+        NSString *jsonString = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSData* jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
+        
+        NSDictionary * itemDict = dic[@"data"];
+//        NSString * title = itemDict[@"title"];
+        [weak_self handlePay:dic];
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求订单失败");
+    }];
+    
+}
+
+
+- (void)test{
+    NSString * url = @"http://file.ifreetalk.com/config/ios";
+    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+    sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [sessionManager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSString *jsonString = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSData* jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
+        
+        NSArray<NSDictionary *> * array = (NSArray*)dic[@"array"];
+        NSMutableArray * mutableDataArray = [[NSMutableArray alloc]initWithCapacity:array.count];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:mutableDataArray forKey:@"mutableDataArray"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
+
+}
+
++(NSString*)objectConvertJson:(id)obj
+{
+    NSError * error = nil;
+    // Pass 0 if you don't care about the readability of the generated string
+    NSData * jsonData = [NSJSONSerialization dataWithJSONObject:obj
+                                                        options:NSJSONWritingPrettyPrinted
+                                                          error:&error];
+    if (error) {
+        GKLogSP(@"%@",error);
+        return @"{}";
+    }
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+
+/**
+ *  data:数据对象
+	orderItems:
+ title;标题
+ cover;封面地址
+ count;订购数
+ price;单价
+ contact;默认联系方式
+ type;条目类型
+ typeName;条目类型名称
+	totalPrice:总价
+ payTypes: 支持的支付渠道1支付宝 2微信 3银联只有渠道支持页面上才能显示并按顺序先后展示
+ type:渠道类型
+ def:是否默认选中渠道 0否 1是
+
+ */
 @end
 

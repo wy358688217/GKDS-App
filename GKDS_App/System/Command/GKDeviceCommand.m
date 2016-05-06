@@ -13,15 +13,15 @@
 @implementation DeviceStartUpCommand
 
 - (void)execute:(id<INotification>)notification {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [[GKDSLogFormatter getGKDSLogFormatter] initDDLog];
-    });
-    GKLog(@"系统启动正常启动");
-    NSSetUncaughtExceptionHandler(&HandleException);
-    GKLog(@"监听Exception崩溃信息成功");
-    InstallUncaughtExceptionHandler();
-    GKLog(@"监听Unix底层抛出Signal信号成功");
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        [[GKDSLogFormatter getGKDSLogFormatter] initDDLog];
+//    });
+//    GKLog(@"系统启动正常启动");
+//    NSSetUncaughtExceptionHandler(&HandleException);
+//    GKLog(@"监听Exception崩溃信息成功");
+//    InstallUncaughtExceptionHandler();
+//    GKLog(@"监听Unix底层抛出Signal信号成功");
 }
 
 @end

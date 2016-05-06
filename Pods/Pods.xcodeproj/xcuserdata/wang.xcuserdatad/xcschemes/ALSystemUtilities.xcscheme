@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '96994661F742FD3C33C2F14F'
+               BlueprintIdentifier = 'B16990D8B55348F4571E582C'
                BlueprintName = 'ALSystemUtilities'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libALSystemUtilities.a'>

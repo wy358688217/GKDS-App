@@ -33,7 +33,7 @@
     [super viewDidLoad];
     
     
-    [webView setFrame:self.view.bounds];
+//    [webView setFrame:self.view.bounds];
 
     
     //加载网页的方式

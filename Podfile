@@ -7,6 +7,8 @@ target 'GKDS_App' do
 pod 'CocoaLumberjack', '~> 2.2.0'
 pod 'ALSystemUtilities', '~> 1.3.4'
 pod 'Toast', '~> 3.0'
+pod 'AFNetworking', '~> 3.1.0'
+pod 'FMDB', '~> 2.6.2'
 end
 
 target 'GKDS_AppTests' do

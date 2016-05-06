@@ -58,28 +58,32 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (!networkTimer) {
-        networkTimer = [NSTimer scheduledTimerWithTimeInterval:5.f
-                                                        target:self
-                                                      selector:@selector(updateNetSpeed)
-                                                      userInfo:nil
-                                                       repeats:YES];
-        [[NSRunLoop mainRunLoop] addTimer:networkTimer forMode:NSRunLoopCommonModes];
-    }
-    [networkTimer fire];
-    NSString * curNetworkOperators = [GK_SYS_PROXY curNetworkOperators];
-    NSString * curClientVersion = [GK_SYS_PROXY curClientVersion];
-    NSString * curIOSVersion = [GK_SYS_PROXY curIOSVersion];
-    NSString * curNetStatus = [GK_SYS_PROXY curNetStatus];
-    GKLog(curNetworkOperators);
-    GKLog(curClientVersion);
-    GKLog(curNetStatus);
-    GKLog(curIOSVersion);
+//    if (!networkTimer) {
+//        networkTimer = [NSTimer scheduledTimerWithTimeInterval:5.f
+//                                                        target:self
+//                                                      selector:@selector(updateNetSpeed)
+//                                                      userInfo:nil
+//                                                       repeats:YES];
+//        [[NSRunLoop mainRunLoop] addTimer:networkTimer forMode:NSRunLoopCommonModes];
+//    }
+//    [networkTimer fire];
+//    NSString * curNetworkOperators = [GK_SYS_PROXY curNetworkOperators];
+//    NSString * curClientVersion = [GK_SYS_PROXY curClientVersion];
+//    NSString * curIOSVersion = [GK_SYS_PROXY curIOSVersion];
+//    NSString * curNetStatus = [GK_SYS_PROXY curNetStatus];
+//    NSString * curPhoneGPUModel = [GK_SYS_PROXY curPhoneGPUModel];
+//    NSString * curPhoneGPUName = [GK_SYS_PROXY curPhoneGPUName];
+//    GKLogSP(@"显卡类型为：%@",curPhoneGPUModel);
+//    GKLogSP(@"显卡名字为：%@",curPhoneGPUName);
+//    GKLog(curNetworkOperators);
+//    GKLog(curClientVersion);
+//    GKLog(curNetStatus);
+//    GKLog(curIOSVersion);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [networkTimer invalidate];
+//    [super viewWillDisappear:animated];
+//    [networkTimer invalidate];
 }
 - (IBAction)onAddMemory:(id)sender {
     for(int i=0;i<300;i++)

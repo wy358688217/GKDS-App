@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "66887690C05876664D28A41E6108C99D"
+               BlueprintIdentifier = "8AE1A7D04FA6CEDE3E78EE6CCFFF0FF3"
                BuildableName = "libPods-GKDS_App.a"
                BlueprintName = "Pods-GKDS_App"
                ReferencedContainer = "container:Pods.xcodeproj">
