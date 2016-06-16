@@ -75,6 +75,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch3.plist"
   install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch4.plist"
   install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch5.plist"
+  install_resource "ZFPlayer/ZFPlayer/ZFPlayer.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPad/iPad2.plist"
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch3.plist"
   install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch4.plist"
   install_resource "ALSystemUtilities/ALSystemUtilities/ALSystemUtilities/Resources/iPodTouch/iPodTouch5.plist"
+  install_resource "ZFPlayer/ZFPlayer/ZFPlayer.bundle"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

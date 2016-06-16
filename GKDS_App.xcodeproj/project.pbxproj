@@ -211,6 +211,11 @@
 		21855DDB1CAAC05700F9B9EA /* GKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21855DDA1CAAC05700F9B9EA /* GKNavigationController.m */; };
 		21855DDF1CAACC3D00F9B9EA /* GKRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21855DDD1CAACC3D00F9B9EA /* GKRecommendViewController.m */; };
 		21855DE01CAACC3D00F9B9EA /* GKRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21855DDE1CAACC3D00F9B9EA /* GKRecommendViewController.xib */; };
+		218FBF471CE5C1C5004E986E /* ZFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218FBF3F1CE5C1C5004E986E /* ZFTableViewController.m */; };
+		218FBF481CE5C1C5004E986E /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 218FBF411CE5C1C5004E986E /* videoData.json */; };
+		218FBF491CE5C1C5004E986E /* ZFPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 218FBF431CE5C1C5004E986E /* ZFPlayerModel.m */; };
+		218FBF4A1CE5C1C5004E986E /* ZFPlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218FBF461CE5C1C5004E986E /* ZFPlayerCell.m */; };
+		218FBF4C1CE5C9EA004E986E /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 218FBF4B1CE5C9EA004E986E /* Icon-60@2x.png */; };
 		219BFAB51CA7FD72002A28D8 /* UITabBar+GKBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 219BFAB41CA7FD72002A28D8 /* UITabBar+GKBadge.m */; };
 		219BFAB61CA7FD72002A28D8 /* UITabBar+GKBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 219BFAB41CA7FD72002A28D8 /* UITabBar+GKBadge.m */; };
 		219BFAB71CA7FD72002A28D8 /* UITabBar+GKBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 219BFAB41CA7FD72002A28D8 /* UITabBar+GKBadge.m */; };
@@ -225,6 +230,12 @@
 		21BE746F1CA58B4300C36272 /* GKNavigationControllerCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BE746E1CA58B4300C36272 /* GKNavigationControllerCommand.m */; };
 		21BE74731CA58C2E00C36272 /* GKChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BE74711CA58C2E00C36272 /* GKChooseViewController.m */; };
 		21BE74741CA58C2E00C36272 /* GKChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21BE74721CA58C2E00C36272 /* GKChooseViewController.xib */; };
+		21C02D371CDDE76D0009869E /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C02D361CDDE76D0009869E /* iTunesArtwork@2x.png */; };
+		21C02D381CDDE76D0009869E /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C02D361CDDE76D0009869E /* iTunesArtwork@2x.png */; };
+		21C02D391CDDE76D0009869E /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C02D361CDDE76D0009869E /* iTunesArtwork@2x.png */; };
+		21C02D3B1CDDE8B80009869E /* ter.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C02D3A1CDDE8B80009869E /* ter.png */; };
+		21C02D3C1CDDE8B80009869E /* ter.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C02D3A1CDDE8B80009869E /* ter.png */; };
+		21C02D3D1CDDE8B80009869E /* ter.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C02D3A1CDDE8B80009869E /* ter.png */; };
 		21C509111CA18421008DE0E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C509101CA18421008DE0E6 /* main.m */; };
 		21C5091A1CA18421008DE0E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C509181CA18421008DE0E6 /* Main.storyboard */; };
 		21C5091C1CA18421008DE0E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C5091B1CA18421008DE0E6 /* Assets.xcassets */; };
@@ -499,6 +510,14 @@
 		21855DDC1CAACC3D00F9B9EA /* GKRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRecommendViewController.h; sourceTree = "<group>"; };
 		21855DDD1CAACC3D00F9B9EA /* GKRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRecommendViewController.m; sourceTree = "<group>"; };
 		21855DDE1CAACC3D00F9B9EA /* GKRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKRecommendViewController.xib; sourceTree = "<group>"; };
+		218FBF3E1CE5C1C5004E986E /* ZFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFTableViewController.h; sourceTree = "<group>"; };
+		218FBF3F1CE5C1C5004E986E /* ZFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTableViewController.m; sourceTree = "<group>"; };
+		218FBF411CE5C1C5004E986E /* videoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videoData.json; sourceTree = "<group>"; };
+		218FBF421CE5C1C5004E986E /* ZFPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerModel.h; sourceTree = "<group>"; };
+		218FBF431CE5C1C5004E986E /* ZFPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlayerModel.m; sourceTree = "<group>"; };
+		218FBF451CE5C1C5004E986E /* ZFPlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerCell.h; sourceTree = "<group>"; };
+		218FBF461CE5C1C5004E986E /* ZFPlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlayerCell.m; sourceTree = "<group>"; };
+		218FBF4B1CE5C9EA004E986E /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		219BFAB31CA7FD72002A28D8 /* UITabBar+GKBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+GKBadge.h"; sourceTree = "<group>"; };
 		219BFAB41CA7FD72002A28D8 /* UITabBar+GKBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+GKBadge.m"; sourceTree = "<group>"; };
 		219BFAB81CA80D81002A28D8 /* GKUITabBarMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUITabBarMediator.h; sourceTree = "<group>"; };
@@ -516,6 +535,8 @@
 		21BE74701CA58C2E00C36272 /* GKChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKChooseViewController.h; sourceTree = "<group>"; };
 		21BE74711CA58C2E00C36272 /* GKChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKChooseViewController.m; sourceTree = "<group>"; };
 		21BE74721CA58C2E00C36272 /* GKChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKChooseViewController.xib; sourceTree = "<group>"; };
+		21C02D361CDDE76D0009869E /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		21C02D3A1CDDE8B80009869E /* ter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ter.png; sourceTree = "<group>"; };
 		21C5090C1CA18421008DE0E6 /* GKDS_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKDS_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C509101CA18421008DE0E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21C509191CA18421008DE0E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -764,6 +785,7 @@
 		18F0A7951CAFA50600EFEB91 /* TabBarIcon */ = {
 			isa = PBXGroup;
 			children = (
+				218FBF4B1CE5C9EA004E986E /* Icon-60@2x.png */,
 				18F0A7961CAFA50600EFEB91 /* Icon_2 */,
 				18F0A7A81CAFA50600EFEB91 /* Iocn_1 */,
 			);
@@ -854,7 +876,8 @@
 				215D25891CB6A92800B7ABC5 /* AliPay */,
 				215D258A1CB6A92800B7ABC5 /* WeiXin */,
 			);
-			path = ThirdPartyPay;
+			name = ThirdPartyPay;
+			path = ../ThirdPartyPay;
 			sourceTree = "<group>";
 		};
 		215D25891CB6A92800B7ABC5 /* AliPay */ = {
@@ -886,6 +909,52 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
+		218FBF3B1CE5C1C5004E986E /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				218FBF3C1CE5C1C5004E986E /* TbaleViewVideo */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		218FBF3C1CE5C1C5004E986E /* TbaleViewVideo */ = {
+			isa = PBXGroup;
+			children = (
+				218FBF3D1CE5C1C5004E986E /* Controller */,
+				218FBF401CE5C1C5004E986E /* Model */,
+				218FBF441CE5C1C5004E986E /* View */,
+			);
+			path = TbaleViewVideo;
+			sourceTree = "<group>";
+		};
+		218FBF3D1CE5C1C5004E986E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				218FBF3E1CE5C1C5004E986E /* ZFTableViewController.h */,
+				218FBF3F1CE5C1C5004E986E /* ZFTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		218FBF401CE5C1C5004E986E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				218FBF411CE5C1C5004E986E /* videoData.json */,
+				218FBF421CE5C1C5004E986E /* ZFPlayerModel.h */,
+				218FBF431CE5C1C5004E986E /* ZFPlayerModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		218FBF441CE5C1C5004E986E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				218FBF451CE5C1C5004E986E /* ZFPlayerCell.h */,
+				218FBF461CE5C1C5004E986E /* ZFPlayerCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		21BE745D1CA5859F00C36272 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
@@ -895,7 +964,8 @@
 				21BE74611CA5859F00C36272 /* UIView */,
 				21BE74621CA5859F00C36272 /* VC */,
 			);
-			path = Discovery;
+			name = Discovery;
+			path = ../Discovery;
 			sourceTree = "<group>";
 		};
 		21BE745E1CA5859F00C36272 /* Command */ = {
@@ -967,14 +1037,9 @@
 		21C5090E1CA18421008DE0E6 /* GKDS_App */ = {
 			isa = PBXGroup;
 			children = (
-				215D25881CB6A92800B7ABC5 /* ThirdPartyPay */,
 				185ED4C71CAFBEC2009EFBCA /* Tools */,
-				21C509531CA185B5008DE0E6 /* System */,
 				21C50C501CA19A4D008DE0E6 /* Client */,
 				21C509A61CA186A6008DE0E6 /* Module */,
-				21C50C101CA18CF4008DE0E6 /* Login */,
-				21C50C161CA18CF4008DE0E6 /* MainTabVc */,
-				21BE745D1CA5859F00C36272 /* Discovery */,
 				21C5094E1CA184F8008DE0E6 /* PureMVC */,
 				21C509AD1CA187AD008DE0E6 /* Configure */,
 				21C50A071CA18B01008DE0E6 /* Resources */,
@@ -1028,7 +1093,8 @@
 				189B01EF1CAFEA420095B2D4 /* GKSystemModule.h */,
 				189B01F01CAFEA420095B2D4 /* GKSystemModule.m */,
 			);
-			path = System;
+			name = System;
+			path = ../System;
 			sourceTree = "<group>";
 		};
 		21C5095B1CA185C3008DE0E6 /* include */ = {
@@ -1166,6 +1232,12 @@
 		21C509A61CA186A6008DE0E6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				218FBF3B1CE5C1C5004E986E /* HomePage */,
+				21C50C161CA18CF4008DE0E6 /* MainTabVc */,
+				215D25881CB6A92800B7ABC5 /* ThirdPartyPay */,
+				21C509531CA185B5008DE0E6 /* System */,
+				21C50C101CA18CF4008DE0E6 /* Login */,
+				21BE745D1CA5859F00C36272 /* Discovery */,
 				21C509A71CA186A6008DE0E6 /* Module.h */,
 				21C509A81CA186A6008DE0E6 /* Module.m */,
 				21C509A91CA186A6008DE0E6 /* ModuleManager.h */,
@@ -1198,6 +1270,8 @@
 		21C50A081CA18B01008DE0E6 /* Publish */ = {
 			isa = PBXGroup;
 			children = (
+				21C02D3A1CDDE8B80009869E /* ter.png */,
+				21C02D361CDDE76D0009869E /* iTunesArtwork@2x.png */,
 				2121ADF81CA5666D00AF7E44 /* app_slogan.png */,
 				2121ADF91CA5666D00AF7E44 /* app_slogan@2x.png */,
 				2121ADFA1CA5666D00AF7E44 /* app_slogan@3x.png */,
@@ -1243,7 +1317,8 @@
 				21C5C8521CA2E3F3006E216C /* GKLoginModule.h */,
 				21C5C8531CA2E3F3006E216C /* GKLoginModule.m */,
 			);
-			path = Login;
+			name = Login;
+			path = ../Login;
 			sourceTree = "<group>";
 		};
 		21C50C111CA18CF4008DE0E6 /* Command */ = {
@@ -1299,7 +1374,8 @@
 				21C5C8551CA2E413006E216C /* GKMainTabModule.h */,
 				21C5C8561CA2E413006E216C /* GKMainTabModule.m */,
 			);
-			path = MainTabVc;
+			name = MainTabVc;
+			path = ../MainTabVc;
 			sourceTree = "<group>";
 		};
 		21C50C171CA18CF4008DE0E6 /* Command */ = {
@@ -1623,6 +1699,7 @@
 				18F0A7D71CAFA50600EFEB91 /* tabBar_3_on.png in Resources */,
 				2121AE271CA5666D00AF7E44 /* publish-text@3x.png in Resources */,
 				18F0A7DC1CAFA50600EFEB91 /* tabBar_essence_click_icon.png in Resources */,
+				218FBF4C1CE5C9EA004E986E /* Icon-60@2x.png in Resources */,
 				18F0A7E21CAFA50600EFEB91 /* tabBar_friendTrends_click_icon.png in Resources */,
 				18F0A7CB1CAFA50600EFEB91 /* tabBar_0_on.png in Resources */,
 				21BE746C1CA5881200C36272 /* GKAboutMeViewController.xib in Resources */,
@@ -1681,6 +1758,7 @@
 				18F0A7E71CAFA50600EFEB91 /* tabBar_friendTrends_icon@3x.png in Resources */,
 				2121AE181CA5666D00AF7E44 /* app_slogan@3x.png in Resources */,
 				2121AE201CA5666D00AF7E44 /* publish-picture@2x.png in Resources */,
+				21C02D3B1CDDE8B80009869E /* ter.png in Resources */,
 				18F0A7F61CAFA50600EFEB91 /* tabBar_publish_click_icon@3x.png in Resources */,
 				18F0A7F11CAFA50600EFEB91 /* tabBar_new_icon.png in Resources */,
 				21C5091A1CA18421008DE0E6 /* Main.storyboard in Resources */,
@@ -1690,6 +1768,7 @@
 				18F0A7E81CAFA50600EFEB91 /* tabBar_me_click_icon.png in Resources */,
 				18F0A7D81CAFA50600EFEB91 /* tabBar_3_on@2x.png in Resources */,
 				2121AE281CA5666D00AF7E44 /* publish-video.png in Resources */,
+				218FBF481CE5C1C5004E986E /* videoData.json in Resources */,
 				18F0A7F81CAFA50600EFEB91 /* tabBar_publish_icon@2x.png in Resources */,
 				18F0A7D21CAFA50600EFEB91 /* tabBar_2@2x.png in Resources */,
 				18F0A7EE1CAFA50600EFEB91 /* tabBar_new_click_icon.png in Resources */,
@@ -1711,6 +1790,7 @@
 				18F0A7F01CAFA50600EFEB91 /* tabBar_new_click_icon@3x.png in Resources */,
 				2121AE221CA5666D00AF7E44 /* publish-review.png in Resources */,
 				18F0A7CD1CAFA50600EFEB91 /* tabBar_1.png in Resources */,
+				21C02D371CDDE76D0009869E /* iTunesArtwork@2x.png in Resources */,
 				2121AE231CA5666D00AF7E44 /* publish-review@2x.png in Resources */,
 				18F0A7F41CAFA50600EFEB91 /* tabBar_publish_click_icon.png in Resources */,
 			);
@@ -1721,8 +1801,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C50CAB1CA19ADE008DE0E6 /* pop-tvos-Info.plist in Resources */,
+				21C02D3C1CDDE8B80009869E /* ter.png in Resources */,
 				21C50CA51CA19ADE008DE0E6 /* pop-ios-Info.plist in Resources */,
 				21C50CA81CA19ADE008DE0E6 /* pop-osx-Info.plist in Resources */,
+				21C02D381CDDE76D0009869E /* iTunesArtwork@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1731,8 +1813,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C50CAC1CA19ADE008DE0E6 /* pop-tvos-Info.plist in Resources */,
+				21C02D3D1CDDE8B80009869E /* ter.png in Resources */,
 				21C50CA61CA19ADE008DE0E6 /* pop-ios-Info.plist in Resources */,
 				21C50CA91CA19ADE008DE0E6 /* pop-osx-Info.plist in Resources */,
+				21C02D391CDDE76D0009869E /* iTunesArtwork@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1800,6 +1884,7 @@
 				21C5C85D1CA2EA1C006E216C /* GKLoginMediator.m in Sources */,
 				21C50CD71CA19ADE008DE0E6 /* POPPropertyAnimation.mm in Sources */,
 				21C50C571CA19A4D008DE0E6 /* GKDSAppDelegate.m in Sources */,
+				218FBF471CE5C1C5004E986E /* ZFTableViewController.m in Sources */,
 				21C50C321CA18D6E008DE0E6 /* XZMTabBarViewController.m in Sources */,
 				21C50C3D1CA190EB008DE0E6 /* XZMTabbarExtension.m in Sources */,
 				21C50C481CA1962E008DE0E6 /* GKSystemBuildCommand.m in Sources */,
@@ -1814,6 +1899,7 @@
 				189B01E91CAFD2680095B2D4 /* CADebugPrintf.cpp in Sources */,
 				21284E0E1CB9296F009F4DDA /* GKAttentionViewController.m in Sources */,
 				21C5C8601CA2EA37006E216C /* GKLoginProxy.m in Sources */,
+				218FBF4A1CE5C1C5004E986E /* ZFPlayerCell.m in Sources */,
 				21C50CDD1CA19ADE008DE0E6 /* POPVector.mm in Sources */,
 				21C50CD11CA19ADE008DE0E6 /* POPLayerExtras.mm in Sources */,
 				21C5099C1CA185C3008DE0E6 /* Model.m in Sources */,
@@ -1847,6 +1933,7 @@
 				21C50CC51CA19ADE008DE0E6 /* POPCGUtils.mm in Sources */,
 				21BE74661CA585DE00C36272 /* GKDiscoveryViewController.m in Sources */,
 				21C509AC1CA186A6008DE0E6 /* ModuleManager.m in Sources */,
+				218FBF491CE5C1C5004E986E /* ZFPlayerModel.m in Sources */,
 				21C50CB61CA19ADE008DE0E6 /* POPAnimationExtras.mm in Sources */,
 				21C50CB31CA19ADE008DE0E6 /* POPAnimationEvent.mm in Sources */,
 				21BE74731CA58C2E00C36272 /* GKChooseViewController.m in Sources */,
@@ -2178,7 +2265,7 @@
 					_DEBUG,
 				);
 				INFOPLIST_FILE = GKDS_App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2202,7 +2289,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GKDS_App/Configure/PrefixHeader_GKDS.pch";
 				INFOPLIST_FILE = GKDS_App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

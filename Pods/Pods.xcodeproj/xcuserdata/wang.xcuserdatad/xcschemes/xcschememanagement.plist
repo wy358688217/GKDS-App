@@ -24,12 +24,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GKDS_App.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Toast.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZFPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,7 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>825D0C1544674450DC2B932130C463C1</key>
+		<key>16A2769FE2D25C6E08F941102503C872</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5576B7A77977C8EF886E75D2F01625F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8BF5EA0627A6DC3D0001D3D75365CB71</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>976D07AEBFCC8085E79714BB8FED1DC1</key>
+		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
+		<key>F4A289CB21AC615748604660CB43A8F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

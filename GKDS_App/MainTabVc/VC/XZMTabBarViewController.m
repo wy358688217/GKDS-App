@@ -8,6 +8,7 @@
 #import "GKWebViewController.h"
 #import "GKWeiXinPayViewController.h"
 #import "GKAttentionViewController.h"
+#import "ZFTableViewController.h"
 @interface XZMTabBarViewController ()<UITabBarDelegate>
 
 @end
@@ -39,7 +40,11 @@
     
     /*添加子控制器 */
     /** 精华 */
-    GKWebViewController * firstVc = [[GKWebViewController alloc]init];
+//    UIStoryboard * main ZFTableViewController
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ZFTableViewController * firstVc = [storyboard instantiateViewControllerWithIdentifier:@"ZFTableViewController"];
+
+//    GKWebViewController * firstVc = [[GKWebViewController alloc]init];
     firstVc.view.backgroundColor = [UIColor whiteColor];
     [self setUpChildControllerWith:firstVc
                           norImage:[UIImage imageNamed:@"tabBar_essence_icon"]
@@ -109,7 +114,6 @@
     childVc.tabBarItem.selectedImage = selImage;
     [childVc.tabBarItem setTag:index];
     [self addChildViewController:nav];
-//    nav.delegate = nav;
     [GK_NAV_PROXY insertNavigationController:nav key:@(index)];
 }
 

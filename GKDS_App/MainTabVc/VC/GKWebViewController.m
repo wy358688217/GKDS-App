@@ -32,7 +32,8 @@
 {
     [super viewDidLoad];
     
-    
+}
+
 //    [webView setFrame:self.view.bounds];
 
     
@@ -58,7 +59,6 @@
 //    [opaqueView setAlpha:0.5];
 //    [self.view addSubview:opaqueView];
 //    [opaqueView addSubview:activityIndicatorView];
-}
 
 //- (void)viewWillAppear:(BOOL)animated {
 //    [super viewWillAppear:animated];
