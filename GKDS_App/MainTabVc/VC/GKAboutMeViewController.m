@@ -21,6 +21,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //时间提示
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateStyle:NSDateFormatterMediumStyle];
+//    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"YYYY-MM-dd-HH-mm-ss"];
+    NSDate *datenow = [NSDate date];//现在时间,你可以输出来看下是什么格式
+//    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970]];
+//    NSLog(@"timeSp:%@",timeSp); //时间戳的值
+    NSString *confromTimespStr = [formatter stringFromDate:datenow];
+//    NSLog(@"confromTimespStr =  %@",confromTimespStr);
+    NSArray<NSString *> * array = [confromTimespStr componentsSeparatedByString:@"-"];
+    GKLog(array);
+    NSString * str = [NSString stringWithFormat:@"%@年%@月%@日 %@时%@分%@秒",array[0],array[1],array[2],array[3],array[4],array[5]];
+    GKLog(str);
+    GKLogEX(@"%@年%@月%@日 %@时%@分%@秒",array[0],array[1],array[2],array[3],array[4],array[5]);
 }
 
 - (void)viewWillAppear:(BOOL)animated {

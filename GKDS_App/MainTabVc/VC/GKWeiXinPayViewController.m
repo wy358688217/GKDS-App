@@ -10,29 +10,77 @@
 #import "WXApiManager.h"
 #import "ALSystem.h"
 #import "AFNetworking.h"
+#import "RSAEncryptor.h"
 
 @interface GKWeiXinPayViewController ()<WXApiManagerDelegate>
 
 @end
 
 @implementation GKWeiXinPayViewController
-- (IBAction)onTestAlertView:(id)sender {
-    UIAlertView * tipsView = [[UIAlertView alloc] initWithTitle:@"系统提示" message:@"老师下课啦，同学记得巩固复习喔！" delegate:self cancelButtonTitle:@"离开教室" otherButtonTitles:nil];
-    [tipsView show];
-}
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-//    NSDictionary * memoryInfo = [ALSystem memoryInformations];
-//    NSDictionary * netWorkInfo = [ALSystem networkInformations];
-//    NSDictionary * cpuInfo = [ALSystem processorInformations];
-//    GKLog(memoryInfo);
-//    GKLog(netWorkInfo);
-//    GKLog(cpuInfo);
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSString * json = @"{'respCode':'000','respDesc':'成功','cacheToken':'','data':{'baseKvUrl':'http://7xk1xm.com1.z0.glb.clouddn.com/@','kvAdList':[{'imagePath':'/kvImage/2016051624020456_96.jpg','linkUrl':'川藏线','cmd':'http://openbrowser|http://www.baidu.com','kvAdId':71,'title':'测试而已- -'},{'imagePath':'/kvImage/2016042924021456_49.jpg','linkUrl':'www.guokaodashi.com','cmd':'http://open|www.guokaodashi.com','kvAdId':69,'title':'测试跳转到外部链接'},{'imagePath':'/kvImage/2016042924100029_2.jpg','linkUrl':'www.guokaodashi.com','cmd':'http://live_personal_lessons|2','kvAdId':67,'title':'11223344'},{'imagePath':'/kvImage/2016030724093903_66.jpg','linkUrl':'http://system.guokaodashi.com/static/cmd.html','cmd':'http://onlie_exam_info|12','kvAdId':60,'title':'测试获取用户信息命令'},{'imagePath':'/kvImage/2016030724093903_66.jpg','linkUrl':'http://system.guokaodashi.com/liveCourse/list','cmd':'http://open|http://system.guokaodashi.com/liveCourse/list?fromApp=1','kvAdId':61,'title':'测试课程购买'}],'recommendNewsColumnList':[{'newsTypeId':2,'newsName':'申论论点'},{'newsTypeId':1,'newsName':'时政热点'}],'recommendNewsList':[{'newsId':3923,'imagePath':'http://7xk1xm.com1.z0.glb.clouddn.com/@//newsImage/newsIcon/2016051024012238_0.jpg','newsTypeTitle':'狮笑世事','title':'你所期待的夏天是什么样子的？','createTime':'2015-12-28 14:04:03','commentCount':4},{'newsId':3860,'imagePath':'http://7xk1xm.com1.z0.glb.clouddn.com/@/newsImage/newsIcon/2016012724041227_55.png','newsTypeTitle':'狮笑世事','title':'我的人生我做主','createTime':'2016-02-29 17:41:14','commentCount':0},{'newsId':3940,'imagePath':'http://7xk1xm.com1.z0.glb.clouddn.com/@/newsImage/newsIcon/2016052524023126_74.png','newsTypeTitle':'申论论点','title':'ceshi环境123','createTime':null,'commentCount':5},{'newsId':3906,'imagePath':null,'newsTypeTitle':'狮笑世事','title':'高考后的那些事儿','createTime':null,'commentCount':18},{'newsId':3905,'imagePath':'http://7xk1xm.com1.z0.glb.clouddn.com/@/newsImage/newsIcon/2015061124030800.jpg','newsTypeTitle':'来稿惊喜','title':'《国考志》征稿启事','createTime':null,'commentCount':3}],'recommendShowVideoList':[{'videoId':10,'videoTitle':'频道视频10','videoScreenshot':'http://www.suqian.gov.cn/publishfile/1251900553654.jpg','playCount':305,'commentCount':0,'evaluate':0.0,'videoIntro':null,'duration':1210,'voteCount':0,'shareUrl':null,'playObjectList':null},{'videoId':10,'videoTitle':'频道视频10','videoScreenshot':'http://www.suqian.gov.cn/publishfile/1251900553654.jpg','playCount':305,'commentCount':0,'evaluate':0.0,'videoIntro':null,'duration':1210,'voteCount':0,'shareUrl':null,'playObjectList':null},{'videoId':19,'videoTitle':'呵呵哒哒哒爱的','videoScreenshot':'http://7xk1xm.com1.z0.glb.clouddn.com/@/video/videoIcon/2016030424025026_72.png','playCount':271,'commentCount':0,'evaluate':0.0,'videoIntro':null,'duration':2313,'voteCount':0,'shareUrl':null,'playObjectList':null},{'videoId':8,'videoTitle':'频道视频8','videoScreenshot':'http://www.suqian.gov.cn/publishfile/1251900553654.jpg','playCount':212,'commentCount':0,'evaluate':0.0,'videoIntro':null,'duration':1238,'voteCount':0,'shareUrl':null,'playObjectList':null},{'videoId':5,'videoTitle':'频道视频5','videoScreenshot':'http://www.suqian.gov.cn/publishfile/1251900553654.jpg','playCount':340,'commentCount':0,'evaluate':0.0,'videoIntro':null,'duration':1235,'voteCount':0,'shareUrl':null,'playObjectList':null}],'channelId':1},'success':true}";
+    NSString * strppp = @"{'respCode':'000','respDesc':'成功','cacheToken':'','data':{},'success':true}";
+    NSString * strdata = @"你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：";/*分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：你阿妈你阿米娜年你阿妈fucvk：：分促进{}：";*/
+//    id encryptData = [self encrypt:json];
+    NSString * encryptStr = [self encrypToString:json];
+    GKLogSP(@"加密后密文:%@",encryptStr);
+//    GKLogSP(@"加密后密文:%@",[[NSString alloc]initWithData:encryptData encoding:NSUTF8StringEncoding]);
+//    NSString * decryptStr = [self decrypt:encryptData];
+    NSString * decryptStr = [self decryptToString:encryptStr];
+    GKLogSP(@"解密后明文:%@",decryptStr);
+}
+
+- (id)encrypToString:(NSString *)securityText {
+    RSAEncryptor * rsa = [[RSAEncryptor alloc] init];
+    [RSAEncryptor setSharedInstance:rsa];
+    NSLog(@"encryptor using rsa");
+    NSString * publicKeyPath = [[NSBundle mainBundle] pathForResource:@"public_key" ofType:@"der"];
+    NSLog(@"public key: %@", publicKeyPath);
+    [rsa loadPublicKeyFromFile:publicKeyPath];
+    NSString * encryptedString = [rsa rsaEncryptString:securityText];
+    return encryptedString;
+}
+
+- (id)decryptToString:(NSString *)encryptedString {
+    /*- (NSString *)decrypt:(NSString *)tring {*/
+    NSLog(@"decryptor using rsa");
+    RSAEncryptor * rsa = [[RSAEncryptor alloc] init];
+    NSString * privateKeyPath = [[NSBundle mainBundle] pathForResource:@"private_key" ofType:@"p12"];
+    NSLog(@"private key: %@", privateKeyPath);
+    [rsa loadPrivateKeyFromFile:privateKeyPath password:@"0012"];
+    NSString * decryptedString = [rsa rsaDecryptLongString:encryptedString];
+    return decryptedString;
+}
+
+
+- (id)encrypt:(NSString *)securityText {
+    NSData * data = [securityText dataUsingEncoding:NSUTF8StringEncoding];
+    RSAEncryptor * rsa = [[RSAEncryptor alloc] init];
+    [RSAEncryptor setSharedInstance:rsa];
+    NSLog(@"encryptor using rsa");
+    NSString * publicKeyPath = [[NSBundle mainBundle] pathForResource:@"public_key" ofType:@"der"];
+    NSLog(@"public key: %@", publicKeyPath);
+    [rsa loadPublicKeyFromFile:publicKeyPath];
+    NSData * encryptedData = [rsa rsaEncryptData:data];
+    return encryptedData;
+}
+- (id)decrypt:(NSData *)data {
+    NSLog(@"decryptor using rsa");
+    RSAEncryptor * rsa = [[RSAEncryptor alloc] init];
+    NSString * privateKeyPath = [[NSBundle mainBundle] pathForResource:@"private_key" ofType:@"p12"];
+    NSLog(@"private key: %@", privateKeyPath);
+    [rsa loadPrivateKeyFromFile:privateKeyPath password:@"0012"];
+    NSData * decryptedData = [rsa rsaDecryptData:data];
+    NSString * decryptedString = [[NSString alloc]initWithData:decryptedData encoding:NSUTF8StringEncoding];
+    return decryptedString;
 }
 
 static const NSInteger kRecvGetMessageReqAlertTag = 1000;

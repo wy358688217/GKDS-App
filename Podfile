@@ -11,6 +11,7 @@ pod 'AFNetworking', '~> 3.1.0'
 pod 'FMDB', '~> 2.6.2'
 pod 'ZFPlayer', '~> 1.1.2'
 pod 'SDWebImage', '~> 3.7.6'
+pod 'Base64nl', '~> 1.2'
 end
 
 target 'GKDS_AppTests' do

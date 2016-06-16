@@ -198,6 +198,16 @@
 		2121AE331CA5666D00AF7E44 /* shareButtonCancelClick@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2121AE151CA5666D00AF7E44 /* shareButtonCancelClick@3x.png */; };
 		21284E0E1CB9296F009F4DDA /* GKAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21284E0C1CB9296F009F4DDA /* GKAttentionViewController.m */; };
 		21284E0F1CB9296F009F4DDA /* GKAttentionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21284E0D1CB9296F009F4DDA /* GKAttentionViewController.xib */; };
+		213F08901D12798D00FD70B2 /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 213F088F1D12798D00FD70B2 /* RSAEncryptor.m */; };
+		213F08981D127C2B00FD70B2 /* pkcs8_private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 213F08911D127C2B00FD70B2 /* pkcs8_private_key.pem */; };
+		213F08991D127C2B00FD70B2 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 213F08921D127C2B00FD70B2 /* private_key.p12 */; };
+		213F089A1D127C2B00FD70B2 /* private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 213F08931D127C2B00FD70B2 /* private_key.pem */; };
+		213F089B1D127C2B00FD70B2 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 213F08941D127C2B00FD70B2 /* public_key.der */; };
+		213F089C1D127C2B00FD70B2 /* rsa_public_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 213F08951D127C2B00FD70B2 /* rsa_public_key.pem */; };
+		213F089D1D127C2B00FD70B2 /* rsaCert.crt in Resources */ = {isa = PBXBuildFile; fileRef = 213F08961D127C2B00FD70B2 /* rsaCert.crt */; };
+		213F089E1D127C2B00FD70B2 /* rsaCertReq.csr in Resources */ = {isa = PBXBuildFile; fileRef = 213F08971D127C2B00FD70B2 /* rsaCertReq.csr */; };
+		2148BCF31D12A2EB00D8F949 /* gen_rsakey.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2148BCF01D12A2EB00D8F949 /* gen_rsakey.sh */; };
+		2148BCF41D12A2EB00D8F949 /* GKRSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2148BCF21D12A2EB00D8F949 /* GKRSAEncryptor.m */; };
 		215D25911CB6A92800B7ABC5 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D258C1CB6A92800B7ABC5 /* read_me.txt */; };
 		215D25941CB6AC0B00B7ABC5 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 215D25931CB6AC0B00B7ABC5 /* WXApiManager.m */; };
 		215D25981CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215D25961CB6AC4F00B7ABC5 /* GKWeiXinPayViewController.m */; };
@@ -362,7 +372,9 @@
 		21C5C85D1CA2EA1C006E216C /* GKLoginMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C5C85C1CA2EA1C006E216C /* GKLoginMediator.m */; };
 		21C5C8601CA2EA37006E216C /* GKLoginProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C5C85F1CA2EA37006E216C /* GKLoginProxy.m */; };
 		21EC038B1CD5CCB900509310 /* GKDataBaseProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC038A1CD5CCB900509310 /* GKDataBaseProxy.m */; };
-		CE400D4886CAFF60D73F1F70 /* libPods-GKDS_App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CFC386F53C36AC60CB966C /* libPods-GKDS_App.a */; };
+		4DB94A55C6B8086057586A23 /* libPods-GKDS_AppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EE710A1442931553161EB0 /* libPods-GKDS_AppTests.a */; };
+		6CB871793AA21E5F54C11B7A /* libPods-GKDS_AppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B26757583D30353FBAA6DB09 /* libPods-GKDS_AppUITests.a */; };
+		CC12D864F0103E909EE88FA7 /* libPods-GKDS_App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A557F4251ABBE5FAD5D97E /* libPods-GKDS_App.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -383,7 +395,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0797A33A3B36FAD5BE9B411C /* Pods-GKDS_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKDS_App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKDS_App/Pods-GKDS_App.debug.xcconfig"; sourceTree = "<group>"; };
+		0BB1CEA5BEA8245C41CB0D26 /* Pods-GKDS_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKDS_AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKDS_AppTests/Pods-GKDS_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		180F8E5A1CB1598000A17261 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		182C225E1CB0EBF40032BA67 /* GKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKWebViewController.h; sourceTree = "<group>"; };
 		182C225F1CB0EBF40032BA67 /* GKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKWebViewController.m; sourceTree = "<group>"; };
@@ -489,6 +501,18 @@
 		21284E0B1CB9296F009F4DDA /* GKAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAttentionViewController.h; sourceTree = "<group>"; };
 		21284E0C1CB9296F009F4DDA /* GKAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAttentionViewController.m; sourceTree = "<group>"; };
 		21284E0D1CB9296F009F4DDA /* GKAttentionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKAttentionViewController.xib; sourceTree = "<group>"; };
+		213F088E1D12798D00FD70B2 /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
+		213F088F1D12798D00FD70B2 /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
+		213F08911D127C2B00FD70B2 /* pkcs8_private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pkcs8_private_key.pem; sourceTree = "<group>"; };
+		213F08921D127C2B00FD70B2 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
+		213F08931D127C2B00FD70B2 /* private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key.pem; sourceTree = "<group>"; };
+		213F08941D127C2B00FD70B2 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
+		213F08951D127C2B00FD70B2 /* rsa_public_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_public_key.pem; sourceTree = "<group>"; };
+		213F08961D127C2B00FD70B2 /* rsaCert.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsaCert.crt; sourceTree = "<group>"; };
+		213F08971D127C2B00FD70B2 /* rsaCertReq.csr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsaCertReq.csr; sourceTree = "<group>"; };
+		2148BCF01D12A2EB00D8F949 /* gen_rsakey.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = gen_rsakey.sh; sourceTree = "<group>"; };
+		2148BCF11D12A2EB00D8F949 /* GKRSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRSAEncryptor.h; sourceTree = "<group>"; };
+		2148BCF21D12A2EB00D8F949 /* GKRSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRSAEncryptor.m; sourceTree = "<group>"; };
 		215D258C1CB6A92800B7ABC5 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
 		215D258D1CB6A92800B7ABC5 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		215D258E1CB6A92800B7ABC5 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -700,8 +724,14 @@
 		21C5C85F1CA2EA37006E216C /* GKLoginProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLoginProxy.m; sourceTree = "<group>"; };
 		21EC03891CD5CCB900509310 /* GKDataBaseProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDataBaseProxy.h; sourceTree = "<group>"; };
 		21EC038A1CD5CCB900509310 /* GKDataBaseProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDataBaseProxy.m; sourceTree = "<group>"; };
-		63CFC386F53C36AC60CB966C /* libPods-GKDS_App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKDS_App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		806292CFB5E463C1A92393CF /* Pods-GKDS_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKDS_App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKDS_App/Pods-GKDS_App.release.xcconfig"; sourceTree = "<group>"; };
+		488BEAA87F7D6D02B0D657B3 /* Pods-GKDS_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKDS_App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKDS_App/Pods-GKDS_App.release.xcconfig"; sourceTree = "<group>"; };
+		68A557F4251ABBE5FAD5D97E /* libPods-GKDS_App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKDS_App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C6A9C90BEE72E794651CB5 /* Pods-GKDS_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKDS_App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKDS_App/Pods-GKDS_App.debug.xcconfig"; sourceTree = "<group>"; };
+		975105ED6000AE26FA08977F /* Pods-GKDS_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKDS_AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKDS_AppTests/Pods-GKDS_AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		B26757583D30353FBAA6DB09 /* libPods-GKDS_AppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKDS_AppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79F260ACEBCAF226A947AC4 /* Pods-GKDS_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKDS_AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKDS_AppUITests/Pods-GKDS_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E3EE710A1442931553161EB0 /* libPods-GKDS_AppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKDS_AppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F871BF90A5B3317AB0F745BF /* Pods-GKDS_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKDS_AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKDS_AppUITests/Pods-GKDS_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -709,15 +739,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215D25A31CB6B19300B7ABC5 /* Security.framework in Frameworks */,
 				219FBB091CBA1E4400A61D14 /* OpenGLES.framework in Frameworks */,
 				215D25A51CB6B1A700B7ABC5 /* SystemConfiguration.framework in Frameworks */,
-				215D25A31CB6B19300B7ABC5 /* Security.framework in Frameworks */,
 				215D25A11CB6B18A00B7ABC5 /* libz.tbd in Frameworks */,
 				215D259F1CB6B16C00B7ABC5 /* libsqlite3.0.tbd in Frameworks */,
 				215D259D1CB6B15C00B7ABC5 /* CoreTelephony.framework in Frameworks */,
 				180F8E5B1CB1598000A17261 /* WebKit.framework in Frameworks */,
-				CE400D4886CAFF60D73F1F70 /* libPods-GKDS_App.a in Frameworks */,
 				215D259B1CB6B12600B7ABC5 /* libWeChatSDK.a in Frameworks */,
+				CC12D864F0103E909EE88FA7 /* libPods-GKDS_App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +755,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB94A55C6B8086057586A23 /* libPods-GKDS_AppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +763,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CB871793AA21E5F54C11B7A /* libPods-GKDS_AppUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,14 +897,36 @@
 				215D259E1CB6B16C00B7ABC5 /* libsqlite3.0.tbd */,
 				215D259C1CB6B15C00B7ABC5 /* CoreTelephony.framework */,
 				180F8E5A1CB1598000A17261 /* WebKit.framework */,
-				63CFC386F53C36AC60CB966C /* libPods-GKDS_App.a */,
+				68A557F4251ABBE5FAD5D97E /* libPods-GKDS_App.a */,
+				E3EE710A1442931553161EB0 /* libPods-GKDS_AppTests.a */,
+				B26757583D30353FBAA6DB09 /* libPods-GKDS_AppUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		213F088D1D12797D00FD70B2 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				213F088E1D12798D00FD70B2 /* RSAEncryptor.h */,
+				2148BCF01D12A2EB00D8F949 /* gen_rsakey.sh */,
+				2148BCF11D12A2EB00D8F949 /* GKRSAEncryptor.h */,
+				2148BCF21D12A2EB00D8F949 /* GKRSAEncryptor.m */,
+				213F088F1D12798D00FD70B2 /* RSAEncryptor.m */,
+				213F08911D127C2B00FD70B2 /* pkcs8_private_key.pem */,
+				213F08921D127C2B00FD70B2 /* private_key.p12 */,
+				213F08931D127C2B00FD70B2 /* private_key.pem */,
+				213F08941D127C2B00FD70B2 /* public_key.der */,
+				213F08951D127C2B00FD70B2 /* rsa_public_key.pem */,
+				213F08961D127C2B00FD70B2 /* rsaCert.crt */,
+				213F08971D127C2B00FD70B2 /* rsaCertReq.csr */,
+			);
+			path = RSA;
 			sourceTree = "<group>";
 		};
 		215D25881CB6A92800B7ABC5 /* ThirdPartyPay */ = {
 			isa = PBXGroup;
 			children = (
+				213F088D1D12797D00FD70B2 /* RSA */,
 				215D25891CB6A92800B7ABC5 /* AliPay */,
 				215D258A1CB6A92800B7ABC5 /* WeiXin */,
 			);
@@ -1019,8 +1073,8 @@
 				21C509281CA18421008DE0E6 /* GKDS_AppTests */,
 				21C509331CA18422008DE0E6 /* GKDS_AppUITests */,
 				21C5090D1CA18421008DE0E6 /* Products */,
-				3CA16E516446DA51B9011AE6 /* Pods */,
 				19DD014C29AFF15B4141FCA6 /* Frameworks */,
+				760B94D1FCF50F69A5274CAB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1579,11 +1633,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		3CA16E516446DA51B9011AE6 /* Pods */ = {
+		760B94D1FCF50F69A5274CAB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0797A33A3B36FAD5BE9B411C /* Pods-GKDS_App.debug.xcconfig */,
-				806292CFB5E463C1A92393CF /* Pods-GKDS_App.release.xcconfig */,
+				88C6A9C90BEE72E794651CB5 /* Pods-GKDS_App.debug.xcconfig */,
+				488BEAA87F7D6D02B0D657B3 /* Pods-GKDS_App.release.xcconfig */,
+				0BB1CEA5BEA8245C41CB0D26 /* Pods-GKDS_AppTests.debug.xcconfig */,
+				975105ED6000AE26FA08977F /* Pods-GKDS_AppTests.release.xcconfig */,
+				F871BF90A5B3317AB0F745BF /* Pods-GKDS_AppUITests.debug.xcconfig */,
+				B79F260ACEBCAF226A947AC4 /* Pods-GKDS_AppUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1595,12 +1653,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21C509391CA18422008DE0E6 /* Build configuration list for PBXNativeTarget "GKDS_App" */;
 			buildPhases = (
-				D6055B8C6218BCC18F90BA4D /* Check Pods Manifest.lock */,
+				E8DA73656F3A152BD6403007 /* [CP] Check Pods Manifest.lock */,
 				21C509081CA18421008DE0E6 /* Sources */,
 				21C509091CA18421008DE0E6 /* Frameworks */,
 				21C5090A1CA18421008DE0E6 /* Resources */,
-				6EC6B62FD7CA2672D6060C30 /* Embed Pods Frameworks */,
-				3842324BC634B30DF588D4EB /* Copy Pods Resources */,
+				1FD8C8E0D2DEA3FFF30E638C /* [CP] Embed Pods Frameworks */,
+				4AC76C40250E533EC97C1E8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1615,9 +1673,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21C5093C1CA18422008DE0E6 /* Build configuration list for PBXNativeTarget "GKDS_AppTests" */;
 			buildPhases = (
+				01CBD030E7250C9AE6BA3543 /* [CP] Check Pods Manifest.lock */,
 				21C509211CA18421008DE0E6 /* Sources */,
 				21C509221CA18421008DE0E6 /* Frameworks */,
 				21C509231CA18421008DE0E6 /* Resources */,
+				616EBD05D2009DB3800CD085 /* [CP] Embed Pods Frameworks */,
+				B9197A1F1BE67E419CAA8924 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1633,9 +1694,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21C5093F1CA18422008DE0E6 /* Build configuration list for PBXNativeTarget "GKDS_AppUITests" */;
 			buildPhases = (
+				CD4C8630F48E7313802FA877 /* [CP] Check Pods Manifest.lock */,
 				21C5092C1CA18422008DE0E6 /* Sources */,
 				21C5092D1CA18422008DE0E6 /* Frameworks */,
 				21C5092E1CA18422008DE0E6 /* Resources */,
+				3A02E7DC1C72FC288CC9590B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1706,6 +1769,7 @@
 				215D25911CB6A92800B7ABC5 /* read_me.txt in Resources */,
 				2121AE1D1CA5666D00AF7E44 /* publish-offline@2x.png in Resources */,
 				2121AE251CA5666D00AF7E44 /* publish-text.png in Resources */,
+				213F089A1D127C2B00FD70B2 /* private_key.pem in Resources */,
 				2121AE261CA5666D00AF7E44 /* publish-text@2x.png in Resources */,
 				2121AE301CA5666D00AF7E44 /* shareButtonCancel@3x.png in Resources */,
 				18F0A7DA1CAFA50600EFEB91 /* tabbar-light.png in Resources */,
@@ -1716,6 +1780,7 @@
 				2121AE161CA5666D00AF7E44 /* app_slogan.png in Resources */,
 				2121AE211CA5666D00AF7E44 /* publish-picture@3x.png in Resources */,
 				18F0A7D51CAFA50600EFEB91 /* tabBar_3.png in Resources */,
+				213F08991D127C2B00FD70B2 /* private_key.p12 in Resources */,
 				18F0A7E01CAFA50600EFEB91 /* tabBar_essence_icon@2x.png in Resources */,
 				2121AE2F1CA5666D00AF7E44 /* shareButtonCancel@2x.png in Resources */,
 				18F0A7F31CAFA50600EFEB91 /* tabBar_new_icon@3x.png in Resources */,
@@ -1734,16 +1799,20 @@
 				18F0A7E31CAFA50600EFEB91 /* tabBar_friendTrends_click_icon@2x.png in Resources */,
 				18F0A7C91CAFA50600EFEB91 /* tabBar_0.png in Resources */,
 				18F0A7DD1CAFA50600EFEB91 /* tabBar_essence_click_icon@2x.png in Resources */,
+				213F089E1D127C2B00FD70B2 /* rsaCertReq.csr in Resources */,
 				21C50CA41CA19ADE008DE0E6 /* pop-ios-Info.plist in Resources */,
 				18F0A7D01CAFA50600EFEB91 /* tabBar_1_on@2x.png in Resources */,
+				213F08981D127C2B00FD70B2 /* pkcs8_private_key.pem in Resources */,
 				18F0A7CF1CAFA50600EFEB91 /* tabBar_1_on.png in Resources */,
 				21C5091C1CA18421008DE0E6 /* Assets.xcassets in Resources */,
 				21C50CAA1CA19ADE008DE0E6 /* pop-tvos-Info.plist in Resources */,
+				2148BCF31D12A2EB00D8F949 /* gen_rsakey.sh in Resources */,
 				18F0A7DB1CAFA50600EFEB91 /* tabbar-light@2x.png in Resources */,
 				18F0A7D91CAFA50600EFEB91 /* tabBar_back@2x.png in Resources */,
 				2121AE291CA5666D00AF7E44 /* publish-video@2x.png in Resources */,
 				18F0A7CE1CAFA50600EFEB91 /* tabBar_1@2x.png in Resources */,
 				18F0A7EF1CAFA50600EFEB91 /* tabBar_new_click_icon@2x.png in Resources */,
+				213F089B1D127C2B00FD70B2 /* public_key.der in Resources */,
 				18F0A7CC1CAFA50600EFEB91 /* tabBar_0_on@2x.png in Resources */,
 				18F0A7EB1CAFA50600EFEB91 /* tabBar_me_icon.png in Resources */,
 				18F0A7E11CAFA50600EFEB91 /* tabBar_essence_icon@3x.png in Resources */,
@@ -1755,6 +1824,7 @@
 				18F0A7ED1CAFA50600EFEB91 /* tabBar_me_icon@3x.png in Resources */,
 				2121AE2B1CA5666D00AF7E44 /* shareBottomBackground.png in Resources */,
 				2121AE2D1CA5666D00AF7E44 /* shareBottomBackground@3x.png in Resources */,
+				213F089D1D127C2B00FD70B2 /* rsaCert.crt in Resources */,
 				18F0A7E71CAFA50600EFEB91 /* tabBar_friendTrends_icon@3x.png in Resources */,
 				2121AE181CA5666D00AF7E44 /* app_slogan@3x.png in Resources */,
 				2121AE201CA5666D00AF7E44 /* publish-picture@2x.png in Resources */,
@@ -1764,6 +1834,7 @@
 				21C5091A1CA18421008DE0E6 /* Main.storyboard in Resources */,
 				2121AE191CA5666D00AF7E44 /* publish-audio.png in Resources */,
 				18F0A7EA1CAFA50600EFEB91 /* tabBar_me_click_icon@3x.png in Resources */,
+				213F089C1D127C2B00FD70B2 /* rsa_public_key.pem in Resources */,
 				182C22621CB0EBF40032BA67 /* GKWebViewController.xib in Resources */,
 				18F0A7E81CAFA50600EFEB91 /* tabBar_me_click_icon.png in Resources */,
 				18F0A7D81CAFA50600EFEB91 /* tabBar_3_on@2x.png in Resources */,
@@ -1823,29 +1894,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3842324BC634B30DF588D4EB /* Copy Pods Resources */ = {
+		01CBD030E7250C9AE6BA3543 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GKDS_App/Pods-GKDS_App-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6EC6B62FD7CA2672D6060C30 /* Embed Pods Frameworks */ = {
+		1FD8C8E0D2DEA3FFF30E638C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1853,14 +1924,89 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GKDS_App/Pods-GKDS_App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D6055B8C6218BCC18F90BA4D /* Check Pods Manifest.lock */ = {
+		3A02E7DC1C72FC288CC9590B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GKDS_AppUITests/Pods-GKDS_AppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AC76C40250E533EC97C1E8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GKDS_App/Pods-GKDS_App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		616EBD05D2009DB3800CD085 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GKDS_AppTests/Pods-GKDS_AppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9197A1F1BE67E419CAA8924 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GKDS_AppTests/Pods-GKDS_AppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD4C8630F48E7313802FA877 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E8DA73656F3A152BD6403007 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1904,6 +2050,7 @@
 				21C50CD11CA19ADE008DE0E6 /* POPLayerExtras.mm in Sources */,
 				21C5099C1CA185C3008DE0E6 /* Model.m in Sources */,
 				21C5C8541CA2E3F3006E216C /* GKLoginModule.m in Sources */,
+				213F08901D12798D00FD70B2 /* RSAEncryptor.m in Sources */,
 				21C50CD41CA19ADE008DE0E6 /* POPMath.mm in Sources */,
 				219BFAB51CA7FD72002A28D8 /* UITabBar+GKBadge.m in Sources */,
 				189B01FB1CB007240095B2D4 /* GKSystemProxy.mm in Sources */,
@@ -1923,6 +2070,7 @@
 				21C50CCE1CA19ADE008DE0E6 /* POPGeometry.mm in Sources */,
 				21C50CB91CA19ADE008DE0E6 /* POPAnimationRuntime.mm in Sources */,
 				21C509A21CA185C3008DE0E6 /* Notification.m in Sources */,
+				2148BCF41D12A2EB00D8F949 /* GKRSAEncryptor.m in Sources */,
 				189B01EB1CAFD2680095B2D4 /* GKLogUtils.mm in Sources */,
 				21C50CBF1CA19ADE008DE0E6 /* POPAnimator.mm in Sources */,
 				21EC038B1CD5CCB900509310 /* GKDataBaseProxy.m in Sources */,
@@ -2251,7 +2399,7 @@
 		};
 		21C5093A1CA18422008DE0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0797A33A3B36FAD5BE9B411C /* Pods-GKDS_App.debug.xcconfig */;
+			baseConfigurationReference = 88C6A9C90BEE72E794651CB5 /* Pods-GKDS_App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2280,7 +2428,7 @@
 		};
 		21C5093B1CA18422008DE0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 806292CFB5E463C1A92393CF /* Pods-GKDS_App.release.xcconfig */;
+			baseConfigurationReference = 488BEAA87F7D6D02B0D657B3 /* Pods-GKDS_App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2304,6 +2452,7 @@
 		};
 		21C5093D1CA18422008DE0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BB1CEA5BEA8245C41CB0D26 /* Pods-GKDS_AppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GKDS_AppTests/Info.plist;
@@ -2316,6 +2465,7 @@
 		};
 		21C5093E1CA18422008DE0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 975105ED6000AE26FA08977F /* Pods-GKDS_AppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GKDS_AppTests/Info.plist;
@@ -2328,6 +2478,7 @@
 		};
 		21C509401CA18422008DE0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F871BF90A5B3317AB0F745BF /* Pods-GKDS_AppUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = GKDS_AppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2340,6 +2491,7 @@
 		};
 		21C509411CA18422008DE0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B79F260ACEBCAF226A947AC4 /* Pods-GKDS_AppUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = GKDS_AppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

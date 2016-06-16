@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Base64nl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CocoaLumberjack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -30,6 +35,16 @@
 			<false/>
 		</dict>
 		<key>Pods-GKDS_App.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GKDS_AppTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GKDS_AppUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,27 +67,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>12BD82E7E944C1F423BAE7E05C378B16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>12E2BC28C62976C425F4B71C2723F0B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>16A2769FE2D25C6E08F941102503C872</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5576B7A77977C8EF886E75D2F01625F3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8BF5EA0627A6DC3D0001D3D75365CB71</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +97,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4A289CB21AC615748604660CB43A8F9</key>
+		<key>C6F8450F2D64EA70E2A40695B9B1A8DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDB19A66A8A002C1D596FE2E49404D2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2151F6C1135D4780B3FDF3AF8D84460</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4914347D2B8DF082FC5A2F5ADE65DEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB32F19587599827FDC4BE89EDDCABDE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6CD7A086D0A7A2B65D2F5FC957CF82C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

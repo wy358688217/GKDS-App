@@ -7,11 +7,6 @@
 //
 
 #import "ALSystem.h"
-#define SafeSetObject(map,obj,key) if(map){\
-if(obj){\
-[map setObject:obj forKey:key];\
-}\
-}\
 
 @implementation ALSystem
 
@@ -207,27 +202,16 @@ if(obj){\
 
 + (NSDictionary *)networkInformations {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-//    [dictionary setObject:[ALNetwork currentIPAddress] forKey:ALNetwork_currentIPAddress];
-//    [dictionary setObject:[NSNumber numberWithBool:[ALNetwork connectedViaWiFi]] forKey:ALNetwork_connectedViaWiFi];
-//    [dictionary setObject:[NSNumber numberWithBool:[ALNetwork connectedVia3G]] forKey:ALNetwork_connectedVia3G];
-//    [dictionary setObject:[ALNetwork macAddress] forKey:ALNetwork_macAddress];
-//    [dictionary setObject:[ALNetwork externalIPAddress] forKey:ALNetwork_externalIPAddress];
-//    [dictionary setObject:[ALNetwork cellIPAddress] forKey:ALNetwork_cellIPAddress];
-//    [dictionary setObject:[ALNetwork WiFiNetmaskAddress] forKey:ALNetwork_WiFiNetmaskAddress];
-//    [dictionary setObject:[ALNetwork WiFiBroadcastAddress] forKey:ALNetwork_WiFiBroadcastAddress];
-//    [dictionary setObject:[ALNetwork BSSID] forKey:ALNetwork_BSSID];
-//    [dictionary setObject:[ALNetwork SSID] forKey:ALNetwork_SSID];
-    
-    SafeSetObject(dictionary, [ALNetwork currentIPAddress], ALNetwork_currentIPAddress);
-    SafeSetObject(dictionary, [NSNumber numberWithBool:[ALNetwork connectedViaWiFi]], ALNetwork_connectedViaWiFi);
-    SafeSetObject(dictionary, [NSNumber numberWithBool:[ALNetwork connectedVia3G]], ALNetwork_connectedVia3G);
-    SafeSetObject(dictionary, [ALNetwork macAddress], ALNetwork_macAddress);
-    SafeSetObject(dictionary, [ALNetwork externalIPAddress], ALNetwork_externalIPAddress);
-    SafeSetObject(dictionary, [ALNetwork cellIPAddress], ALNetwork_cellIPAddress);
-    SafeSetObject(dictionary, [ALNetwork WiFiNetmaskAddress], ALNetwork_WiFiNetmaskAddress);
-    SafeSetObject(dictionary, [ALNetwork WiFiBroadcastAddress], ALNetwork_WiFiBroadcastAddress);
-    SafeSetObject(dictionary, [ALNetwork BSSID], ALNetwork_BSSID);
-    SafeSetObject(dictionary, [ALNetwork SSID], ALNetwork_SSID);
+    [dictionary setObject:[ALNetwork currentIPAddress] forKey:ALNetwork_currentIPAddress];
+    [dictionary setObject:[NSNumber numberWithBool:[ALNetwork connectedViaWiFi]] forKey:ALNetwork_connectedViaWiFi];
+    [dictionary setObject:[NSNumber numberWithBool:[ALNetwork connectedVia3G]] forKey:ALNetwork_connectedVia3G];
+    [dictionary setObject:[ALNetwork macAddress] forKey:ALNetwork_macAddress];
+    [dictionary setObject:[ALNetwork externalIPAddress] forKey:ALNetwork_externalIPAddress];
+    [dictionary setObject:[ALNetwork cellIPAddress] forKey:ALNetwork_cellIPAddress];
+    [dictionary setObject:[ALNetwork WiFiNetmaskAddress] forKey:ALNetwork_WiFiNetmaskAddress];
+    [dictionary setObject:[ALNetwork WiFiBroadcastAddress] forKey:ALNetwork_WiFiBroadcastAddress];
+    [dictionary setObject:[ALNetwork BSSID] forKey:ALNetwork_BSSID];
+    [dictionary setObject:[ALNetwork SSID] forKey:ALNetwork_SSID];
     return dictionary;
 }
 
@@ -235,18 +219,11 @@ if(obj){\
 
 + (NSDictionary *)processorInformations {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-//    [dictionary setObject:[NSNumber numberWithInteger:[ALProcessor processorsNumber]] forKey:ALProcessor_processorsNumber];
-//    [dictionary setObject:[NSNumber numberWithInteger:[ALProcessor activeProcessorsNumber]] forKey:ALProcessor_activeProcessorsNumber];
-//    [dictionary setObject:[NSNumber numberWithFloat:[ALProcessor cpuUsageForApp]] forKey:ALProcessor_cpuUsageForApp];
-//    [dictionary setObject:[ALProcessor activeProcesses] forKey:ALProcessor_activeProcesses];
-//    [dictionary setObject:[NSNumber numberWithInteger:[ALProcessor numberOfActiveProcesses]] forKey:ALProcessor_numberOfActiveProcesses];
-    
-    SafeSetObject(dictionary, [NSNumber numberWithInteger:[ALProcessor processorsNumber]], ALProcessor_processorsNumber);
-    SafeSetObject(dictionary, [NSNumber numberWithInteger:[ALProcessor activeProcessorsNumber]], ALProcessor_activeProcessorsNumber);
-    SafeSetObject(dictionary, [NSNumber numberWithFloat:[ALProcessor cpuUsageForApp]], ALProcessor_cpuUsageForApp);
-    SafeSetObject(dictionary, [ALProcessor activeProcesses], ALProcessor_activeProcesses);
-    SafeSetObject(dictionary, [NSNumber numberWithInteger:[ALProcessor numberOfActiveProcesses]], ALProcessor_activeProcesses);
-
+    [dictionary setObject:[NSNumber numberWithInteger:[ALProcessor processorsNumber]] forKey:ALProcessor_processorsNumber];
+    [dictionary setObject:[NSNumber numberWithInteger:[ALProcessor activeProcessorsNumber]] forKey:ALProcessor_activeProcessorsNumber];
+    [dictionary setObject:[NSNumber numberWithFloat:[ALProcessor cpuUsageForApp]] forKey:ALProcessor_cpuUsageForApp];
+    [dictionary setObject:[ALProcessor activeProcesses] forKey:ALProcessor_activeProcesses];
+    [dictionary setObject:[NSNumber numberWithInteger:[ALProcessor numberOfActiveProcesses]] forKey:ALProcessor_numberOfActiveProcesses];
     return dictionary;
 }
 

@@ -16,7 +16,6 @@
 #include <net/if.h>
 #include <net/if_dl.h>
 #include <sys/ioctl.h>
-#import "AFNetworking.h"
 
 @implementation ALNetwork
 
@@ -169,49 +168,17 @@
 // Credits to Shmoopi LLC, SystemServiceDemo
 // Get the External IP Address
 + (NSString *)externalIPAddress {
-    
-    
-//    NSString *address = @"error";
-//    struct ifaddrs *interfaces = NULL;
-//    struct ifaddrs *temp_addr = NULL;
-//    int success = 0;
-//    
-//    // retrieve the current interfaces - returns 0 on success
-//    success = getifaddrs(&interfaces);
-//    if (success == 0) {
-//        // Loop through linked list of interfaces
-//        temp_addr = interfaces;
-//        while (temp_addr != NULL) {
-//            if( temp_addr->ifa_addr->sa_family == AF_INET) {
-//                // Check if interface is en0 which is the wifi connection on the iPhone
-//                if ([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
-//                    // Get NSString from C String
-//                    address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
-//                }
-//            }
-//            
-//            temp_addr = temp_addr->ifa_next;
-//        }
-//    }
-//    
-//    // Free memory
-//    freeifaddrs(interfaces);
-//    
-//    return address;
-    
     // Check if we have an internet connection then try to get the External IP Address
     if (![self connectedViaWiFi] && ![self connectedVia3G]) {
         // Not connected to anything, return nil
         return nil;
     }
     
-    // Get the external IP Address based on dynsns.org////http://www.dyndns.org/cgi-bin/check_ip.cgi
-    NSError *error = nil;//http://www.ip138.com/  //http://fw.qq.com/ipaddress  //http://members.3322.org/dyndns/getip
-    NSString *theIpHtml = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://members.3322.org/dyndns/getip"]
+    // Get the external IP Address based on dynsns.org
+    NSError *error = nil;
+    NSString *theIpHtml = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://www.dyndns.org/cgi-bin/check_ip.cgi"]
                                                    encoding:NSUTF8StringEncoding
                                                       error:&error];
-    return theIpHtml;
-    
     if (!error) {
         NSUInteger  an_Integer;
         NSArray *ipItemsArray;

@@ -21,7 +21,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"选择兴趣";
-        
 }
 
 - (void)didReceiveMemoryWarning {
